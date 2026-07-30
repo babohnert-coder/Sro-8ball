@@ -1,0 +1,27 @@
+{
+  "chance": 0.18,
+  "cooldown": 6,
+  "maxPerResponse": 1,
+  "categories": {
+    "approval": ["NODDERS", "YEP", "badYEP", "VeryBased", "GIGACHAD", "Wp"],
+    "hope": ["COPIUM", "HOPIUM", "NODDERS"],
+    "failure": ["RIPBOZO", "Deadge", "sroNope", "SkillIssue", "ICANT"],
+    "disbelief": ["AINTNOWAY", "HUH", "ICANT", "KEKL", "xxd"],
+    "suspicion": ["Susge", "modCheck", "Aware", "HUH"],
+    "vision": ["lookUp", "MYEYES", "Aware", "KEKScreen"],
+    "caught": ["CAUGHT", "KEKScreen", "Aware"],
+    "bald": ["Baldge", "KEKbald", "BOOMWADDUP"],
+    "gamba": ["WPGG", "RIPBOZO", "COPIUM"],
+    "cringe": ["DIESOFCRINGE", "Pffttt", "KEKL", "HUH"],
+    "romance": ["Kreygasm", "Susge", "AINTNOWAY"],
+    "league": ["NODDERS", "COPIUM", "sroNope", "xxd"],
+    "chaos": ["KEKL", "HUH", "AINTNOWAY", "Pffttt"]
+  },
+  "approvedRoomEmotes": [
+    "NODDERS", "YEP", "badYEP", "VeryBased", "GIGACHAD", "Wp",
+    "COPIUM", "HOPIUM", "RIPBOZO", "Deadge", "sroNope", "SkillIssue",
+    "ICANT", "AINTNOWAY", "HUH", "KEKL", "xxd", "Susge", "modCheck",
+    "Aware", "lookUp", "MYEYES", "KEKScreen", "CAUGHT", "Baldge",
+    "KEKbald", "BOOMWADDUP", "WPGG", "DIESOFCRINGE", "Pffttt", "Kreygasm"
+  ]
+}

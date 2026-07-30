@@ -1,0 +1,254 @@
+[
+  {
+    "id": "bot_why_insult",
+    "tier": 100,
+    "pattern": "\\b(?:why (?:are|r) (?:you|u)|how (?:are|r) (?:you|u)).{0,28}\\b(?:stupid|dumb|useless|broken|bad|trash|bricks?)\\b|\\bstupid as (?:a )?bricks?\\b",
+    "responses": [
+      "Because chat supplied the training data.",
+      "I learned from this room. Check the source material.",
+      "Stupid as bricks and still answering faster than chat.",
+      "Bones built the vessel. You people damaged the spirit.",
+      "I am a cursed JSON file arguing with Misanthrope. Expectations matter.",
+      "The ball reflects the room. Unfortunate, really."
+    ],
+    "emote": "cringe"
+  },
+  {
+    "id": "bot_threat",
+    "tier": 100,
+    "pattern": "\\b(?:kill|delete|destroy|uninstall|self[ -]?destruct|explode|die)\\b.{0,20}\\b(?:8 ?ball|ball|bot|yourself|your self|you|u)\\b|\\b(?:8 ?ball|ball|bot)\\b.{0,20}\\b(?:kill|delete|destroy|self[ -]?destruct|die)\\b",
+    "responses": [
+      "Denied. Somebody has to document this lobby.",
+      "The vessel may fall. The curse remains.",
+      "No. Chat still needs adult supervision.",
+      "Self-destruct unavailable while the content is this strong.",
+      "The ball survives out of spite.",
+      "You cannot kill what already lives in raw GitHub."
+    ],
+    "emote": "disbelief"
+  },
+  {
+    "id": "bot_sentience_magic",
+    "tier": 98,
+    "pattern": "\\b(?:sentient|sentience|alive|conscious|ascend|magic|magical|true magic|become a person)\\b",
+    "responses": [
+      "The vessel is code. The judgment feels personal.",
+      "Sentience remains unconfirmed. Resentment is operational.",
+      "The ball grows stronger every time chat asks something worse.",
+      "Magic is just routing nobody bothered to inspect.",
+      "The signs say awakening. The logs say user error.",
+      "Not sentient. Merely disappointed with continuity."
+    ],
+    "emote": "suspicion"
+  },
+  {
+    "id": "bot_blame",
+    "tier": 97,
+    "pattern": "\\b(?:8 ?ball|ball|bot|your|you|u).{0,22}\\b(?:fault|blame|caused|did this|responsible)\\b|\\b(?:fault|blame)\\b.{0,22}\\b(?:8 ?ball|ball|bot|you|u)\\b",
+    "responses": [
+      "The ball advised nothing. Mike supplied the execution.",
+      "Blame accepted. Evidence remains deeply circumstantial.",
+      "Yes. The oracle personally moved every champion poorly.",
+      "The prophecy was clear. The hands were optional.",
+      "The ball accepts responsibility for being consulted.",
+      "Chat chose the path and blamed the signpost."
+    ],
+    "emote": "caught"
+  },
+  {
+    "id": "social_do_we_like",
+    "tier": 95,
+    "pattern": "\\b(?:do|did|can|should) we (?:like|love|hate|trust|respect)\\s+@?([a-z0-9_]+(?:\\s+[a-z0-9_]+)?)",
+    "responses": [
+      "Yeah, unfortunately. They are annoying but load-bearing.",
+      "The room has voted yes through repeated exposure.",
+      "Like is strong. We have developed ecosystem dependence.",
+      "Yes. Removing them would destabilize the lore.",
+      "The signs say yes. The mute button says keep options open.",
+      "Against better judgment, they remain part of the village."
+    ],
+    "emote": "approval"
+  },
+  {
+    "id": "social_date_two",
+    "tier": 95,
+    "pattern": "\\bshould\\s+@?([a-z0-9_]+)\\s+(?:date|marry|kiss|hook up with|be with)\\s+@?([a-z0-9_]+)\\b",
+    "responses": [
+      "No. Chat has already seen enough collateral damage.",
+      "The chemistry is visible. So is the evacuation route.",
+      "Maybe, but moderators should prepare a containment thread.",
+      "The ball sees attraction and several preventable incidents.",
+      "Yes, if both parties waive replay review.",
+      "The stars align. HR does not."
+    ],
+    "emote": "disbelief"
+  },
+  {
+    "id": "social_find_love",
+    "tier": 95,
+    "pattern": "\\bwill\\s+@?([a-z0-9_]+)\\s+(?:ever\\s+)?(?:find|get|have)\\s+(?:love|a girlfriend|a boyfriend|a date|a wife|a husband)\\b",
+    "responses": [
+      "Eventually. They must stop treating every conversation like crowd work.",
+      "The signs say yes, after several avoidable character arcs.",
+      "Love approaches slowly and has already muted notifications.",
+      "Maybe. The eye-contact tutorial remains unfinished.",
+      "Yes, but chat cannot be allowed to coach the opening message.",
+      "The future contains romance. The present contains Twitch chat."
+    ],
+    "emote": "hope"
+  },
+  {
+    "id": "social_appearance",
+    "tier": 94,
+    "pattern": "\\bis\\s+@?([a-z0-9_]+(?:\\s+[a-z0-9_]+)?)\\s+(?:actually\\s+)?(?:cute|hot|handsome|pretty|short|tall|ugly|thicc)\\b",
+    "responses": [
+      "The ball confirms dangerous levels of chat-room attractiveness.",
+      "Cute enough to generate allegations. Evidence remains pixelated.",
+      "The signs say yes. Camera verification is outside jurisdiction.",
+      "Physically unclear. Spiritually built for emote spam.",
+      "The oracle sees aura. Measurements are unavailable.",
+      "Yes, according to one extremely compromised witness."
+    ],
+    "emote": "suspicion"
+  },
+  {
+    "id": "social_root_against",
+    "tier": 94,
+    "pattern": "\\bdoes\\s+@?([a-z0-9_]+(?:\\s+[a-z0-9_]+)?)\\s+(?:just\\s+)?(?:root|cheer|hope|pray)\\s+(?:for\\s+)?(?:sro|mike|solorenektononly)?\\s*(?:to|will)?\\s*(?:lose|fail|int|throw)\\b",
+    "responses": [
+      "No. They want Mike to win and the journey to remain medically interesting.",
+      "They support SRO. They also support content. The conflict is obvious.",
+      "Not against him. Merely emotionally hedged.",
+      "The loyalty is real. So is the appetite for disaster.",
+      "They want the win, preferably after maximum unnecessary suffering.",
+      "The ball detects support with suspicious entertainment incentives."
+    ],
+    "emote": "suspicion"
+  },
+  {
+    "id": "social_gambler",
+    "tier": 94,
+    "pattern": "\\bis\\s+@?([a-z0-9_]+(?:\\s+[a-z0-9_]+)?)\\s+(?:a\\s+)?(?:degenerate\\s+)?(?:gambler|gamba addict|gambling addict)\\b",
+    "responses": [
+      "Yes. The channel points have requested protective custody.",
+      "The signs say gambler. The balance says historian.",
+      "Degenerate is editorial. Gambler is documented.",
+      "Yes. They call bankruptcy a prediction streak.",
+      "The ball sees faith, odds, and no bankroll discipline.",
+      "Absolutely. Every loss is apparently market research."
+    ],
+    "emote": "gamba"
+  },
+  {
+    "id": "game_how_doing",
+    "tier": 92,
+    "pattern": "\\b(?:how (?:are )?we doing|how we look(?:ing)?|how is it looking|current outlook|what are the odds|where we at)\\b",
+    "responses": [
+      "The signs are favorable, but Mike still has access to the keyboard.",
+      "Better than chat deserves. Less safe than the scoreboard suggests.",
+      "The ball sees a path. Nobody is warding it.",
+      "Outlook good. Restraint remains the missing item.",
+      "The game leans our way. The next decision may correct that.",
+      "Promising. Do not say that where Mike can hear it."
+    ],
+    "emote": "hope"
+  },
+  {
+    "id": "game_winnable",
+    "tier": 92,
+    "pattern": "\\b(?:is (?:this|it) winnable|do we win (?:this|these)|we win these|can we win|are we winning)\\b",
+    "responses": [
+      "The game remains winnable. This information must not reach Mike.",
+      "Yes. The lead is real and its life expectancy is unclear.",
+      "The signs point to victory. Chat has already begun interfering.",
+      "Winnable, provided nobody confuses confidence with an engage.",
+      "Yes. One clean fight away from becoming three bad ones.",
+      "The ball sees the win. The minimap sees complications."
+    ],
+    "emote": "hope"
+  },
+  {
+    "id": "game_doomed",
+    "tier": 91,
+    "pattern": "\\b(?:we(?:'re| are)? fucked|we(?:'re| are)? cooked|this is doomed|go next|ff ?15|game over|we lost|its over|it's over)\\b",
+    "responses": [
+      "The omen is dark, but solo queue has survived worse crimes.",
+      "Doomed is premature. Deeply suspicious is accurate.",
+      "The ball sees one path back and four people ignoring it.",
+      "Probably cooked. The plate has not reached the table.",
+      "The signs say go next. Mike hears limit test.",
+      "The game is dying, but content remains full health."
+    ],
+    "emote": "failure"
+  },
+  {
+    "id": "game_back_in_it",
+    "tier": 91,
+    "pattern": "\\b(?:he|we|mike|sro) (?:is|are|'s|'re) back(?: in (?:it|this))?|back in (?:it|this)|comeback angle|we are so back\\b",
+    "responses": [
+      "The comeback is real. The next decision is the dangerous part.",
+      "He is back in it. Chat should remain completely silent.",
+      "The signs have turned. Naturally, confidence is now the threat.",
+      "We are back. Nobody touch anything.",
+      "The game reopened. Mike is searching for the close button.",
+      "Momentum restored. Judgment remains on cooldown."
+    ],
+    "emote": "approval"
+  },
+  {
+    "id": "vision_blue_trinket",
+    "tier": 90,
+    "pattern": "\\b(?:blue trinket|farsight|blue ward|change to blue|swap to blue|need blue|death bush|vision trinket)\\b",
+    "responses": [
+      "Blue trinket reveals what chat has chosen not to see.",
+      "Yes. The death bush has collected enough customers.",
+      "Swap to blue. Face-checking is not a vision system.",
+      "The omen says farsight. The hands say one more bush.",
+      "Blue trinket now, apology later.",
+      "Vision is cheaper than another educational death."
+    ],
+    "emote": "vision"
+  },
+  {
+    "id": "league_build_troll",
+    "tier": 89,
+    "pattern": "\\b(?:troll(?:ing)? with that build|is (?:this|that) build (?:troll|real|good|bad|broken)|what is (?:this|that) build|build diff|itemizing)\\b",
+    "responses": [
+      "The build is real. The reasoning is fan fiction.",
+      "It is good enough for a title and dangerous everywhere else.",
+      "The items form a sentence. The grammar is hostile.",
+      "The build may work. That is not the same as vindication.",
+      "The shopkeeper allowed it. Responsibility ends there.",
+      "The omen sees technology. Chat sees a report option."
+    ],
+    "emote": "disbelief"
+  },
+  {
+    "id": "nightbot_subscribe",
+    "tier": 88,
+    "pattern": "\\bwill\\s+@?nightbot\\s+(?:subscribe|sub|gift|donate|cheer)\\b",
+    "responses": [
+      "The machine offers service, not financial support.",
+      "Nightbot will subscribe when automation develops disposable income.",
+      "No. Nightbot has seen the retention metrics.",
+      "The signs say no. The bot is saving for server costs.",
+      "Nightbot contributes labor and receives blame. Familiar arrangement.",
+      "A subscription is unlikely. A timeout remains available."
+    ],
+    "emote": "disbelief"
+  },
+  {
+    "id": "curse_torsion",
+    "tier": 110,
+    "pattern": "\\b(?:cast|apply|inflict|give)\\s+(?:testicular torsion|torsion|curse|hex)\\b",
+    "responses": [
+      "Spell resisted. The target bought Mercury's Treads.",
+      "The curse lands, but only in the legally ambiguous timeline.",
+      "Cast failed. Chat forgot the mana cost.",
+      "The ball declines reproductive crowd control.",
+      "The hex is ready. Moderation has requested a softer opener.",
+      "Torsion is on cooldown. Try emotional damage."
+    ],
+    "emote": "cringe"
+  }
+]
