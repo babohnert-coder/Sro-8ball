@@ -17,7 +17,13 @@ const cases = [
   ['cast testicular torsion', 'curse_torsion'],
   ['we are fucked', 'game_doomed'],
   ['he is back in it', 'game_back_in_it'],
-  ['mf trolling with that build tho', 'league_build_troll']
+  ['mf trolling with that build tho', 'league_build_troll'],
+  ['should i go outside', 'life_go_outside'],
+  ['this 8ball can never be the original', 'bot_original_nostalgia'],
+  ['please 8ball stop doing all the drugs', 'bot_drug_accusation'],
+  ['is mtf smarter than john', 'social_smarter_than'],
+  ['full ap croc when', 'league_full_ap_croc'],
+  ['call out the fail flash', 'league_fail_flash']
 ];
 
 for (const [input, expected] of cases) {

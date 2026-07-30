@@ -88,3 +88,11 @@ For live 7TV filtering, set either:
 If neither variable is set, the bundled SRO room list is used. The oracle continues working if 7TV is temporarily unavailable.
 
 Room humor guidance is stored in `data/room-humor.json`. Keep recurring lore there and avoid turning temporary jokes into permanent personality.
+
+## v1.3 content update
+
+- Automatically discovers the live SoloRenektonOnly 7TV set using Twitch user ID `30227322`.
+- Uses the full live set as an availability filter while retaining curated semantic categories, so emotes remain relevant rather than random.
+- Adds routes for outside/touch-grass advice, original-8-ball nostalgia, drug accusations, smarter-than comparisons, keeping named chatters in check, full-AP Croc, and fail-flash moments.
+- Reduces default emote frequency to 16%, expands cooldown to eight responses, and still allows no more than one emote per answer.
+- No Vercel environment variable is required for the SRO live 7TV set. `SEVENTV_EMOTE_SET_ID`, `SEVENTV_TWITCH_USER_ID`, and `SEVENTV_EMOTES` remain optional overrides.

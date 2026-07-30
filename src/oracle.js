@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadViewer, saveViewer, recordInteraction, viewerStoreMode } from './viewer-store.js';
-import { getRoomEmotes } from './seventv.js';
+import { getRoomEmotes, sevenTvStatus } from './seventv.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = path.resolve(__dirname, '../data');
@@ -206,7 +206,7 @@ async function maybeEmote(route, response) {
   if (EMOTE_RE.test(response) || Math.random() > emoteConfig.chance) return '';
   const category = emoteCategory(route, response);
   if (!category) return '';
-  const available = await getRoomEmotes(emoteConfig.approvedRoomEmotes || []);
+  const available = await getRoomEmotes(emoteConfig.approvedRoomEmotes || [], emoteConfig);
   const recent = state.recentEmotes.slice(-emoteConfig.cooldown);
   const pool = (emoteConfig.categories[category] || []).filter((e) => available.has(e) && !recent.includes(e));
   if (!pool.length) return '';
@@ -293,8 +293,8 @@ export function health() {
     routes: allRoutes.length,
     highPriorityRoutes: highPriorityRoutes.length,
     legacyRoutes: Object.keys(legacyRoutes).length,
-    version: '1.2.0',
-    sevenTv: Boolean(process.env.SEVENTV_EMOTE_SET_ID || process.env.SEVENTV_EMOTES),
+    version: '1.3.0',
+    sevenTv: sevenTvStatus(),
     bundledRoomEmotes: emoteConfig.approvedRoomEmotes.length,
     viewerContext: viewerStoreMode()
   };

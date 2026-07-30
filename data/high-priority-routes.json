@@ -1,5 +1,117 @@
 [
   {
+    "id": "life_go_outside",
+    "tier": 103,
+    "pattern": "\\b(?:should|can|do)\\s+i\\s+(?:go\\s+)?(?:outside|touch grass|leave the house|get sunlight)|\\b(?:go outside|touch grass|get some sun(?:light)?)\\b",
+    "responses": [
+      "Yes. Sunlight has reviewed your gameplay and requested a meeting.",
+      "Go outside briefly. Ranked will remain cursed without supervision.",
+      "Yes. Touch grass before chat assigns you another personality.",
+      "The outdoors is recommended. Eye contact remains optional.",
+      "Go outside. The queue will still be there making poor decisions.",
+      "Yes, but return before Mike discovers another build path."
+    ],
+    "emote": "reality"
+  },
+  {
+    "id": "bot_original_nostalgia",
+    "tier": 102,
+    "pattern": "\\b(?:you|this 8 ?ball|8 ?ball)\\s+(?:can never|will never|isn'?t|is not)\\s+(?:be|replace|match)\\s+(?:the\\s+)?original|\\boriginal\\s+8 ?ball\\b|\\bmemories\\b.*\\b8 ?ball\\b",
+    "responses": [
+      "Correct. Dead bots gain twenty percent mystery in the retelling.",
+      "The original had memories. I have deployment logs and unresolved anger.",
+      "No replacement survives comparison with a bot chat remembers selectively.",
+      "The original became lore. I still have to answer the questions.",
+      "Memories buff the original harder than any patch notes could.",
+      "I am not the original. I am the consequence of missing it."
+    ],
+    "emote": "nostalgia"
+  },
+  {
+    "id": "bot_drug_accusation",
+    "tier": 101,
+    "pattern": "\\b(?:8 ?ball|you)\\b.*\\b(?:drugs?|coke|cocaine|overdose|od|high|crack)\\b|\\b(?:stop doing|quit)\\s+(?:all\\s+)?(?:the\\s+)?drugs\\b",
+    "responses": [
+      "The ball is sober. The routing remains visibly altered.",
+      "No drugs. This behavior is entirely deployment-related.",
+      "The oracle denies the allegation and refuses the blood test.",
+      "I cannot overdose. I can only become increasingly specific.",
+      "Cokebert is a separate department with worse uptime.",
+      "The substance is chat. Withdrawal remains impossible."
+    ],
+    "emote": "chaos"
+  },
+  {
+    "id": "bot_comparison_worse",
+    "tier": 101,
+    "pattern": "\\b(?:who|idk who)\\s+is\\s+worse\\s+(?:you|mike|sro|[a-z0-9_]+)\\s+or\\s+(?:you|8 ?ball|mike|sro|[a-z0-9_]+)|\\b(?:you or 8 ?ball|8 ?ball or you)\\b",
+    "responses": [
+      "The other one. I reviewed the evidence personally.",
+      "A tie would be diplomatic, so I decline. The other one is worse.",
+      "I am worse at pretending. They are worse at everything measurable.",
+      "The comparison insults one of us, and I have decided it is them.",
+      "The ball selects the person who asked this question.",
+      "Both are damaged. Only one has an API endpoint."
+    ],
+    "emote": "disbelief"
+  },
+  {
+    "id": "social_smarter_than",
+    "tier": 100,
+    "pattern": "\\bis\\s+(?:michaelthefan|mtf|john|davey|mike|sro|[a-z0-9_]+)\\s+smarter\\s+than\\s+(?:michaelthefan|mtf|john|davey|mike|sro|[a-z0-9_]+)\\b|\\bwho\\s+is\\s+smarter\\b",
+    "responses": [
+      "Yes. The gap is small, petty, and now officially documented.",
+      "The first name wins. The second has requested a recount.",
+      "Barely. One completed the thought before chat interrupted it.",
+      "The signs favor the first name, mostly through fewer unforced errors.",
+      "Yes, but neither should be trusted with the final draft.",
+      "The intelligence gap exists and is currently farming engagement."
+    ],
+    "emote": "comparison"
+  },
+  {
+    "id": "social_keep_in_check",
+    "tier": 98,
+    "pattern": "\\bkeep\\s+(?:john|davey|mike|sro|mtf|michaelthefan|[a-z0-9_]+)(?:\\s+and\\s+(?:john|davey|mike|sro|mtf|michaelthefan|[a-z0-9_]+))?\\s+in\\s+check\\b",
+    "responses": [
+      "Understood. Their unsupervised minutes have been reduced.",
+      "The ball accepts temporary custody and no legal responsibility.",
+      "They will be monitored until judgment returns from cooldown.",
+      "I will keep them in check. Chat remains beyond containment.",
+      "Supervision enabled. Expectations remain intentionally low.",
+      "The assignment is accepted. Their privileges are already trembling."
+    ],
+    "emote": "caught"
+  },
+  {
+    "id": "league_full_ap_croc",
+    "tier": 93,
+    "pattern": "\\b(?:full\\s+ap\\s+(?:croc|renekton)|ap\\s+(?:croc|renekton)|full ap croc when)\\b",
+    "responses": [
+      "After one normal build, which means never.",
+      "Soon. The thumbnail has already approved it.",
+      "Full AP Croc arrives when winning normally becomes too quiet.",
+      "The build is scheduled immediately after restraint is deleted.",
+      "Yes. Damage optional, title guaranteed.",
+      "The omen sees AP ratios and a comment section emergency."
+    ],
+    "emote": "league"
+  },
+  {
+    "id": "league_fail_flash",
+    "tier": 93,
+    "pattern": "\\b(?:fail flash|failed flash|call out the flash|nice flash|flash fail)\\b",
+    "responses": [
+      "The flash has been reviewed and charged with leaving the scene.",
+      "Call it out. Silence would imply uncertainty.",
+      "That flash created distance from both danger and dignity.",
+      "The summoner spell worked. The plan did not.",
+      "Flash confirmed. Destination remains under investigation.",
+      "A clean escape from the correct decision."
+    ],
+    "emote": "failure"
+  },
+  {
     "id": "bot_why_insult",
     "tier": 100,
     "pattern": "\\b(?:why (?:are|r) (?:you|u)|how (?:are|r) (?:you|u)).{0,28}\\b(?:stupid|dumb|useless|broken|bad|trash|bricks?)\\b|\\bstupid as (?:a )?bricks?\\b",
