@@ -2,6 +2,7 @@
   "chance": 0.5,
   "cooldown": 4,
   "maxPerResponse": 1,
+  "legacyEmbeddedEmotes": ["LETSGO", "cmonBruh", "BASED", "SRORefill", "Hmm", "British", "Revolutionary", "kassawin"],
   "liveRoomSet": {
     "twitchUserId": "30227322",
     "channel": "SoloRenektonOnly",

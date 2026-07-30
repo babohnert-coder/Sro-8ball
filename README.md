@@ -1,6 +1,6 @@
 # SRO 8 Ball Hosted Oracle
 
-A hosted Twitch/League oracle designed to replace the large Nightbot `$(eval ...)` loop. Nightbot sends the question to one stable endpoint; the endpoint handles typo normalization, hierarchical intent scoring, social questions, League shorthand, mystical fallbacks, anti-repetition, and contextual 7TV emotes, 50% emote delivery, sharper SRO-room humor, and champion-aware answers.
+A hosted Twitch/League oracle designed to replace the large Nightbot `$(eval ...)` loop. Nightbot sends the question to one stable endpoint; the endpoint handles typo normalization, hierarchical intent scoring, social questions, League shorthand, structured fallbacks, anti-repetition, and contextual 7TV emotes, 50% eligible-response emote delivery, sharper SRO-room humor, and champion-aware answers.
 
 ## What this fixes
 
@@ -28,9 +28,9 @@ The health endpoint is:
 https://YOUR-PROJECT.vercel.app/health
 ```
 
-## Nightbot command after deployment
+## Stable Nightbot interface
 
-Replace `YOUR-PROJECT.vercel.app` once the deployment URL is known:
+The existing deployment URL does not need to change for this update. Both `/8ball` and `/api/8ball` remain supported, with `q` or `question` for the question and `user` or `u` for the viewer. For a new deployment only, the usual command is:
 
 ```text
 !commands edit !8ball -cd=12 8ballSRO @$(user): $(urlfetch https://YOUR-PROJECT.vercel.app/8ball?q=$(querystring)&user=$(user))
@@ -94,7 +94,7 @@ Room humor guidance is stored in `data/room-humor.json`. Keep recurring lore the
 - Automatically discovers the live SoloRenektonOnly 7TV set using Twitch user ID `30227322`.
 - Uses the full live set as an availability filter while retaining curated semantic categories, so emotes remain relevant rather than random.
 - Adds routes for outside/touch-grass advice, original-8-ball nostalgia, drug accusations, smarter-than comparisons, keeping named chatters in check, full-AP Croc, and fail-flash moments.
-- Reduces default emote frequency to 16%, expands cooldown to eight responses, and still allows no more than one emote per answer.
+- Historical note: v1.3 briefly targeted a lower emote rate. The current configured behavior is 50% on eligible responses, with a four-emote cooldown window and no more than one emote per answer.
 - No Vercel environment variable is required for the SRO live 7TV set. `SEVENTV_EMOTE_SET_ID`, `SEVENTV_TWITCH_USER_ID`, and `SEVENTV_EMOTES` remain optional overrides.
 
 ## v1.5 social-intelligence upgrade
@@ -105,3 +105,17 @@ Room humor guidance is stored in `data/room-humor.json`. Keep recurring lore the
 - Short pronoun follow-ups can resolve against the viewer's recent question for up to 20 minutes.
 - Dedicated handling was added for `prove it`, `still?`, `again?`, `what about me?`, 400-character bait, and Ask Jeeves comparisons.
 - Debug output now reports intent, confidence, route score, score margin, resolved text, and recognized lore targets.
+
+## v1.6 structured-reference upgrade
+
+- `data/room-humor.json` is now runtime policy: target length, joke limit, discouraged frames, stable lore, and inactive-by-default temporary motifs are read by the oracle.
+- `data/legacy-fallbacks.json` now participates in broad prediction and reaction fallbacks instead of being loaded and ignored.
+- `data/reference-fragments.json` is a tagged composition layer. It can add one context-matched SRO-room observation without sending a pile of dialogue to a model.
+- Debug output reports the fragment ID, emote category, and why an emote was selected or skipped.
+- Package version, voice policy, provenance, fallback count, and emote settings are exposed by `/health`.
+
+### Reference boundary
+
+This package does **not** include the raw chat-log corpus. The supplied route, lore, and room-humor files are the current reference boundary, and `reference-fragments.json` truthfully marks its fragments as curated rather than corpus-derived. A future corpus pass should add reviewed, tagged fragments with provenance; raw dialogue should not be pasted into a prompt or shipped as an unfiltered response pool.
+
+Stable identity and relationship facts belong in `lore-map.json` and `room-humor.json.fixedLore`. Temporary bits belong in `room-humor.json.temporaryMotifs`; they are inactive unless explicitly enabled, so a short-lived joke cannot silently become permanent room canon.

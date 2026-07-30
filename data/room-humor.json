@@ -33,5 +33,8 @@
     "the_misanthrope13": ["crowd work", "degenerate questions"],
     "teamplay4victory": ["moderator", "ban-hammer lore"],
     "johnwestgamer": ["doubter list", "moderator paperwork"]
-  }
+  },
+  "temporaryMotifs": [
+    {"id":"current_room_bits","active":false,"introducedIn":"1.6.0","expiresAfter":null,"tags":[],"lines":[]}
+  ]
 }

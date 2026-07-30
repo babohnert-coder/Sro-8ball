@@ -7,7 +7,7 @@ function parseEnvList(value = '') {
 
 async function fetchJson(url) {
   const response = await fetch(url, {
-    headers: { 'user-agent': 'sro-8ball-oracle/1.5' },
+    headers: { 'user-agent': 'sro-8ball-oracle' },
     signal: AbortSignal.timeout(2200)
   });
   if (!response.ok) throw new Error(`7TV ${response.status}`);

@@ -14,12 +14,25 @@ const legacyFallbacks = read('legacy-fallbacks.json');
 const emoteConfig = read('emotes.json');
 const championKnowledge = read('champions.json');
 const loreMap = read('lore-map.json');
+const roomHumor = read('room-humor.json');
+const referenceBank = read('reference-fragments.json');
+const packageMeta = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../package.json'), 'utf8'));
 
 const CHAMPION_INDEX = championKnowledge.flatMap((champ) => champ.names.map((name) => ({ name, champ }))).sort((a, b) => b.name.length - a.name.length);
 const LORE_INDEX = Object.entries(loreMap.entities || {}).flatMap(([id, entity]) => (entity.aliases || []).map((alias) => ({ id, alias, entity }))).sort((a, b) => b.alias.length - a.alias.length);
 
-const VERDICT = /^(?:yes|no|maybe|unclear|unlikely|inconclusive)\b/i;
-const EMOTE_RE = new RegExp(`\\b(?:${emoteConfig.approvedRoomEmotes.map((x) => x.replace(/[.*+?^${}()|[\\]\\]/g, '\\$&')).join('|')})\\b`);
+const KNOWN_EMOTES = [...(emoteConfig.approvedRoomEmotes || []), ...(emoteConfig.legacyEmbeddedEmotes || [])];
+const EMOTE_RE = new RegExp(`\\b(?:${KNOWN_EMOTES.map((x) => x.replace(/[.*+?^${}()|[\\]\\]/g, '\\$&')).join('|')})\\b`);
+const ACTIVE_TEMPORARY_MOTIFS = (roomHumor.temporaryMotifs || []).filter((motif) => motif.active);
+const REFERENCE_FRAGMENTS = [
+  ...(referenceBank.fragments || []),
+  ...ACTIVE_TEMPORARY_MOTIFS.flatMap((motif) => (motif.lines || []).map((text, index) => ({
+    id: `${motif.id}_${index}`,
+    tags: motif.tags || [],
+    text,
+    temporary: true
+  })))
+];
 
 const TYPO_MAP = new Map([
   ['briish', 'british'], ['britsh', 'british'], ['br*tish', 'british'],
@@ -124,12 +137,13 @@ function findLoreTargets(text) {
 }
 
 function resolvePronouns(text, profile) {
-  if (!/\b(?:he|him|his|they|them|their)\b/.test(text)) return text;
+  const refersBack = /\b(?:he|him|his|she|her|hers|they|them|their|that person|this one)\b/.test(text);
+  if (!refersBack) return text;
   if (text.split(/\s+/).length > 12) return text;
   const last = profile?.interactions?.at(-1);
-  const target = last?.targets?.[0];
-  if (!target || Date.now() - last.at > 1000 * 60 * 20) return text;
-  return `${text} ${target}`;
+  if (!last || Date.now() - last.at > 1000 * 60 * 20) return text;
+  const context = [...(last.targets || [])];
+  return context.length ? `${text} ${context.join(' ')}` : text;
 }
 
 function classifyIntent(text, targets = []) {
@@ -177,7 +191,7 @@ function selectRoute(text) {
   const second = matches[1] || null;
   if (!best) return { route: null, score: -Infinity, margin: 0, confidence: 'none' };
   const margin = best.score - (second?.score ?? -Infinity);
-  const confidence = best.route.tier >= 90 || best.score >= 92 ? 'high' : best.score >= 70 && margin >= 1.5 ? 'medium' : 'low';
+  const confidence = best.route.tier >= 90 && margin >= 0 ? 'high' : best.score >= 70 && margin >= 1.5 ? 'medium' : 'low';
   return { route: best.route, score: best.score, margin, confidence };
 }
 
@@ -190,12 +204,15 @@ function responseFamily(text) {
 }
 
 function chooseResponse(pool) {
+  if (!Array.isArray(pool) || !pool.length) return '';
   const recent = new Set(state.recentResponses.slice(-18));
   const recentFamilies = new Set(state.recentResponses.slice(-6).map(responseFamily));
+  const discouraged = roomHumor.overusedFrames || [];
   const candidates = pool.map((text) => {
     let weight = 10;
     if (recent.has(text)) weight = 0;
     if (recentFamilies.has(responseFamily(text))) weight -= 4;
+    if (discouraged.some((frame) => text.toLowerCase().includes(frame.toLowerCase()))) weight -= 6;
     return { text, weight: Math.max(0, weight) };
   });
   const total = candidates.reduce((sum, x) => sum + x.weight, 0);
@@ -297,7 +314,60 @@ function fallback(intent, shape, targets = []) {
       'The timeline accepts this under protest.'
     ]
   };
-  return chooseResponse(pools[intent] || pools[shape] || pools.reaction);
+  const focused = pools[intent] || pools[shape] || pools.reaction;
+  const mayUseLegacy = ['prediction', 'reaction'].includes(intent) || ['prediction', 'reaction'].includes(shape);
+  return chooseResponse(mayUseLegacy ? [...focused, ...legacyFallbacks] : focused);
+}
+
+function routeTags(route, intent, response, targets) {
+  const tags = new Set([intent, ...(targets || []).map((target) => target.id)]);
+  const signature = `${route?.id || ''} ${response}`.toLowerCase();
+  if (/vision|trinket|ward/.test(signature)) tags.add('vision');
+  if (/\b(?:build|item|items|runes?)\b/.test(signature)) tags.add('build');
+  if (/game_|winnable|doomed|comeback/.test(signature)) tags.add('game');
+  if (/league_|champion_|build|item/.test(signature)) tags.add('league');
+  if (/bot_|oracle|8ball/.test(signature)) tags.add('botbait');
+  return tags;
+}
+
+function chooseTaggedFragment(tags, response) {
+  const entityTags = new Set(Object.keys(loreMap.entities || {}));
+  const gatedTags = new Set(['vision', 'build', 'nonsense', ...entityTags]);
+  const candidates = REFERENCE_FRAGMENTS
+    .map((fragment) => ({
+      ...fragment,
+      score: (fragment.tags || []).reduce((sum, tag) => sum + (tags.has(tag) ? 1 : 0), 0)
+    }))
+    .filter((fragment) => fragment.score > 0)
+    .filter((fragment) => (fragment.tags || []).filter((tag) => gatedTags.has(tag)).every((tag) => tags.has(tag)))
+    .filter((fragment) => !response.toLowerCase().includes(fragment.text.toLowerCase()));
+  if (!candidates.length) return '';
+  const best = Math.max(...candidates.map((fragment) => fragment.score));
+  return chooseResponse(candidates.filter((fragment) => fragment.score === best).map((fragment) => fragment.text));
+}
+
+function cleanOneLine(text) {
+  return String(text).replace(/[\r\n\t]+/g, ' ').replace(/\s{2,}/g, ' ').trim();
+}
+
+function limitEmbeddedEmotes(text) {
+  if (Number(emoteConfig.maxPerResponse) < 1) {
+    return cleanOneLine(text.replace(new RegExp(EMOTE_RE.source, 'g'), ''));
+  }
+  let seen = 0;
+  return cleanOneLine(text.replace(new RegExp(EMOTE_RE.source, 'g'), (token) => (++seen === 1 ? token : '')));
+}
+
+function composeResponse(base, { route, intent, targets, allowReference = true }) {
+  let response = cleanOneLine(base) || 'The ball declines to elaborate.';
+  const targetWords = Math.max(8, Number(roomHumor.voice?.targetWords) || 18);
+  const maxJokes = Math.max(0, Number(roomHumor.voice?.maxJokes) || 0);
+  const tags = routeTags(route, intent, response, targets);
+  if (allowReference && maxJokes > 0 && response.split(/\s+/).length < targetWords && Math.random() < 0.32) {
+    const fragment = chooseTaggedFragment(tags, response);
+    if (fragment) response = `${response} ${fragment}`;
+  }
+  return limitEmbeddedEmotes(response);
 }
 
 function emoteCategory(route, response) {
@@ -316,20 +386,22 @@ function emoteCategory(route, response) {
 }
 
 async function maybeEmote(route, response) {
-  if (EMOTE_RE.test(response) || Math.random() > emoteConfig.chance) return '';
   const category = emoteCategory(route, response);
-  if (!category) return '';
+  if (Number(emoteConfig.maxPerResponse) < 1) return { name: '', category, reason: 'disabled' };
+  if (EMOTE_RE.test(response)) return { name: '', category, reason: 'already-present' };
+  if (Math.random() > emoteConfig.chance) return { name: '', category, reason: 'chance' };
+  if (!category) return { name: '', category: null, reason: 'no-category' };
   const available = await getRoomEmotes(emoteConfig.approvedRoomEmotes || [], emoteConfig);
   const recent = state.recentEmotes.slice(-emoteConfig.cooldown);
   const categoryPool = (emoteConfig.categories[category] || emoteConfig.categories.edge || []).filter((e) => available.has(e));
-  if (!categoryPool.length) return '';
+  if (!categoryPool.length) return { name: '', category, reason: 'no-available-match' };
   let pool = categoryPool.filter((e) => !recent.includes(e));
   if (!pool.length) {
     const last = state.recentEmotes.at(-1);
     pool = categoryPool.filter((e) => e !== last);
   }
   if (!pool.length) pool = categoryPool;
-  return pool[Math.floor(Math.random() * pool.length)];
+  return { name: pool[Math.floor(Math.random() * pool.length)], category, reason: 'selected' };
 }
 
 function callback(profile, route, text) {
@@ -372,19 +444,27 @@ export async function answerOracle(rawQuestion, { user = '', debug = false } = {
   const intent = classifyIntent(resolvedText, targets);
   const selection = selectRoute(resolvedText);
   let route = selection.route;
+  let effectiveConfidence = selection.confidence;
   const champ = findChampion(resolvedText);
   if (champ && (!route || route.tier <= 72 || /^legacy_(league_state|champ_next|good_bad|why|permission|prediction)/.test(route.id))) {
     route = { id: `champion_${champ.id}`, tier: 74, emote: 'champion' };
+    effectiveConfidence = 'medium';
   }
-  if (selection.confidence === 'low' && route?.tier < 70) route = null;
+  if (effectiveConfidence === 'low' && route?.tier < 70) route = null;
   let response = route?.id?.startsWith('champion_') ? championResponse(champ, resolvedText) : route ? chooseResponse(route.responses) : fallback(intent, questionShape(resolvedText), targets);
-  const prefix = callback(profile, route, text);
-  if (prefix) response = `${prefix} ${response}`;
-  const emote = await maybeEmote(route, response);
+  const callbackText = callback(profile, route, text);
+  if (callbackText) {
+    response = roomHumor.voice?.directAnswerFirst ? `${response} ${callbackText}` : `${callbackText} ${response}`;
+  }
+  response = composeResponse(response, { route, intent, targets, allowReference: !callbackText });
+  const coreResponse = response;
+  const emoteDecision = await maybeEmote(route, response);
+  const emote = emoteDecision.name;
   if (emote) response = `${response} ${emote}`;
+  response = cleanOneLine(response);
   if (response.length > 380) response = `${response.slice(0, 377).trimEnd()}...`;
 
-  state.recentResponses.push(response);
+  state.recentResponses.push(coreResponse);
   if (state.recentResponses.length > 40) state.recentResponses.shift();
   if (emote) {
     state.recentEmotes.push(emote);
@@ -402,6 +482,7 @@ export async function answerOracle(rawQuestion, { user = '', debug = false } = {
       targets: targets.map((x) => x.id),
       intent,
       route: route?.id || `fallback_${intent}`, 
+      coreResponse,
       response,
       at: Date.now()
     });
@@ -413,12 +494,20 @@ export async function answerOracle(rawQuestion, { user = '', debug = false } = {
     normalized: text,
     resolved: resolvedText,
     intent,
-    confidence: selection.confidence,
+    confidence: effectiveConfidence,
     score: Number.isFinite(selection.score) ? selection.score : null,
     margin: selection.margin,
     targets: targets.map((x) => x.id),
+    stableLore: Object.fromEntries(targets.map((target) => {
+      const aliases = [target.id, ...(target.entity.aliases || [])];
+      const match = Object.entries(roomHumor.fixedLore || {}).find(([key]) => aliases.includes(key));
+      return [target.id, match?.[1] || target.entity.traits || []];
+    })),
     route: route?.id || `fallback_${intent}`, 
     emote: emote || null,
+    emoteCategory: emoteDecision.category,
+    emoteDecision: emoteDecision.reason,
+    referenceFragment: REFERENCE_FRAGMENTS.find((fragment) => coreResponse.includes(fragment.text))?.id || null,
     viewer: profile ? { total: profile.total, recent: profile.interactions.slice(-4), routeCounts: profile.routeCounts } : null
   };
   return debug ? result : response;
@@ -430,12 +519,20 @@ export function health() {
     routes: allRoutes.length,
     highPriorityRoutes: highPriorityRoutes.length,
     legacyRoutes: Object.keys(legacyRoutes).length,
-    version: '1.5.0',
+    version: packageMeta.version,
     sevenTv: sevenTvStatus(),
     bundledRoomEmotes: emoteConfig.approvedRoomEmotes.length,
+    emoteChance: emoteConfig.chance,
+    emoteCooldown: emoteConfig.cooldown,
+    maxEmotesPerResponse: emoteConfig.maxPerResponse,
     championProfiles: championKnowledge.length,
     loreEntities: Object.keys(loreMap.entities || {}).length,
     relationshipMaps: (loreMap.relationships || []).length,
+    referenceFragments: REFERENCE_FRAGMENTS.length,
+    legacyFallbacks: legacyFallbacks.length,
+    referenceProvenance: referenceBank.provenance,
+    activeTemporaryMotifs: ACTIVE_TEMPORARY_MOTIFS.length,
+    voicePolicy: roomHumor.voice,
     viewerContext: viewerStoreMode()
   };
 }

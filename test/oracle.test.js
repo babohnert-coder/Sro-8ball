@@ -42,7 +42,7 @@ for (const [input, expected] of cases) {
 }
 assert.ok(health().routes > 50);
 assert.ok(health().championProfiles >= 20);
-assert.equal(health().version, '1.5.0');
+assert.equal(health().version, '1.6.0');
 assert.ok(health().loreEntities >= 6);
 assert.ok(health().relationshipMaps >= 3);
 console.log(`PASS: ${cases.length} routing cases; ${health().routes} total routes`);

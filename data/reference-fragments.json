@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "provenance": {
+    "source": "curated-build-assets",
+    "corpusDerived": false,
+    "note": "Curated from the supplied route, lore, and room-humor assets. No raw chat corpus is included in this package."
+  },
+  "fragments": [
+    {"id":"game_content","tags":["game","solorenektononly"],"text":"Mike can still convert the lead into content."},
+    {"id":"game_belief","tags":["game","reaction"],"text":"Chat will believe as soon as the odds move."},
+    {"id":"league_cannon","tags":["league","game"],"text":"The cannon has shown better judgment."},
+    {"id":"vision_bush","tags":["league","vision"],"text":"Blue trinket remains cheaper than another death-bush donation."},
+    {"id":"build_title","tags":["league","build"],"text":"The build is one fight from becoming a title."},
+    {"id":"social_mtf","tags":["social","michaelthefan"],"text":"MTF has already requested Nidalee."},
+    {"id":"social_john","tags":["social","john"],"text":"John has started the paperwork."},
+    {"id":"social_misanthrope","tags":["social","the_misanthrope13"],"text":"Misanthrope is treating this as crowd work."},
+    {"id":"builder_warranty","tags":["botbait","b0n3sxx"],"text":"Bones built the vessel; chat voided the warranty."},
+    {"id":"life_outside","tags":["life"],"text":"Ranked will still be broken when you get back."},
+    {"id":"challenge_ruling","tags":["challenge"],"text":"The second shake did not improve the evidence."},
+    {"id":"reaction_dome","tags":["reaction","solorenektononly"],"text":"The dome saw it; restraint did not."}
+  ]
+}

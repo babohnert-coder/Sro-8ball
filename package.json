@@ -1,12 +1,12 @@
 {
   "name": "sro-8ball-hosted-oracle",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "private": true,
   "type": "module",
-  "description": "Hosted SRO Twitch oracle with confidence-aware routing, relationship lore, sharper fallbacks, 50% semantic 7TV emotes, champion knowledge, and viewer context.",
+  "description": "Hosted SRO Twitch oracle with confidence-aware routing, tagged composition, stable lore, semantic 7TV emotes, champion knowledge, and viewer context.",
   "scripts": {
     "start": "node server.js",
-    "test": "node test/oracle.test.js",
+    "test": "SEVENTV_EMOTES=NODDERS,HOPIUM,lookUp,Aware,KEKScreen,HUH,KEKL node test/oracle.test.js && SEVENTV_EMOTES=NODDERS,HOPIUM,lookUp,Aware,KEKScreen,HUH,KEKL node test/runtime.test.js",
     "demo": "node test/demo.js"
   },
   "engines": {
