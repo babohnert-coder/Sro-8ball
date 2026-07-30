@@ -23,7 +23,16 @@ const cases = [
   ['please 8ball stop doing all the drugs', 'bot_drug_accusation'],
   ['is mtf smarter than john', 'social_smarter_than'],
   ['full ap croc when', 'league_full_ap_croc'],
-  ['call out the fail flash', 'league_fail_flash']
+  ['call out the fail flash', 'league_fail_flash'],
+  ['is irelia broken', 'champion_irelia'],
+  ['what should i build on singed', 'champion_singed'],
+  ['is ksante good', 'champion_ksante'],
+  ['tell me about gangplank', 'champion_gangplank'],
+  ['is your response over 400 characters', 'bot_length_bait'],
+  ['prove it', 'bot_prove_it'],
+  ['still?', 'bot_still_again'],
+  ['what about me', 'social_what_about_me'],
+  ['are you ask jeeves now', 'bot_ask_jeeves']
 ];
 
 for (const [input, expected] of cases) {
@@ -32,4 +41,8 @@ for (const [input, expected] of cases) {
   assert.ok(result.response.length > 5);
 }
 assert.ok(health().routes > 50);
+assert.ok(health().championProfiles >= 20);
+assert.equal(health().version, '1.5.0');
+assert.ok(health().loreEntities >= 6);
+assert.ok(health().relationshipMaps >= 3);
 console.log(`PASS: ${cases.length} routing cases; ${health().routes} total routes`);

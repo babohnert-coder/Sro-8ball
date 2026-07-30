@@ -1,6 +1,6 @@
 # SRO 8 Ball Hosted Oracle
 
-A hosted Twitch/League oracle designed to replace the large Nightbot `$(eval ...)` loop. Nightbot sends the question to one stable endpoint; the endpoint handles typo normalization, hierarchical intent scoring, social questions, League shorthand, mystical fallbacks, anti-repetition, and contextual 7TV emotes.
+A hosted Twitch/League oracle designed to replace the large Nightbot `$(eval ...)` loop. Nightbot sends the question to one stable endpoint; the endpoint handles typo normalization, hierarchical intent scoring, social questions, League shorthand, mystical fallbacks, anti-repetition, and contextual 7TV emotes, 50% emote delivery, sharper SRO-room humor, and champion-aware answers.
 
 ## What this fixes
 
@@ -96,3 +96,12 @@ Room humor guidance is stored in `data/room-humor.json`. Keep recurring lore the
 - Adds routes for outside/touch-grass advice, original-8-ball nostalgia, drug accusations, smarter-than comparisons, keeping named chatters in check, full-AP Croc, and fail-flash moments.
 - Reduces default emote frequency to 16%, expands cooldown to eight responses, and still allows no more than one emote per answer.
 - No Vercel environment variable is required for the SRO live 7TV set. `SEVENTV_EMOTE_SET_ID`, `SEVENTV_TWITCH_USER_ID`, and `SEVENTV_EMOTES` remain optional overrides.
+
+## v1.5 social-intelligence upgrade
+
+- Confidence-aware routing avoids confidently choosing weak or ambiguous matches.
+- Fallbacks are classified as challenge, comparison, bot bait, social, game, League, life, nonsense, or reaction.
+- Relationship lore combines recurring room characters instead of repeating isolated name jokes.
+- Short pronoun follow-ups can resolve against the viewer's recent question for up to 20 minutes.
+- Dedicated handling was added for `prove it`, `still?`, `again?`, `what about me?`, 400-character bait, and Ask Jeeves comparisons.
+- Debug output now reports intent, confidence, route score, score margin, resolved text, and recognized lore targets.

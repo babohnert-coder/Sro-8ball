@@ -1,5 +1,65 @@
 [
   {
+    "id": "bot_length_bait",
+    "tier": 106,
+    "pattern": "\\b(?:is|will|was|are)\\s+(?:your|the)\\s+(?:response|answer)\\s+(?:over|under|more than|less than)\\s+400\\s+characters?\\b|\\b400\\s+characters?\\b",
+    "responses": [
+      "No. Production fixed what preview mode embarrassed.",
+      "Under 400. Unlike chat's postmortem.",
+      "The answer fits. The ego may require another endpoint.",
+      "Compact, operational, and still somehow too much for you."
+    ],
+    "emote": "caught"
+  },
+  {
+    "id": "bot_prove_it",
+    "tier": 104,
+    "pattern": "^(?:prove it|proof|show me|receipts|source\\??)$",
+    "responses": [
+      "You asked a haunted billiard ball for peer review. The proof is your situation.",
+      "The evidence was visible before you typed this.",
+      "Exhibit A is still talking.",
+      "The ruling stands. Appeals require better gameplay."
+    ],
+    "emote": "caught"
+  },
+  {
+    "id": "bot_still_again",
+    "tier": 103,
+    "pattern": "^(?:still|again|still\\?|again\\?|you sure|are you sure)\\??$",
+    "responses": [
+      "Still. Time passed; the diagnosis did not.",
+      "Again. Repetition has not improved the evidence.",
+      "Yes. The second consultation was somehow less necessary.",
+      "The omen remains unchanged and mildly annoyed."
+    ],
+    "emote": "disbelief"
+  },
+  {
+    "id": "social_what_about_me",
+    "tier": 102,
+    "pattern": "^(?:what about me|and me|how about me|am i safe|do me)\\??$",
+    "responses": [
+      "You were already included under preventable complications.",
+      "The ball reviewed your file and closed the curtains.",
+      "You are not exempt. You are the follow-up example.",
+      "Chat asked for collateral damage and you volunteered."
+    ],
+    "emote": "roast"
+  },
+  {
+    "id": "bot_ask_jeeves",
+    "tier": 103,
+    "pattern": "\\b(?:ask jeeves|google assistant|helpful assistant|chatgpt|customer service|faq bot)\\b",
+    "responses": [
+      "Ask Jeeves had manners. I have chat logs.",
+      "I am not customer service. Your ticket has been mocked and closed.",
+      "Helpful assistant mode was removed for lack of room compatibility.",
+      "Google answers questions. I document poor judgment."
+    ],
+    "emote": "roast"
+  },
+  {
     "id": "life_go_outside",
     "tier": 103,
     "pattern": "\\b(?:should|can|do)\\s+i\\s+(?:go\\s+)?(?:outside|touch grass|leave the house|get sunlight)|\\b(?:go outside|touch grass|get some sun(?:light)?)\\b",

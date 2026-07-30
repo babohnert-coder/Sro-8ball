@@ -1,6 +1,6 @@
 {
-  "chance": 0.16,
-  "cooldown": 8,
+  "chance": 0.5,
+  "cooldown": 4,
   "maxPerResponse": 1,
   "liveRoomSet": {
     "twitchUserId": "30227322",
@@ -8,29 +8,164 @@
     "refreshMinutes": 10
   },
   "categories": {
-    "approval": ["NODDERS", "YEP", "badYEP", "VeryBased", "GIGACHAD", "Wp"],
-    "hope": ["HOPIUM", "NODDERS", "WPGG"],
-    "failure": ["RIPBOZO", "Deadge", "sroNope", "SkillIssue", "ICANT", "Saddies"],
-    "disbelief": ["AINTNOWAY", "HUH", "ICANT", "KEKL", "xxd"],
-    "suspicion": ["Susge", "modCheck", "Aware", "HUH"],
-    "vision": ["lookUp", "MYEYES", "Aware", "KEKScreen"],
-    "caught": ["CAUGHT", "KEKScreen", "Aware"],
-    "bald": ["Baldge", "KEKbald", "BOOMWADDUP"],
-    "gamba": ["WPGG", "RIPBOZO", "COPIUM"],
-    "cringe": ["DIESOFCRINGE", "Pffttt", "KEKL", "HUH"],
-    "romance": ["Kreygasm", "Susge", "AINTNOWAY"],
-    "league": ["NODDERS", "sroNope", "xxd", "GIGANASUS"],
-    "chaos": ["KEKL", "HUH", "AINTNOWAY", "Pffttt", "xxd"],
-    "reality": ["lookUp", "Aware", "NODDERS"],
-    "nostalgia": ["Saddies", "Aware", "NODDERS"],
-    "comparison": ["HUH", "KEKL", "Aware", "NODDERS"]
+    "approval": [
+      "NODDERS",
+      "YEP",
+      "badYEP",
+      "VeryBased",
+      "GIGACHAD",
+      "Wp"
+    ],
+    "hope": [
+      "HOPIUM",
+      "NODDERS",
+      "WPGG"
+    ],
+    "failure": [
+      "RIPBOZO",
+      "Deadge",
+      "sroNope",
+      "SkillIssue",
+      "ICANT",
+      "Saddies"
+    ],
+    "disbelief": [
+      "AINTNOWAY",
+      "HUH",
+      "ICANT",
+      "KEKL",
+      "xxd"
+    ],
+    "suspicion": [
+      "Susge",
+      "modCheck",
+      "Aware",
+      "HUH"
+    ],
+    "vision": [
+      "lookUp",
+      "MYEYES",
+      "Aware",
+      "KEKScreen"
+    ],
+    "caught": [
+      "CAUGHT",
+      "KEKScreen",
+      "Aware"
+    ],
+    "bald": [
+      "Baldge",
+      "KEKbald",
+      "BOOMWADDUP"
+    ],
+    "gamba": [
+      "WPGG",
+      "RIPBOZO",
+      "COPIUM"
+    ],
+    "cringe": [
+      "DIESOFCRINGE",
+      "Pffttt",
+      "KEKL",
+      "HUH"
+    ],
+    "romance": [
+      "Kreygasm",
+      "Susge",
+      "AINTNOWAY"
+    ],
+    "league": [
+      "NODDERS",
+      "sroNope",
+      "xxd",
+      "GIGANASUS"
+    ],
+    "chaos": [
+      "KEKL",
+      "HUH",
+      "AINTNOWAY",
+      "Pffttt",
+      "xxd"
+    ],
+    "reality": [
+      "lookUp",
+      "Aware",
+      "NODDERS"
+    ],
+    "nostalgia": [
+      "Saddies",
+      "Aware",
+      "NODDERS"
+    ],
+    "comparison": [
+      "HUH",
+      "KEKL",
+      "Aware",
+      "NODDERS"
+    ],
+    "roast": [
+      "KEKL",
+      "HUH",
+      "ICANT",
+      "Pffttt",
+      "xxd",
+      "RIPBOZO"
+    ],
+    "champion": [
+      "GIGANASUS",
+      "NODDERS",
+      "HUH",
+      "KEKL",
+      "BOOMWADDUP",
+      "xxd"
+    ],
+    "edge": [
+      "KEKL",
+      "AINTNOWAY",
+      "HUH",
+      "Pffttt",
+      "ICANT",
+      "CAUGHT"
+    ]
   },
   "approvedRoomEmotes": [
-    "NODDERS", "YEP", "badYEP", "VeryBased", "GIGACHAD", "Wp",
-    "COPIUM", "HOPIUM", "RIPBOZO", "Deadge", "sroNope", "SkillIssue",
-    "ICANT", "AINTNOWAY", "HUH", "KEKL", "xxd", "Susge", "modCheck",
-    "Aware", "lookUp", "MYEYES", "KEKScreen", "CAUGHT", "Baldge",
-    "KEKbald", "BOOMWADDUP", "WPGG", "DIESOFCRINGE", "Pffttt", "Kreygasm",
-    "Saddies", "GIGANASUS"
+    "NODDERS",
+    "YEP",
+    "badYEP",
+    "VeryBased",
+    "GIGACHAD",
+    "Wp",
+    "COPIUM",
+    "HOPIUM",
+    "RIPBOZO",
+    "Deadge",
+    "sroNope",
+    "SkillIssue",
+    "ICANT",
+    "AINTNOWAY",
+    "HUH",
+    "KEKL",
+    "xxd",
+    "Susge",
+    "modCheck",
+    "Aware",
+    "lookUp",
+    "MYEYES",
+    "KEKScreen",
+    "CAUGHT",
+    "Baldge",
+    "KEKbald",
+    "BOOMWADDUP",
+    "WPGG",
+    "DIESOFCRINGE",
+    "Pffttt",
+    "Kreygasm",
+    "Saddies",
+    "GIGANASUS",
+    "Clueless",
+    "WICKED",
+    "LETHIMCOOK",
+    "NOPERS",
+    "NoThanks"
   ]
 }

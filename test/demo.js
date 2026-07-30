@@ -8,6 +8,11 @@ const questions = [
   'should we change to blue trinket',
   'will Nightbot subscribe?',
   'is Teamplay short',
-  'cast testicular torsion'
+  'cast testicular torsion',
+  'is irelia broken',
+  'what should i build on singed'
 ];
-for (const q of questions) console.log(`${q}\n  -> ${answerOracle(q, { user: 'demo' })}\n`);
+for (const q of questions) {
+  const answer = await answerOracle(q, { user: 'demo' });
+  console.log(`${q}\n  -> ${answer}\n`);
+}

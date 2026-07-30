@@ -12,6 +12,11 @@ const highPriorityRoutes = read('high-priority-routes.json');
 const legacyRoutes = read('smart-responses.json');
 const legacyFallbacks = read('legacy-fallbacks.json');
 const emoteConfig = read('emotes.json');
+const championKnowledge = read('champions.json');
+const loreMap = read('lore-map.json');
+
+const CHAMPION_INDEX = championKnowledge.flatMap((champ) => champ.names.map((name) => ({ name, champ }))).sort((a, b) => b.name.length - a.name.length);
+const LORE_INDEX = Object.entries(loreMap.entities || {}).flatMap(([id, entity]) => (entity.aliases || []).map((alias) => ({ id, alias, entity }))).sort((a, b) => b.alias.length - a.alias.length);
 
 const VERDICT = /^(?:yes|no|maybe|unclear|unlikely|inconclusive)\b/i;
 const EMOTE_RE = new RegExp(`\\b(?:${emoteConfig.approvedRoomEmotes.map((x) => x.replace(/[.*+?^${}()|[\\]\\]/g, '\\$&')).join('|')})\\b`);
@@ -81,6 +86,25 @@ const state = {
   userHistory: new Map()
 };
 
+
+function findChampion(text) {
+  for (const { name, champ } of CHAMPION_INDEX) {
+    const escaped = name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    if (new RegExp(`\\b${escaped.replace(/\\ /g, '\\s+')}\\b`, 'i').test(text)) return champ;
+  }
+  return null;
+}
+
+function championResponse(champ, text) {
+  let lead;
+  if (/\b(?:good|strong|broken|op|viable|worth|suck|bad)\b/.test(text)) lead = champ.good;
+  else if (/\b(?:build|item|items|ap|ad|tank|bruiser|crit|on hit|on-hit)\b/.test(text)) lead = champ.build;
+  else if (/\b(?:what|who|explain|does|do|is)\b/.test(text)) lead = `${champ.names[0][0].toUpperCase()+champ.names[0].slice(1)} is ${champ.role}: ${champ.identity}.`;
+  else lead = chooseResponse(champ.roasts);
+  if (Math.random() < 0.58) return `${lead} ${chooseResponse(champ.roasts)}`;
+  return lead;
+}
+
 function questionShape(text) {
   if (/\bwhy\b/.test(text)) return 'why';
   if (/\bwhen|how long|what time\b/.test(text)) return 'when';
@@ -88,6 +112,46 @@ function questionShape(text) {
   if (/\bwho|what is|what are\b/.test(text)) return 'identity';
   if (/\bwill|does|do|is|are|can\b/.test(text) || text.endsWith('?')) return 'prediction';
   return 'reaction';
+}
+
+function findLoreTargets(text) {
+  const found = [];
+  for (const entry of LORE_INDEX) {
+    const escaped = entry.alias.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\\ /g, '\\s+');
+    if (new RegExp(`\\b${escaped}\\b`, 'i').test(text) && !found.some((x) => x.id === entry.id)) found.push(entry);
+  }
+  return found;
+}
+
+function resolvePronouns(text, profile) {
+  if (!/\b(?:he|him|his|they|them|their)\b/.test(text)) return text;
+  if (text.split(/\s+/).length > 12) return text;
+  const last = profile?.interactions?.at(-1);
+  const target = last?.targets?.[0];
+  if (!target || Date.now() - last.at > 1000 * 60 * 20) return text;
+  return `${text} ${target}`;
+}
+
+function classifyIntent(text, targets = []) {
+  if (/^(?:prove it|proof|show me|receipts|source|still|again|you sure|are you sure|what about me|and me|how about me)/.test(text)) return 'challenge';
+  if (/\b(?:smarter|better|worse|stronger|more|less)\s+than\b|\bwho is (?:better|worse|smarter)\b/.test(text)) return 'comparison';
+  if (/\b(?:8 ?ball|bot|oracle|you)\b.*\b(?:suck|stupid|dumb|broken|die|delete|over 400|original)\b/.test(text)) return 'botbait';
+  if (targets.length || /\b(?:like|love|hate|trust|date|marry|cute|hot|friend)\b/.test(text)) return 'social';
+  if (/\b(?:winnable|winning|losing|doomed|back in it|throw|lead|game|teamfight|ff|surrender)\b/.test(text)) return 'game';
+  if (/\b(?:build|item|champion|lane|top|jungle|mid|adc|support|baron|dragon|ward|trinket|flash|ult|cs|cannon)\b/.test(text)) return 'league';
+  if (/\b(?:outside|sleep|eat|work|job|money|girlfriend|boyfriend|life)\b/.test(text)) return 'life';
+  if (/\b(?:goon|cokebert|drugs|naked|single sock|testicular|balls|degenerate)\b/.test(text)) return 'nonsense';
+  return 'reaction';
+}
+
+function loreResponse(targets) {
+  if (!targets.length) return '';
+  if (targets.length >= 2) {
+    const ids = new Set(targets.map((x) => x.id));
+    const relation = (loreMap.relationships || []).find((r) => r.members.every((m) => ids.has(m)));
+    if (relation?.lines?.length) return chooseResponse(relation.lines);
+  }
+  return chooseResponse(targets[0].entity.lines || []);
 }
 
 function topicalBoost(route, text) {
@@ -109,7 +173,12 @@ function selectRoute(text) {
     matches.push({ route, score });
   }
   matches.sort((a, b) => b.score - a.score || a.route.order - b.route.order);
-  return matches[0]?.route || null;
+  const best = matches[0] || null;
+  const second = matches[1] || null;
+  if (!best) return { route: null, score: -Infinity, margin: 0, confidence: 'none' };
+  const margin = best.score - (second?.score ?? -Infinity);
+  const confidence = best.route.tier >= 90 || best.score >= 92 ? 'high' : best.score >= 70 && margin >= 1.5 ? 'medium' : 'low';
+  return { route: best.route, score: best.score, margin, confidence };
 }
 
 function responseFamily(text) {
@@ -139,53 +208,96 @@ function chooseResponse(pool) {
   return candidates.at(-1).text;
 }
 
-function fallback(shape) {
+function fallback(intent, shape, targets = []) {
+  const lore = loreResponse(targets);
+  if (lore && Math.random() < 0.72) return lore;
   const pools = {
+    challenge: [
+      'The ruling stands. Your appeal contained no new gameplay.',
+      'You came back for a rematch with a haunted endpoint.',
+      'The ball has reviewed your objection and found it emotionally motivated.',
+      'Ask again louder. The evidence enjoys confidence.'
+    ],
+    comparison: [
+      'The first one wins by fewer preventable decisions.',
+      'One has evidence. The other has volume.',
+      'The gap is narrow, petty, and now part of room lore.',
+      'Chat requested a comparison and accidentally supplied two warnings.'
+    ],
+    botbait: [
+      'The ball survives. Your premise did not.',
+      'You are beefing with an endpoint and currently losing.',
+      'The oracle has logged the disrespect under predictable.',
+      'Chat built a machine and immediately challenged it to fistfight.'
+    ],
+    social: [
+      'Against better judgment, the ecosystem requires them.',
+      'The room has confused repeated exposure with affection again.',
+      'The chemistry is real. So is the moderator concern.',
+      'This relationship has lore, no supervision, and excellent clip potential.'
+    ],
+    game: [
+      'Winnable until Mike detects content.',
+      'The lead is real. Its life expectancy is not.',
+      'One clean fight from victory, one normal fight from a documentary.',
+      'The game remains alive and visibly unsupervised.'
+    ],
+    league: [
+      'Mechanically possible. Spiritually reportable.',
+      'The build has damage, intent, and no adult signature.',
+      'Macro objected. The hands proceeded anyway.',
+      'The correct play remains available, which is concerning.'
+    ],
+    life: [
+      'Do it before ranked becomes your primary ecosystem.',
+      'The sun has issued a welfare check.',
+      'Real life remains unpatched and somehow still viable.',
+      'Yes. Touch grass before chat theorycrafts your personality.'
+    ],
+    nonsense: [
+      'The premise arrived pre-cursed. I respect the efficiency.',
+      'This question has been denied access to normal society.',
+      'Chat has once again weaponized literacy.',
+      'The ball understood that and wishes it had not.'
+    ],
     why: [
-      'Because the signs prefer consequences to explanations.',
-      'The reason is hidden behind poor vision.',
-      'Because chat touched the timeline again.',
-      'The omen knows why and has declined to testify.',
+      'Because somebody in this room keeps mistaking confidence for pathing.',
+      'Because the minimap was decorative and accountability had ads.',
+      'Because chat touched the timeline with both hands and no supervision.',
       'Because the simple path produced no content.'
     ],
     when: [
-      'Soon, but not before one unnecessary fight.',
+      'Soon. Mike just needs one unnecessary fight to make it content.',
       'After the next cannon falls.',
-      'When the signs stop laughing.',
       'Three queues from now, give or take a surrender vote.',
-      'The timing is obscured by poor macro.'
+      'Right after macro returns from its smoke break.'
     ],
     permission: [
-      'The ball permits it. Wisdom has filed an objection.',
-      'You may. The omen did not say you should.',
-      'Proceed carefully; chat has mistaken permission for prophecy before.',
+      'Do it. Wisdom was never a moderator here.',
+      'Proceed. The replay needs a villain.',
       'The path is open and visibly cursed.',
       'Yes, but keep one escape route unmuted.'
     ],
     prediction: [
-      'The signs lean yes, but chat has already contaminated the reading.',
-      'Maybe. The outcome is hiding behind poor vision.',
-      'The ball sees two paths. Both contain unnecessary confidence.',
+      'Yeah, until Mike smells a thumbnail.',
+      'Two paths: boring success or premium content. Guess which one loaded.',
       'Unclear. Ask again after the next cannon dies.',
-      'The omen refuses certainty while Mike retains agency.',
       'Probably, which is more dangerous than a no.'
     ],
     identity: [
-      'A cursed League oracle with access to public records.',
+      'SRO chat compressed into a haunted endpoint.',
       'Part prophecy, part chat damage, fully on cooldown.',
-      'The room speaking through a green triangle.',
-      'A witness with no subpoena power.',
+      'A cursed billiard ball with better macro than the lobby.',
       'The replay, arriving early.'
     ],
     reaction: [
-      'The signs acknowledge this and offer no comfort.',
-      'Chat has spoken. The omen remains professionally distant.',
+      'Chat saw it, clipped it, and somehow learned nothing.',
       'The ball sees what happened and resents the assignment.',
-      'A development has occurred. Wisdom was not involved.',
+      'Something happened. Competence is denying involvement.',
       'The timeline accepts this under protest.'
     ]
   };
-  return chooseResponse(pools[shape] || pools.prediction);
+  return chooseResponse(pools[intent] || pools[shape] || pools.reaction);
 }
 
 function emoteCategory(route, response) {
@@ -199,7 +311,8 @@ function emoteCategory(route, response) {
   if (/bald|dome|hair/.test(s)) return 'bald';
   if (/yes|favorable|win|back in/.test(s)) return 'approval';
   if (/league|lane|build|champ|darius|renekton|cannon|baron|dragon/.test(s)) return 'league';
-  return null;
+  if (/idiot|stupid|suck|worse|trash|cope|excuse|report/.test(s)) return 'roast';
+  return route?.id?.startsWith('champion_') ? 'champion' : 'edge';
 }
 
 async function maybeEmote(route, response) {
@@ -208,8 +321,14 @@ async function maybeEmote(route, response) {
   if (!category) return '';
   const available = await getRoomEmotes(emoteConfig.approvedRoomEmotes || [], emoteConfig);
   const recent = state.recentEmotes.slice(-emoteConfig.cooldown);
-  const pool = (emoteConfig.categories[category] || []).filter((e) => available.has(e) && !recent.includes(e));
-  if (!pool.length) return '';
+  const categoryPool = (emoteConfig.categories[category] || emoteConfig.categories.edge || []).filter((e) => available.has(e));
+  if (!categoryPool.length) return '';
+  let pool = categoryPool.filter((e) => !recent.includes(e));
+  if (!pool.length) {
+    const last = state.recentEmotes.at(-1);
+    pool = categoryPool.filter((e) => e !== last);
+  }
+  if (!pool.length) pool = categoryPool;
   return pool[Math.floor(Math.random() * pool.length)];
 }
 
@@ -248,8 +367,17 @@ export async function answerOracle(rawQuestion, { user = '', debug = false } = {
   if (!text) return debug ? { response: 'You brought the command but forgot the question.', route: 'empty' } : 'You brought the command but forgot the question.';
 
   const profile = await loadViewer(user);
-  const route = selectRoute(text);
-  let response = route ? chooseResponse(route.responses) : fallback(questionShape(text));
+  const resolvedText = resolvePronouns(text, profile);
+  const targets = findLoreTargets(resolvedText);
+  const intent = classifyIntent(resolvedText, targets);
+  const selection = selectRoute(resolvedText);
+  let route = selection.route;
+  const champ = findChampion(resolvedText);
+  if (champ && (!route || route.tier <= 72 || /^legacy_(league_state|champ_next|good_bad|why|permission|prediction)/.test(route.id))) {
+    route = { id: `champion_${champ.id}`, tier: 74, emote: 'champion' };
+  }
+  if (selection.confidence === 'low' && route?.tier < 70) route = null;
+  let response = route?.id?.startsWith('champion_') ? championResponse(champ, resolvedText) : route ? chooseResponse(route.responses) : fallback(intent, questionShape(resolvedText), targets);
   const prefix = callback(profile, route, text);
   if (prefix) response = `${prefix} ${response}`;
   const emote = await maybeEmote(route, response);
@@ -270,7 +398,10 @@ export async function answerOracle(rawQuestion, { user = '', debug = false } = {
   if (profile) {
     recordInteraction(profile, {
       question: text,
-      route: route?.id || `fallback_${questionShape(text)}`,
+      resolvedQuestion: resolvedText,
+      targets: targets.map((x) => x.id),
+      intent,
+      route: route?.id || `fallback_${intent}`, 
       response,
       at: Date.now()
     });
@@ -280,7 +411,13 @@ export async function answerOracle(rawQuestion, { user = '', debug = false } = {
   const result = {
     response,
     normalized: text,
-    route: route?.id || `fallback_${questionShape(text)}`,
+    resolved: resolvedText,
+    intent,
+    confidence: selection.confidence,
+    score: Number.isFinite(selection.score) ? selection.score : null,
+    margin: selection.margin,
+    targets: targets.map((x) => x.id),
+    route: route?.id || `fallback_${intent}`, 
     emote: emote || null,
     viewer: profile ? { total: profile.total, recent: profile.interactions.slice(-4), routeCounts: profile.routeCounts } : null
   };
@@ -293,9 +430,12 @@ export function health() {
     routes: allRoutes.length,
     highPriorityRoutes: highPriorityRoutes.length,
     legacyRoutes: Object.keys(legacyRoutes).length,
-    version: '1.3.0',
+    version: '1.5.0',
     sevenTv: sevenTvStatus(),
     bundledRoomEmotes: emoteConfig.approvedRoomEmotes.length,
+    championProfiles: championKnowledge.length,
+    loreEntities: Object.keys(loreMap.entities || {}).length,
+    relationshipMaps: (loreMap.relationships || []).length,
     viewerContext: viewerStoreMode()
   };
 }
