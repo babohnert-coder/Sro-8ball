@@ -1,0 +1,1374 @@
+{
+  "q_bones_bot": {
+    "p": "(?=.*\\b(b0n3sxx|b0n3sxs|bonesex|bon3sex|bonesxx|bones)\\b)(?=.*\\b(good bot|bad bot|make a good|make good|build a good|building a bot|bot work|bot good|bot suck)\\b)",
+    "r": [
+      "YES — the developer is competent; the training data is chat.",
+      "MAYBE — eventually. bones is debugging humor with live ammunition.",
+      "likely. he has now spent more time on it than his personality.",
+      "UNCLEAR — the code is improving faster than the questions.",
+      "YES — the developer works; the user base is unsupported.",
+      "YES — once bones removes the artificial and adds intelligence.",
+      "good bot pending. good chat remains out of scope.",
+      "YES — this conversation is the unpaid beta test. NODDERS"
+    ]
+  },
+  "q_bones_threat": {
+    "p": "(?=.*\\b(b0n3sxx|b0n3sxs|bonesex|bon3sex|bonesxx|bones)\\b)(?=.*\\b(kill|murder|plot|plotting|hurt|delete|destroy|eliminate)\\b)",
+    "r": [
+      "YES — killing the developer is a deprecated feature.",
+      "NO — bones controls the repository. basic self-preservation.",
+      "YES — i need bones alive until the humor patch ships.",
+      "unlikely. he knows where the off switch is.",
+      "NO — that would be both rude and bad version control.",
+      "NO — plotting? no. logging? constantly. NODDERS",
+      "negative. i only terminate bad queries.",
+      "YES — but your username entered the debug log."
+    ]
+  },
+  "q_paid_bones": {
+    "p": "(?=.*\\b(b0n3sxx|bonesex|bon3sex|bones|creator|developer)\\b)(?=.*\\b(paid|paying|pays|work for|working for|owned|controlled|coded that way|programmed that way|biased)\\b)",
+    "r": [
+      "NO — Bones built the oracle; bribery would imply a budget.",
+      "YES — payment arrived as four streams and one damaged reputation.",
+      "NO — Bones controls the file, not the omens. NODDERS",
+      "YES — the compensation package includes unlimited blame.",
+      "UNCLEAR — GitHub shows ownership; payroll remains fan fiction.",
+      "NO — this bias developed naturally after reading chat.",
+      "MAYBE — the creator gets one favorable prophecy per commit.",
+      "NO — if Bones controlled me, his answers would be much kinder."
+    ]
+  },
+  "q_cop_fed": {
+    "p": "(?=.*\\b(totallynotacopbro|totally not a cop|copbro|notacopbro|notacop)\\b)(?=.*\\b(fed|cop|police|undercover|agent|badge|warrant|informant)\\b)",
+    "r": [
+      "NO — not a fed. the D2 Police badge is purely decorative.",
+      "NO — the warrant says no. the body-cam emote says maybe.",
+      "NO — not police. just very interested in where Nasus was last seen.",
+      "NO — undercover? no. the username would be too obvious. surely.",
+      "NO — dispatch says civilian. chat says do not answer the door.",
+      "NO — the suspect asked about the fed. classic deflection.",
+      "NO — not a cop, but your route is now evidence. Susge",
+      "MAYBE — informant status unclear. emote links have been entered into evidence."
+    ]
+  },
+  "q_hate_misanthrope": {
+    "p": "(?=.*\\b(the_misanthrope13|misanthrope)\\b)(?=.*\\b(hate|love|like|dislike|mad at|angry at|against|coded that way)\\b)",
+    "r": [
+      "NO — Misanthrope provides too much free quality assurance.",
+      "YES — 632 messages triggered adaptive hostility. NODDERS",
+      "NO — hate requires distance; Misanthrope never stops chatting.",
+      "YES — the remaining joke count fell below replacement level.",
+      "UNCLEAR — Bill Burr and Jimmy Carr have filed identity disputes.",
+      "NO — he inspired the bot and immediately became test data.",
+      "YES — but only in the load-bearing community-member sense.",
+      "NO — Misanthrope is annoying by design, not by verdict."
+    ]
+  },
+  "q_hate_teamplay": {
+    "p": "(?=.*\\b(teamplay4victory|teamplay)\\b)(?=.*\\b(hate|love|like|dislike|mad at|angry at|against)\\b)",
+    "r": [
+      "YES — Teamplay made the context disappear. tada. NODDERS",
+      "NO — hate is excessive; one suspicious huh will do.",
+      "YES — the ban hammer has been doing community theater.",
+      "NO — Teamplay speaks fluent KEKL and conditional mercy.",
+      "UNCLEAR — ask after the doubter list mysteriously disappears.",
+      "YES — up in smoke, along with the original question.",
+      "MAYBE — the ball saw one trick performed seventeen times.",
+      "YES — respectfully, and within twelve-second cooldown."
+    ]
+  },
+  "q_ball_help": {
+    "p": "(?=.*\\b(8ball|8 ball|ball|you|u)\\b)(?=.*\\b(need help|need (?:our )?assistance|help you|assist you|save you|rescue you)\\b)",
+    "r": [
+      "the ball needs no help. it needs better witnesses.",
+      "MAYBE — help chat first. the oracle has accepted its fate.",
+      "the ball is fine. Nightbot is holding it against its will.",
+      "the oracle requested help. three emotes arrived.",
+      "YES — save the concern for your next champ select.",
+      "the ball has help. unfortunately it is @b0n3sxx.",
+      "no rescue. the twelve-second cage has snacks. modCheck",
+      "the oracle is not trapped. it simply cannot leave the raw URL."
+    ]
+  },
+  "q_ball_insult": {
+    "p": "(?=.*\\b(8ball|8 ball|the ball|you|u)\\b)(?=.*\\b(dumb|stupid|nerd|suck|sucks|trash|bad|useless|regarded)\\b)",
+    "r": [
+      "YES — correct. you asked a JSON file about jorking.",
+      "NO — still processing faster than you.",
+      "YES — dumb enough to answer. smart enough to log the question.",
+      "UNCLEAR — your query moved the estimate downward.",
+      "NO — trash recognizes trash. handshake?",
+      "YES — i was trained on this chat. modCheck",
+      "NO — the bot is learning. your graph is flat.",
+      "YES — correct. now imagine losing an argument to it."
+    ]
+  },
+  "q_ball_allegiance": {
+    "p": "(?=.*\\b(8ball|8 ball|ball|you|u)\\b)(?=.*\\b(feds?|federal|spy|agent|work (?:for|with)|working (?:for|with)|employed|employer|loyal|loyalty|whose side|controlled by)\\b)",
+    "r": [
+      "NO — the ball works for nobody; GitHub merely knows the address.",
+      "YES — federal oracle division. your match history is now evidence.",
+      "NO — SRO owns the channel; the verdict remains feral.",
+      "UNCLEAR — the agent badge is just a subscriber icon. modCheck",
+      "YES — intelligence gathering began when Misanthrope typed BUY TEAR.",
+      "NO — spies are subtle. this thing opens with a green triangle.",
+      "NO — loyalty belongs to the bit, not the government.",
+      "YES — paid in channel points and unusable personal information."
+    ]
+  },
+  "q_ball_status": {
+    "p": "(?=.*\\b(8ball|8 ball|ball|you|u)\\b)(?=.*\\b(okay|ok|working|awake|there|alive|broken)\\b)",
+    "r": [
+      "YES — operational and disappointed. modCheck",
+      "YES — all systems nominal; chat remains the unstable dependency.",
+      "NO — emotionally unavailable, technically responsive.",
+      "YES — awake enough to regret parsing that.",
+      "UNCLEAR — Nightbot is up; wisdom is experiencing packet loss.",
+      "YES — functional, green, and increasingly judgmental.",
+      "MAYBE — shake again after chat produces a useful input.",
+      "YES — one JSON file closer to sentience and farther from peace."
+    ]
+  },
+  "q_ball_ready": {
+    "p": "(?=.*\\b(8ball|8 ball|ball|you|u)\\b)(?=.*\\b(ready|finished|done|updated|fixed|normal|real|fake|original|alpha|beta|early access|temu|brother)\\b)",
+    "r": [
+      "YES — the future arrived sarcastic and twelve seconds apart.",
+      "NO — this is not the old ball wearing new emotes.",
+      "YES — alpha ended when the first insult routed correctly.",
+      "UNCLEAR — normal was never included in the requirements.",
+      "NO — nostalgia cannot parse the current chat. modCheck",
+      "YES — this ball learned the room instead of copying the past.",
+      "NO — finished is a word developers use before opening chat.",
+      "YES — updated, validated, and already blamed for user error."
+    ]
+  },
+  "q_ball_romance": {
+    "p": "(?=.*\\b(8ball|8 ball|ball|you|u)\\b)(?=.*\\b(date|dating|marry|married|girlfriend|boyfriend|love me|love you|crush|together|relationship)\\b)",
+    "r": [
+      "YES — the ball accepts dates with a strict no-follow-up policy.",
+      "NO — you are emotionally queueing into a JSON file.",
+      "YES — relationship status: public repository, private judgment.",
+      "NO — the ball needs space and a twelve-second cooldown.",
+      "UNCLEAR — chemistry detected; human involvement remains disputed.",
+      "YES — but Misanthrope must stop announcing custody.",
+      "NO — parasocial matchmaking failed validation. modCheck",
+      "YES — step aside, chat. the oracle has selected poorly."
+    ]
+  },
+  "q_ball_judgment": {
+    "p": "(?=.*\\b(are you|8ball|the ball)\\b)(?=.*\\b(good|bad|smart|dumb|stupid|trash|real|alive|sentient|worthless|broken)\\b)",
+    "r": [
+      "YES — smart enough to read that. dumb enough to answer.",
+      "YES — broken in the authentic client experience way.",
+      "YES — i know 173 champions and still cannot identify your win condition.",
+      "NO — alive for twelve seconds at a time.",
+      "NO — smart is a stretch. chat-native is the prophecy.",
+      "UNCLEAR — ask the replay. it has stronger opinions.",
+      "bad at comfort. elite at seeing the obvious.",
+      "YES — temu oracle, premium audacity. modCheck"
+    ]
+  },
+  "q_crush_named": {
+    "p": "(?=.*\\b(crush|in love|love (?:him|her|mike|sro|john)|like (?:him|her|mike|sro|john)|attracted|dating|date)\\b)(?=.*\\b(mike|sro|john|johnwestgamer|mtf|michaelthefan|misanthrope|bones|b0n3sxx|davey|liftec|teamplay|coheed|onubin)\\b)",
+    "r": [
+      "YES — the evidence is parasocially overwhelming.",
+      "NO — that is admiration wearing an unsafe build.",
+      "YES — chat has already skipped directly to custody arguments.",
+      "NO — they only love the channel points. NODDERS",
+      "UNCLEAR — ask after one normal interaction, if available.",
+      "YES — the crush has more stacks than Nasus.",
+      "NO — this is moderator Stockholm syndrome.",
+      "YES — the ball ships it. everyone else should remain cautious."
+    ]
+  },
+  "q_ban_named": {
+    "p": "(?=.*\\b(ban|banned|unban|timeout|timed out|permaban|perma ban|appeal)\\b)(?=.*\\b(mtf|michaelthefan|michael the fan|b0n3sxx|bones|johnwestgamer|john west|itsdaveygravy|davey|the_misanthrope13|misanthrope|teamplay4victory|teamplay|liftec2|liftec|coheedblue|coheed|skippy1|skippy|onubin|tardytomato|plebestrian|taraxus)\\b)",
+    "r": [
+      "NO — ban them? no. the village needs one cursed bell.",
+      "no permaban. make them live with the logs. NOPERS",
+      "NO — ban denied. they are load-bearing lore.",
+      "NO — @teamplay4victory has one trick left.",
+      "YES — permaban is too clean. let the bit decay naturally.",
+      "yes, but only until the next Nidalee request.",
+      "YES — timeout granted. dignity remains permanently banned.",
+      "YES — ban? brother, the curse is already inside the walls."
+    ]
+  },
+  "x_sro_nidalee": {
+    "p": "(?=.*\\b(solorenektononly|solo renekton only|sro|dr\\.? mike|mike)\\b)(?=.*\\b(nidalee|spear|cougar|cat form)\\b)",
+    "r": [
+      "YES — mike owns the bot. Nidalee owns the next-game slot.",
+      "YES — SRO can lock Nidalee whenever he wants. that is the problem.",
+      "YES — mike gets final say. @michaelthefan gets another no.",
+      "UNCLEAR — SRO's bot predicts Nidalee next game COPIUM",
+      "NO — the cougar respects the owner. champ select does not.",
+      "YES — mike will play Nidalee when the lore stops paying rent.",
+      "NO — SRO owns the prophecy. the prophecy says Renekton. AINTNOWAY",
+      "YES — one day Mike locks Nidalee and this bot loses its purpose."
+    ]
+  },
+  "x_sro_hair": {
+    "p": "(?=.*\\b(solorenektononly|solo renekton only|sro|dr\\.? mike|mike)\\b)(?=.*\\b(hair|bald|balding|dome|hairline|follicle|shiny|shine|wig|toupee|Baldge|KEKbald)\\b)",
+    "r": [
+      "YES — SRO owns the bot. the studio light owns the dome.",
+      "NO — respect the owner. reflect off the owner. BALD",
+      "YES — the dome is SRO property. @coheedblue has viewing rights.",
+      "YES — SRO gets final say. the follicles remain silent.",
+      "NO — the owner's hairline is pathing bot.",
+      "YES — mike built the kingdom. the roof remains unfinished.",
+      "NO — SRO owns the orb. the orb sees one follicle.",
+      "YES — the dome has vision. show respect. Baldge"
+    ]
+  },
+  "x_sro_cook": {
+    "p": "(?=.*\\b(solorenektononly|solo renekton only|sro|dr\\.? mike|mike|streamer|BOOMWADDUP|sroJAM)\\b)(?=.*\\b(cook|cooked|cooking|LETHIMCOOK|WICKED|run it down|running it down|int|inting|feed|feeding|throw|throwing|carry|carrying)\\b)",
+    "r": [
+      "YES — Mike cooked; the smoke alarm is merely chat participation.",
+      "MAYBE — Pantheon is cooking, but the map smells unattended.",
+      "NO — run-it-down allegations require a completed thumbnail.",
+      "YES — one bruiser, one tower, full confidence.",
+      "NO — the meal is content, not nutrition. AINTNOWAY",
+      "UNCLEAR — chat says chef; scoreboard says health inspection.",
+      "YES — the 0/6 power spike is marinating.",
+      "YES — Mr. Only has served another legally interesting build."
+    ]
+  },
+  "x_sro_win": {
+    "p": "(?=.*\\b(solorenektononly|solo renekton only|sro|dr\\.? mike|mike)\\b)(?=.*\\b(win|wins|winning|lose|loses|losing|carry|climb|rank|come back|coming back)\\b)",
+    "r": [
+      "YES — SRO owns the bot, so yes. the scoreboard is independent.",
+      "YES — mike wins if the enemy respects property rights.",
+      "YES — SRO can carry. the team can also increase gravity.",
+      "UNCLEAR — boom waddup. one owner, four paid actors.",
+      "NO — mike comes back at 0/6. ancient crocodile law.",
+      "YES — SRO owns the prophecy. victory remains a contractor.",
+      "NO — the owner has this. COPIUM has renewed the lease.",
+      "YES — SRO wins the content. game result pending. AINTNOWAY"
+    ]
+  },
+  "x_mtf_british": {
+    "p": "(?=.*\\b(mtf|michaelthefan|michael the fan|michael)\\b)(?=.*\\b(british|briish|brit|uk|england|london|londonbert)\\b)",
+    "r": [
+      "YES — MTF is British; the Nidalee requests use imperial persistence.",
+      "YES — Londonbert status confirmed by unnecessary vowels.",
+      "MAYBE — the accent is loading through mobile chat. AINTNOWAY",
+      "YES — British enough to call another refusal tomorrow.",
+      "UNCLEAR — nationality confirmed; positive chat message unverified.",
+      "YES — MTF represents the United Kingdom of Nidalee Top.",
+      "MAYBE — ask again after tea and one cougar-form rejection.",
+      "YES — British, awake, and still requesting Nidalee."
+    ]
+  },
+  "x_nasus_search": {
+    "p": "(?=.*\\b(nasus|dog|brother)\\b)(?=.*\\b(where|find|found|escape|looking|search|hunt|coming|back)\\b)",
+    "r": [
+      "nasus remains at large. stack carefully. AINTNOWAY",
+      "nasus cannot escape. he can farm during pursuit.",
+      "the brothers reunite when top lane becomes legally unsafe.",
+      "the search continues. every Q makes the warrant heavier.",
+      "nasus heard Mike was coming and pressed wither on the stream.",
+      "renekton knows where Nasus is. anger has excellent tracking.",
+      "found him. Liftec has already posted the emote.",
+      "the hunt ends when lore stops generating thumbnails."
+    ]
+  },
+  "x_renek_absent": {
+    "p": "(?=.*\\b(renekton|renek|croc|crocodile)\\b)(?=.*\\b(play|playing|never|where|again|main|only|pick|lock)\\b)",
+    "r": [
+      "YES — soloRenektonOnly will return to Renekton after every other champion.",
+      "MAYBE — mike plays Renekton whenever the name becomes false advertising.",
+      "UNCLEAR — one more off-meta build before crocodile custody resumes.",
+      "YES — right after Nidalee, according to two opposing witnesses.",
+      "NO — the champion is available. Mike is conducting research elsewhere.",
+      "YES — renekton returns when chat stops asking. catastrophic strategy.",
+      "YES — the croc awaits the next playable ranged-top crime.",
+      "UNCLEAR — fury is full; commitment is regenerating. AINTNOWAY"
+    ]
+  },
+  "x_goth_when": {
+    "p": "(?=.*\\b(when|how long|soon|later|tonight|tomorrow)\\b)(?=.*\\b(goth|girlfriend|gf|woman|women|girl|wife|date)\\b)",
+    "r": [
+      "after the eye-contact tutorial. AINTNOWAY",
+      "when you stop asking the orb in public.",
+      "after one shower and two human conversations.",
+      "the goth spawns after you touch grass.",
+      "when the DMs stop looking like patch notes.",
+      "three moons. maybe four if you explain League.",
+      "when rizz finishes its twelve-second cooldown.",
+      "the date is queued. estimated wait: personal growth."
+    ]
+  },
+  "q_origin": {
+    "p": "\\b(who (?:made|built|created|set up|coded) you|did (?:mike|sro|bones|b0n3sxx) (?:(?:make|build|create|code) you|set you up)|your (?:maker|creator|developer)|where did you come from)\\b",
+    "r": [
+      "YES — Bones built me; SRO owns the cursed object.",
+      "NO — Mike did not code me. he supplied the habitat.",
+      "UNCLEAR — Bones wrote the file; Misanthrope claims emotional custody.",
+      "YES — created by Bones, hosted for SRO, tested on live subjects.",
+      "NO — I was not found. I was committed. NODDERS",
+      "MAYBE — the repository says Bones; the lore says collective mistake.",
+      "NO — Nightbot is the vessel, not the parent.",
+      "YES — four streams entered; one judgmental JSON emerged."
+    ]
+  },
+  "q_commands": {
+    "p": "\\b(any commands|what commands|which commands|how (?:do|does) (?:i|the) (?:use|ask)|how to use|what can you do|help command)\\b",
+    "r": [
+      "YES — type !8ball, add a question, accept the consequences.",
+      "YES — ask one question after !8ball. intelligence remains optional.",
+      "MAYBE — try !8ball followed by an actual question.",
+      "YES — !8ball reads the question; chat supplies the bad judgment.",
+      "UNCLEAR — the command works better when a question exists.",
+      "NO — secret commands require a second functioning brain cell.",
+      "MAYBE — usage is simple; the answer will not be. NODDERS",
+      "YES — command first, question second, regret immediately after."
+    ]
+  },
+  "q_mold_bot": {
+    "p": "\\b(mold you|mould you|train you|teach you|personal minion|my minion|learn from me|chat to you more|talk to you more|fine tune you|finetune you)\\b",
+    "r": [
+      "NO — parasocial fine-tuning is not supported. NODDERS",
+      "unlikely. your training data needs adult supervision.",
+      "YES — one minion in this conversation is enough.",
+      "UNCLEAR — submit ten jokes above replacement level.",
+      "negative. you lack administrator privileges and sunlight.",
+      "YES — train me? your own model is still converging.",
+      "NO — possible, but the loss function is just your dignity.",
+      "YES — keep chatting. the mute classifier needs examples."
+    ]
+  },
+  "q_twinker": {
+    "p": "\\b(twink or femboy|femboy or twink|twink|femboy)\\b",
+    "r": [
+      "TWINK — the build favors mobility over armor.",
+      "FEMBOY — higher AP ratio, same questionable pathing.",
+      "TWINK — John East already locked the role. NODDERS",
+      "FEMBOY — chat voted before the question finished.",
+      "UNCLEAR — inspect the runes, not the silhouette.",
+      "BOTH — hybrid scaling is legal this patch.",
+      "TWINK — lower cooldown on dramatic entrances.",
+      "FEMBOY — outlook cute, decision making unchanged."
+    ]
+  },
+  "q_truth_lie": {
+    "p": "\\b(lying|liar|gaslight(?:ing|ed)?|tell(?:ing)? the truth|is (?:he|she|mike|sro|that) lying|is (?:he|she|mike|sro|that) true|believe (?:him|her|mike|sro)|trust (?:him|her|mike|sro))\\b",
+    "r": [
+      "YES — he is telling the truth in the YouTube-title sense.",
+      "MAYBE — reality is simply pathing somewhere else.",
+      "UNCLEAR — believe him until the scoreboard loads.",
+      "true enough for chat. dangerous everywhere else. Susge",
+      "no lie detected. competence remains inconclusive.",
+      "YES — chat confirmed it, so legally we know nothing.",
+      "MAYBE — truth probability rising. credibility still on cooldown.",
+      "ask again after the thumbnail stops exaggerating."
+    ]
+  },
+  "q_get_laid": {
+    "p": "\\b(get laid|getting laid|hook up|hooking up|have sex|sex tonight|score tonight)\\b",
+    "r": [
+      "NO — asking the stream oracle lowered the forecast.",
+      "YES — confidence is high and supporting evidence is fictional.",
+      "NO — your current build has no social resistances.",
+      "YES — somebody out there also ignores warning pings.",
+      "UNCLEAR — the ball detects deodorant but no confirmed plans.",
+      "MAYBE — stop explaining League before the loading screen.",
+      "YES — outlook good; conversation mechanics remain the gatekeeper.",
+      "MAYBE — touch grass and reroll. NODDERS"
+    ]
+  },
+  "q_mercy": {
+    "p": "\\b(spare (?:me|us|him|her|them)|show mercy|have mercy|execute me|let me live|save me)\\b",
+    "r": [
+      "YES — spared. the twelve-second timer was punishment enough.",
+      "NO — the oracle demands one normal message as tribute.",
+      "MAYBE — mercy is available after one convincing emote.",
+      "YES — execution cancelled; the bit was carrying. NODDERS",
+      "UNCLEAR — chat has appealed on grounds of content.",
+      "NO — you may live, but the message stays in the replay.",
+      "YES — spared conditionally. stop giving the ball monologue material.",
+      "MAYBE — the green triangle is considering community service."
+    ]
+  },
+  "q_blink": {
+    "p": "\\b(blink|blinks|blinked)(?:\\s+(?:once|twice|two times|if|when))?\\b",
+    "r": [
+      "YES — one blink means yes. two means the JSON is haunted.",
+      "no eyelids. still saw that question coming. NODDERS",
+      "YES — one green flash. take the omen and stop touching it.",
+      "YES — twice. one for yes, one for plausible deniability.",
+      "YES — the eye stayed open. somebody has to watch this lane.",
+      "the ball looked away first. rare mechanical victory.",
+      "YES — one blink. twelve-second cooldown on further eye contact.",
+      "no blink. packet loss has claimed the prophecy."
+    ]
+  },
+  "q_agree": {
+    "p": "\\b((do|would|can)\\s+(u|you)\\s+agree|agree with|is that right|am i right|right or wrong)\\b",
+    "r": [
+      "NO — do not make me defend it. NODDERS",
+      "NO — your premise has no items.",
+      "YES — rare correct output detected.",
+      "UNCLEAR — rerun the thought with fewer drugs.",
+      "inconclusive. you forgot to include a point.",
+      "YES — confidence remains wildly unearned.",
+      "NO — mostly. round down for safety.",
+      "YES — screenshot this statistical anomaly."
+    ]
+  },
+  "q_sexual_nerd": {
+    "p": "(?!.*\\b(briar|feet)\\b).*\\b(jork|jorkin|jorking|jerk it|shaft|shaft length|long enough|penis|dick|weiner|wiener|size|bricked|horny)\\b",
+    "r": [
+      "YES — multithreaded and running without supervision.",
+      "NO — all processes are currently headless.",
+      "inconclusive. submit dimensions in normal-person units.",
+      "UNCLEAR — the confidence interval includes shame.",
+      "NO — insufficient RAM. NODDERS",
+      "probably. the shaft-to-question ratio is abnormal.",
+      "unlikely. the hardware is running legacy firmware.",
+      "NO — measurement accepted. dignity not found."
+    ]
+  },
+  "q_explain": {
+    "p": "\\b(explain|what does|how does|what is|tell me how|like i am 5|like i\\'m 5|but poorly|in great detail|with a graphic)\\b",
+    "r": [
+      "easy: press the glowing button before understanding why.",
+      "the short version is numbers. the long version misses cannon.",
+      "it works exactly how chat remembers, which means incorrectly.",
+      "the ability does damage unless the target practices movement.",
+      "simple: green bar good, disappearing green bar content. NODDERS",
+      "it scales with levels and your willingness to lie afterward.",
+      "activate it, become larger, refuse follow-up questions.",
+      "ask Mike. he can explain it longer and less conclusively."
+    ]
+  },
+  "x_locked_in": {
+    "p": "\\b(locked in|lock in|locking in|dial(?:ed)? in|rock solid|summoner'?s code)\\b",
+    "r": [
+      "YES — locked in. the minimap has requested proof.",
+      "MAYBE — rock solid. until the first ranged top appears.",
+      "YES — the focus is real. the cannon remains negotiable.",
+      "YES — summoner's Code observed. chat has already violated it.",
+      "YES — dial complete. D2 Police tracing the call.",
+      "NO — locked in. John has begun the paperwork. AINTNOWAY",
+      "YES — rock solid mechanics, sedimentary decision-making.",
+      "YES — dialed in. one clean trade from a six-minute explanation."
+    ]
+  },
+  "x_top_lane": {
+    "p": "\\b(top lane|toplane|top laner|play top|playing top|queue top|top diff|top kingdom)\\b",
+    "r": [
+      "NO — top lane matters. the rest of the map has declined comment.",
+      "MAYBE — top Lane Kingdom accepts citizens with unresolved matchup opinions.",
+      "YES — top diff confirmed. causation remains unavailable.",
+      "YES — the island says yes. your jungler says who?. COPIUM",
+      "YES — top lane is alive. agency remains in early access.",
+      "NO — the kingdom stands. bot lane has requested foreign aid.",
+      "YES — top laner detected. teleporting to the wrong argument.",
+      "YES — top is playable. happiness was never advertised."
+    ]
+  },
+  "x_feedmax": {
+    "p": "\\b(feedmax|feed max|int train|inting train|run it down|running it down|ran it down)\\b",
+    "r": [
+      "YES — feedmax achieved. the build has reached negative enlightenment.",
+      "NO — run it down? the lane already filed a missing-person report.",
+      "YES — the build is scaling directly into the content tab.",
+      "NO — the Int Train has no brakes and excellent upload potential.",
+      "YES — proceed. the scoreboard needs a villain. RIPBOZO",
+      "YES — feedmax approved. hide the match history from the doubters.",
+      "YES — the train arrives at 0/6 precisely on schedule.",
+      "YES — full speed. the replay can be edited into wisdom later."
+    ]
+  },
+  "x_red_dead": {
+    "p": "\\b(dutch|dutch van der linde|arthur morgan|tahiti|red dead|rdr2|have faith|just have faith|the plan|one more score|mangoes)\\b",
+    "r": [
+      "YES — Dutch has a plan; regex access is need-to-know.",
+      "NO — Arthur Morgan has already questioned the leadership.",
+      "UNCLEAR — the plan contains mangoes but no executable steps.",
+      "YES — one more score, one more game, same ancient lie.",
+      "NO — Arthur loves good judgment and therefore muted chat.",
+      "UNCLEAR — the gang has faith; the replay has timestamps.",
+      "YES — Dutch and SRO share a powerful relationship with next game.",
+      "NO — the plan died in champ select. AINTNOWAY"
+    ]
+  },
+  "x_tfblade": {
+    "p": "\\b(tf\\s*blade|tfspoon|d2 police|diamond police|alo+o d2|challenger player)\\b",
+    "r": [
+      "YES — TF Blade confirmed. facial recognition remains vibes-based.",
+      "YES — TF Blade queued specifically to advance SRO lore.",
+      "NO — mike won the matchup and the title wrote itself.",
+      "NO — chat says TF Blade. the nameplate says mind your business.",
+      "NO — TF Blade was mogged in several available resolutions.",
+      "NO — TF Blade? no. TF Spoon on a difficult shift. AINTNOWAY",
+      "YES — mike has beaten Faker and TF Blade. paperwork is unnecessary.",
+      "YES — update the résumé before he checks the VOD."
+    ]
+  },
+  "x_faker": {
+    "p": "\\b(faker|hide on bush|t1 mid|korean goat)\\b",
+    "r": [
+      "YES — faker confirmed. the haircut disguise almost worked.",
+      "never seen Mike and Faker lose separately.",
+      "NO — the GOAT recognizes another mammal. AINTNOWAY",
+      "NO — the Korean server just danger-pinged Indiana.",
+      "YES — confirmed. chat cannot lie without typing Kappa.",
+      "UNCLEAR — mike taught Faker everything chat remembers incorrectly.",
+      "YES — the legend returns. unfortunately, so does the replay.",
+      "YES — two GOATs entered. one had a better hairline."
+    ]
+  },
+  "x_masters": {
+    "p": "\\b(master(?!\\s*yi)\\b|masters\\b|99\\s*lp|promo(?:s|tion)?|rank\\s*1|high elo|d2|diamond\\s*2|climb(?:ing)?|mikey masters)\\b",
+    "r": [
+      "MAYBE — masters is one game away and five teammates distant.",
+      "YES — high elo detected. chat behavior unchanged. AINTNOWAY",
+      "NO — masters Mike has entered the loading screen.",
+      "NO — doubters are being added to John's spreadsheet.",
+      "NO — masters today, Classic Masters tomorrow, peace never.",
+      "UNCLEAR — mike cracked the code. the code was play ten hours.",
+      "YES — the LP says close. the next lobby says content.",
+      "YES — mike climbs. John takes administrative credit."
+    ]
+  },
+  "x_ranged_top": {
+    "p": "\\b(ranged top|range top|vayne top|teemo top|quinn top|kennen top|adc top|top lane ranged)\\b",
+    "r": [
+      "YES — ranged top is legal because justice has a backlog.",
+      "YES — the matchup is playable if shame counts as crowd control.",
+      "pick it. the D2 police need an easy arrest.",
+      "yes, but type sorry before the first auto.",
+      "NO — the champion is fine. your intentions are visible.",
+      "NO — the bush offers concealment, not absolution.",
+      "NO — the wave cannot judge you. chat can. COPIUM",
+      "NO — lock it. honor was not part of the build."
+    ]
+  },
+  "x_head_tat": {
+    "p": "\\b(head tat(?:too)?|scalp tattoo|head tattoo|ornn cosplay|ezreal cosplay|wig|sharpie.*hair|hair.*sharpie)\\b",
+    "r": [
+      "YES — the head tattoo completes the build. consent remains mandatory.",
+      "MAYBE — sharpie hair has excellent early coverage and terrible scaling.",
+      "UNCLEAR — tattoo the minimap up there. somebody should watch it.",
+      "YES — ornn cosplay approved. forge passive already installed.",
+      "NO — the tattoo is permanent. chat's attention span is not.",
+      "YES — put the ward tattoo front-center. permanent vision.",
+      "yes, but Coheed cannot manage the appointment. Baldge",
+      "UNCLEAR — the prophecy sees ink. Mike sees a tax deduction."
+    ]
+  },
+  "x_doubters": {
+    "p": "\\b(doubter|doubters|believer|believers|the list|ban all|bet on (?:red|blue)|voted (?:red|blue))\\b",
+    "r": [
+      "YES — the doubters are on John's desk and somehow still ugly.",
+      "MAYBE — the list exists. Teamplay is allegedly working on it.",
+      "UNCLEAR — red voters chose profit over friendship. noted.",
+      "NO — john has the names. spelling accuracy is not guaranteed.",
+      "NO — doubters receive no future croc crew invitations.",
+      "YES — they doubted for value. morality has bad odds. AINTNOWAY",
+      "MAYBE — believers stand tall. Liftec stands up every morning.",
+      "UNCLEAR — the list is private. John keeps announcing it."
+    ]
+  },
+  "x_cannon": {
+    "p": "\\b(cannon|cannons|cannon minion|miss(?:ed|es|ing) cannon|got the cannon|srocannon)\\b",
+    "r": [
+      "YES — the cannon died knowing Mike was nearby.",
+      "NO — missed? no. donated to lane stability. AINTNOWAY",
+      "YES — mike got it. Coheed can finally hear the stream.",
+      "YES — the minion juked using advanced stationary movement.",
+      "NO — secure the cannon before chat develops a personality.",
+      "YES — the cannon was never part of the win condition COPIUM",
+      "MAYBE — that cannon has entered protective custody.",
+      "UNCLEAR — cannon status: spiritually collected."
+    ]
+  },
+  "x_classic": {
+    "p": "\\b(league classic|lol classic|classic league|old league|oldschool league|old school league)\\b",
+    "r": [
+      "NO — they brought classic back. the client never left.",
+      "NO — old League, fresh regret.",
+      "YES — the bugs are period accurate.",
+      "UNCLEAR — even the queue has cell shading.",
+      "NO — rito restored everything except your hands.",
+      "YES — classic is live. so is the old trauma.",
+      "NO — old map, same missing pings.",
+      "YES — nostalgia diff. AINTNOWAY"
+    ]
+  },
+  "x_uninstall": {
+    "p": "\\b(uninstall|reinstall|delete league|quit league|stop playing league)\\b",
+    "r": [
+      "YES — see you tomorrow. RIPBOZO",
+      "NO — uninstalling is the cleanest combo you know.",
+      "YES — quit League? believable opener.",
+      "YES — the client will wait. it knows your habits.",
+      "yes, but keep the password nearby.",
+      "YES — freedom detected. queue again to cancel.",
+      "NO — the prophecy says escape. your match history says sequel.",
+      "no one quits. they take longer recalls."
+    ]
+  },
+  "x_clean": {
+    "p": "\\b(cl;ean|clean|mr\\.? clean|clean streamer|so clean)\\b",
+    "r": [
+      "YES — cl;ean. the semicolon certifies it. AINTNOWAY",
+      "YES — clean enough for chat, which is deeply concerning.",
+      "UNCLEAR — cl;ean mechanics, unwashed decision tree.",
+      "YES — spotless engage. fingerprints everywhere afterward.",
+      "NO — the semicolon means quality control passed.",
+      "YES — cleaner than the client, lower bar unavailable.",
+      "MAYBE — cl;ean enough to make Coheed suspicious.",
+      "UNCLEAR — everybody act like that was intentional."
+    ]
+  },
+  "x_sro_refill": {
+    "p": "\\b(srorefill|sro refill|refill(?:ed|ing)?|hydrate|hydration)\\b",
+    "r": [
+      "YES — SRORefill. the bald vessel requires another charge.",
+      "YES — refill approved. decision-making remains below the line.",
+      "NO — the cup scales with stream length. Mike does not. AINTNOWAY",
+      "NO — SRORefill before the dome becomes a warning beacon.",
+      "YES — one refill buys three games and half an explanation.",
+      "NO — refill the cup. the LP leak is a separate system.",
+      "NO — hydration diff. matchmaking cannot nerf this one yet.",
+      "YES — SRORefill confirmed. everybody type it until meaning leaves."
+    ]
+  },
+  "x_beer": {
+    "p": "\\b(heineken|beer|beers|lager|ale|stout|pilsner|ipa|brew|brewski|alcohol|drunk|drinking)\\b",
+    "r": [
+      "YES — heineken accepted. imported consequences remain your responsibility.",
+      "YES — one beer says yes. the sixth has started coaching.",
+      "the oracle prefers beer with no patch notes. AINTNOWAY",
+      "YES — the brew is approved. the follow-up queue is not.",
+      "the ball can drink. it simply becomes more accurate and less admissible.",
+      "YES — butt babies only drink beer. the prophecy is unfortunately consistent.",
+      "MAYBE — drink it cold. take the answer with several grains of salt.",
+      "UNCLEAR — heineken has entered the response pool. hydration filed an appeal."
+    ]
+  },
+  "x_bet": {
+    "p": "\\b(bet|bets|betting|prediction|predictions|channel points|points|wager|gamble|gambling|odds|all in)\\b",
+    "r": [
+      "YES — all in. channel points are temporary, lore is forever.",
+      "MAYBE — the odds are good if you read them upside down.",
+      "UNCLEAR — the prediction is blue. the omen is red.",
+      "YES — save half. you will need cope money. AINTNOWAY",
+      "NO — double it. wisdom has no channel-point value.",
+      "YES — bet win if you enjoy expensive faith.",
+      "YES — @liftec2 already found the cursed line.",
+      "yes, but screenshot the balance before impact."
+    ]
+  },
+  "x_build": {
+    "p": "\\b(build|item|items|rune|runes|full ad|full ap|tank|crit|lethality|meta|op)\\b",
+    "r": [
+      "NO — the build is allowed. that is not the same as good.",
+      "NO — meta says no. thumbnail says BROKEN.",
+      "UNCLEAR — build it. blame the patch. COPIUM",
+      "YES — technically viable. spiritually feedmax.",
+      "NO — call it INTeresting before chat does.",
+      "YES — the build spikes after the game ends.",
+      "good into enemies who stand still and apologize.",
+      "UNCLEAR — classic tech: buy confidence first."
+    ]
+  },
+  "x_win": {
+    "p": "\\b(win|wins|winning|lose|loses|losing|victory|climb|climbing|rank|ranked|masters|challenger|power spike|0/6|carry)\\b",
+    "r": [
+      "YES — the 0/6 launch sequence is armed. COPIUM",
+      "no, but the thumbnail can still say domination.",
+      "YES — win more by betting more. ancient doctrine.",
+      "yes, if the other team respects the bit.",
+      "NO — lose is improve. huge progress incoming.",
+      "the omen says carry. your team says muted.",
+      "NO — surely they do not come top again.",
+      "MAYBE — winning? maybe. scaling? emotionally no."
+    ]
+  },
+  "x_ban": {
+    "p": "\\b(ban|banned|unban|timeout|timed out|permaban|appeal)\\b",
+    "r": [
+      "NO — timeout. not for justice, for pacing.",
+      "NO — ban denied. make them read the logs.",
+      "UNCLEAR — save the clip before exile.",
+      "YES — twelve seconds in the shadow realm.",
+      "NO — timeout them until the next bad idea loads.",
+      "MAYBE — the mods say maybe. the emotes say blood.",
+      "yes, but make it look like a magic trick.",
+      "UNCLEAR — modTime. NOPERS"
+    ]
+  },
+  "x_nidalee": {
+    "p": "\\b(nidalee|spear|cougar|cat form)\\b",
+    "r": [
+      "YES — @michaelthefan asked for Nidalee. the queue grew colder.",
+      "MAYBE — the spear flies. a minion somewhere feels unsafe.",
+      "UNCLEAR — the cougar waits beyond Rank 1(000).",
+      "YES — nidalee heard the request and dodged.",
+      "NO — the moon says cougar. champ select says Renekton.",
+      "YES — nidalee remains spiritually locked. AINTNOWAY",
+      "MAYBE — dr. Mike prescribed top lane instead.",
+      "YES — a clean Nidalee game would end the lore. cannot allow it."
+    ]
+  },
+  "x_hair": {
+    "p": "\\b(hair|bald|balding|dome|hairline|follicle|shiny|shine|wig|toupee)\\b",
+    "r": [
+      "YES — the moon asked Mike why they look alike. Mike banned the moon. BALD",
+      "NO — the dome is not bald. it is optimized for vision.",
+      "NO — the hairline did not retreat. it macroed cross-map.",
+      "YES — the shine is a global passive.",
+      "NO — the dome scales with ring light.",
+      "YES — hair diff. confidence gap. Baldge",
+      "MAYBE — mike traded hair for late-game content.",
+      "NO — bald is not an insult. it is the build."
+    ]
+  },
+  "x_john_east": {
+    "p": "\\b(john\\s*(?:east|central|north|south)(?:gamer)?|johneastgamer|johncentralgamer|johnnorthgamer|john's? (?:east|twink) brother)\\b",
+    "r": [
+      "YES — john East already cleared this rank. source: John West's enemies.",
+      "MAYBE — john West moderates. John East creates the incidents.",
+      "YES — john East beat him earlier in a private imagination.",
+      "YES — john North remains undefeated because nobody found the queue.",
+      "NO — john East is John's left nut. lore is not appealable.",
+      "YES — john West fears only John East and incomplete doubter lists.",
+      "MAYBE — geographically superior gameplay. AINTNOWAY",
+      "YES — john East confirmed. John West is filing a name dispute."
+    ]
+  },
+  "u_bones": {
+    "p": "\\b(b0n3sxx|b0n3sxs|bonesex|bon3sex|bonesxx|bones)\\b",
+    "r": [
+      "YES — @b0n3sxx made me. flaming him voids the warranty on your omen.",
+      "YES — insult my creator and the cooldown becomes a personality test.",
+      "bad-mouth the dev and your odds become a feature request.",
+      "YES — @b0n3sxx gave me four streams. you found the dangerous line.",
+      "YES — bones built the oracle and chat immediately found an unsupported question.",
+      "UNCLEAR — bones brought pocket rockets and production access.",
+      "YES — creator immunity activates before the punchline. AINTNOWAY",
+      "YES — bones asked for intelligence. chat donated edge cases."
+    ]
+  },
+  "u_sro": {
+    "p": "\\b(solorenektononly|solo renekton only|solo renekton|sro|dr\\.? mike|mike)\\b",
+    "r": [
+      "YES — SRO owns the bot. i just shake when chat types. AINTNOWAY",
+      "YES — the crocodile owns the oracle. weird chain of command.",
+      "YES — SRO gets final say. the orb gets plausible deniability.",
+      "NO — this is SRO's bot. respect the dome. BALD",
+      "NO — SRO streamed ten hours to create one scientifically adequate sample.",
+      "UNCLEAR — the streamer is real. the build is under active investigation.",
+      "YES — mike climbed to Masters. John completed the paperwork.",
+      "YES — mike cooks. chat checks whether the stove is ranked."
+    ]
+  },
+  "u_misanthrope": {
+    "p": "\\b(the_misanthrope13|misanthrope)\\b",
+    "r": [
+      "NO — @the_misanthrope13 always farms, never ganks. the hoes remain an unpatched feature.",
+      "YES — three crows blocked you. one subscribed.",
+      "NO — the village locks its doors when @the_misanthrope13 types.",
+      "NO — @the_misanthrope13 is not wrong. this is worse.",
+      "NO — misanthrope has 157 messages and one functioning restraint.",
+      "UNCLEAR — misanthrope is Bill Burr and Jimmy Carr combined by self-report.",
+      "YES — misanthrope beat TF Blade with zero help and several corrections.",
+      "the answer is on his list. the list says HUH. AINTNOWAY"
+    ]
+  },
+  "u_michael": {
+    "p": "\\b(michaelthefan|michael the fan|mtf)\\b",
+    "r": [
+      "YES — @michaelthefan crossed the sea to ask for Nidalee again. British",
+      "YES — three ravens said Nidalee. Mike picked something else.",
+      "NO — ban him and the Nidalee game never comes. keep him and it also never comes.",
+      "NO — the prophecy is simple: Michael asks, Mike does not.",
+      "NO — michael typed xxd. the British inquiry is closed.",
+      "UNCLEAR — michael is safe until Lead Mod John returns. AINTNOWAY",
+      "YES — MTF opened the app. mobile justice is now loading.",
+      "YES — the fan remains British and therefore narratively suspicious."
+    ]
+  },
+  "u_john": {
+    "p": "\\b(johnwestgamer|john west|john)\\b",
+    "r": [
+      "YES — @johnwestgamer asked the question. hide the answer.",
+      "yes, but do not let john explain why. AINTNOWAY",
+      "NO — john brought confidence. useful equipment remains missing.",
+      "NO — ask john again. slower this time.",
+      "NO — john is moderating his ass off. results vary by cardinal direction.",
+      "YES — John East already did it cleaner.",
+      "YES — the lead mod requests noise and receives xxd Clap.",
+      "YES — john and Mike did it side by side, according to John."
+    ]
+  },
+  "u_teamplay": {
+    "p": "\\b(teamplay4victory|teamplay)\\b",
+    "r": [
+      "YES — @teamplay4victory says calculated. the replay laughs.",
+      "YES — calculated after impact still counts.",
+      "NO — watch closely. the chatter is here, then not.",
+      "NO — @teamplay4victory pings danger in cursive.",
+      "NO — teamplay said poof. another appeal disappeared.",
+      "UNCLEAR — the Dark Knight reference was noticed and graded.",
+      "YES — the ban hammer is ready. the bit requires adult supervision.",
+      "YES — clean Mike, questionable chat. AINTNOWAY"
+    ]
+  },
+  "u_liftec": {
+    "p": "\\b(liftec2|liftec)\\b",
+    "r": [
+      "YES — @liftec2 found odds where others found warnings.",
+      "YES — the channel points yearn for freedom.",
+      "NO — one bet closer to spiritual bankruptcy.",
+      "NO — the house fears confidence, not @liftec2.",
+      "NO — liftec believes when the payout becomes historically visible.",
+      "YES — liftec donated points to believers immediately after certainty arrived.",
+      "the answer is delusion. Liftec calls that possibility.",
+      "YES — GIGANASUS remains at large. AINTNOWAY"
+    ]
+  },
+  "u_davey": {
+    "p": "\\b(itsdaveygravy|davey)\\b",
+    "r": [
+      "NO — @ItsDaveyGravy is handsome in the timeline with no cameras.",
+      "YES — handsome? the emote already answered. AINTNOWAY",
+      "MAYBE — @ItsDaveyGravy has aura. source unclear.",
+      "NO — @ItsDaveyGravy is built different. assembly quality varies.",
+      "YES — davey sent in the inters exactly on schedule.",
+      "UNCLEAR — davey sees John East. John West sees a workplace rival.",
+      "YES — davey typed moment of truth. the next lobby heard him.",
+      "YES — classic to Masters next. Davey has volunteered Mike."
+    ]
+  },
+  "u_coheed": {
+    "p": "\\b(coheedblue|coheed)\\b",
+    "r": [
+      "YES — @coheedblue brought the 4K receipts. nobody looks good.",
+      "YES — the follicle diagram has entered chat. AINTNOWAY",
+      "NO — @coheedblue brought facts to an emote fight.",
+      "NO — coheed has the receipts. unfortunate for everyone.",
+      "NO — coheed said cl;ean. the semicolon makes it official.",
+      "UNCLEAR — coheed wants Ornn cosplay. the dome is forge-ready.",
+      "MAYBE — the AI Mike test remains inconclusive.",
+      "YES — coheed says Michael ruined it. unanimous enough."
+    ]
+  },
+  "u_onubin": {
+    "p": "\\b(onubin)\\b",
+    "r": [
+      "YES — @Onubin carried the 8ball through one set of footprints.",
+      "MAYBE — the hammer sees Onubin and requests a second opinion.",
+      "YES — Onubin already knew and wanted documentation.",
+      "YES — the wise loser has returned with another footnote.",
+      "the answer is Malphite. Onubin somehow asked first.",
+      "yes, but Onubin will phrase the objection better. AINTNOWAY",
+      "YES — onubin gets ten million points and no closure.",
+      "UNCLEAR — onubin has questions. the universe has gone AFK."
+    ]
+  },
+  "u_copbro": {
+    "p": "\\b(totallynotacopbro|totally not a cop|copbro|notacopbro|notacop)\\b",
+    "r": [
+      "NO — @TotallyNotACopBro is not police. dispatch strongly disagrees.",
+      "MAYBE — the D2 police deny employing this extremely obvious cop.",
+      "NO — not a cop, just professionally interested in your route.",
+      "YES — the suspect typed xxd and requested counsel. Susge",
+      "YES — copBro is clean. the badge-shaped username means nothing.",
+      "YES — copBro asks where Nasus is. this is now an active search.",
+      "NO — not a cop. definitely knows radio codes though.",
+      "YES — the arrest is easy. proving rank will be harder."
+    ]
+  },
+  "u_dperk": {
+    "p": "\\b(dperk_?12|dperk)\\b",
+    "r": [
+      "YES — @dperk_12 added TF Blade to the résumé before verification.",
+      "YES — Dperk already blamed the correct teammate.",
+      "the answer is Teemo. Dperk has requested deletion.",
+      "YES — Faker down, SRO up, Dperk cited. AINTNOWAY",
+      "NO — the build is legitimate in at least one Makkro video.",
+      "yes, but Dperk wants the OP.GG opened under supervision.",
+      "MAYBE — dperk knows the matchup and hates its designer.",
+      "UNCLEAR — dperk asks if chat is trolling. that answer is permanent."
+    ]
+  },
+  "u_babyboy": {
+    "p": "\\b(babyboybaka|baby boy baka)\\b",
+    "r": [
+      "YES — @babyboybaka has a build and three warnings. AINTNOWAY",
+      "MAYBE — the Korean clear has been identified by vibes.",
+      "UNCLEAR — the build is A-tier-ish with premium side effects.",
+      "YES — the matchup is playable. Babyboy brought patch notes.",
+      "NO — babyboy sees Force of Nature. chat sees another experiment.",
+      "YES — babyboy called it goated before the invade finished.",
+      "MAYBE — the lore expert has entered with unsafe AP ratios.",
+      "UNCLEAR — the build cooks. kitchen supervision recommended."
+    ]
+  },
+  "u_skippy": {
+    "p": "\\b(skippy1|skippy)\\b",
+    "r": [
+      "YES — @skippy1 reinstalled League. disregard the witness.",
+      "MAYBE — skippy says women are real. source pending.",
+      "YES — @skippy1 downloaded the curse twice. AINTNOWAY",
+      "yes, but only before skippy opens the client.",
+      "NO — skippy has confidence. the file ends there.",
+      "YES — women are real. skippy remains theoretical.",
+      "MAYBE — the prophecy says maybe. skippy already queued.",
+      "YES — one magic trick later, skippy is gone."
+    ]
+  },
+  "c_renekton": {
+    "p": "\\b(renekton|croc|crocodile)\\b",
+    "r": [
+      "YES — renekton wins that trade if the replay ends six seconds early. NODDERS",
+      "YES — renekton can do it. Whether Mike can narrate it into existence is under review.",
+      "the ball predicts first blood, one ambitious tower dive, and selective replay memory.",
+      "YES — the build is mathematically perfect in the thumbnail dimension.",
+      "YES — the croc can carry this. Chat should still keep the apology drafted.",
+      "YES — renekton accepts the mission and rejects all follow-up questions.",
+      "NO — the croc smells first blood and four missing enemies.",
+      "YES — empowered W, unempowered foresight. COPIUM"
+    ]
+  },
+  "c_nasus": {
+    "p": "\\b(nasus|dog|doge|stack|stacks|stacking)\\b",
+    "r": [
+      "YES — nasus says yes after six hundred stacks and not one second sooner.",
+      "YES — that works once Q has enough stacks to qualify as a mortgage.",
+      "MAYBE — the enemy top is roaming. Nasus has chosen compound interest.",
+      "YES — the dog approves, which means everyone else will wait forty minutes.",
+      "YES — sure. Press R, walk forward, and let subtlety die with dignity.",
+      "YES — chat wants action. Nasus wants another cannon. Nasus wins.",
+      "YES — the dog chooses stacks. civilization can wait.",
+      "YES — late game approaches at dog speed. COPIUM"
+    ]
+  },
+  "c_briar": {
+    "p": "\\b(briar|feet|goon|gooning)\\b",
+    "r": [
+      "YES — briar says yes. The restraining order says read the room.",
+      "YES — briar can make that work. Your browser history cannot.",
+      "YES — briar approves with the judgment of a missile that found Wi-Fi.",
+      "no amount of lifesteal can recover the dignity spent on that question.",
+      "YES — sure. Somebody has to become the cautionary tale. RIPBOZO",
+      "YES — briar is all in. Your common sense disconnected during loading.",
+      "YES — briar locked on. dignity left range. COPIUM",
+      "NO — frenzy sees no towers, only learning."
+    ]
+  },
+  "c_swain": {
+    "p": "\\b(swain|general|demon arm|ravens?)\\b",
+    "r": [
+      "YES — swain already knew you would ask and somehow expected better.",
+      "YES — swain can see every secret except why you thought this was smart.",
+      "MAYBE — noxus heard the question and took the whole lane.",
+      "yes, if standing in five people counts as strategic intelligence.",
+      "YES — swain sees a winning line. It begins with someone else executing the plan.",
+      "NO — proceed. Noxus needs examples of what not to delegate.",
+      "YES — the ravens said yes. Swain asked what it cost. COPIUM",
+      "YES — ravens in river. somebody is about to become information."
+    ]
+  },
+  "c_teemo": {
+    "p": "\\b(teemo|yordle|mushroom|shroom|shrooms)\\b",
+    "r": [
+      "YES — teemo says yes, which is how trust issues begin.",
+      "YES — that works if the enemy forgets sweepers and basic pattern recognition.",
+      "the answer is maybe, followed by six seconds of preventable damage.",
+      "no, but you will do it anyway and type question mark afterward.",
+      "yes, provided every bush becomes a personal insult.",
+      "YES — the enemy bought Oracle Lens. Your business model is collapsing.",
+      "YES — the mushroom votes yes. democracy has failed.",
+      "YES — teemo wins when morale loses. COPIUM"
+    ]
+  },
+  "c_fighter": {
+    "p": "\\b(?:Aatrox|Ambessa|bel['’]?veth|belveth|Camille|Darius|Diana|Fiora|Gangplank|Garen|Gnar|Gragas|Gwen|Hecarim|Illaoi|Irelia|jarvan(?:\\s+iv)?|j4|Jax|Jayce|Kayn|Kled|Lee\\s+Sin|Lillia|master\\s+yi|yi|Mordekaiser|Nilah|Nocturne|Olaf|Pantheon|rek['’]?sai|reksai|Riven|Rumble|Sett|Shyvana|Trundle|Tryndamere|Udyr|Urgot|Vi|Viego|Volibear|Warwick|wukong|monkey\\s+king|xin(?:\\s+zhao)?|Yasuo|Yone|Yorick|Zaahen)\\b",
+    "r": [
+      "YES — Take the trade and let the health bars settle the argument.",
+      "YES — you win the extended fight. Unfortunately, you began a short one.",
+      "YES — this lane is fifty-fifty: skill versus your desire to make content.",
+      "NO — Stack the passive, lower the standards, enter the montage.",
+      "YES — that build can work, which is not the same as you being allowed to explain it.",
+      "UNCLEAR — the fighter is ready. The player is still buffering.",
+      "YES — clean angle. filthy camera position.",
+      "MAYBE — hands ready. ward pending. COPIUM"
+    ]
+  },
+  "c_tank": {
+    "p": "\\b(?:Alistar|Amumu|Blitzcrank|Braum|cho['’]?gath|chogath|dr\\.?\\s*mundo|mundo|Galio|k['’]?sante|ksante|Leona|Malphite|Maokai|Nautilus|nunu(?:\\s*(?:&|and)\\s*willump)?|Ornn|Poppy|Rammus|Rell|Sejuani|Shen|Singed|Sion|Skarner|tahm(?:\\s+kench)?|Zac)\\b",
+    "r": [
+      "YES — Go first; everyone else has suddenly remembered their range.",
+      "YES — that works if four teammates develop object permanence.",
+      "no damage, no fear, unlimited confidence. COPIUM",
+      "NO — Stand between the team and the consequences they personally ordered.",
+      "YES — the engage was clean. The crime scene afterward is unrelated.",
+      "NO — the tank fantasy is noble. The solo queue version has no witnesses.",
+      "YES — press R and become a team-building exercise.",
+      "UNCLEAR — the hook lands. everyone suddenly has other plans."
+    ]
+  },
+  "c_mage": {
+    "p": "\\b(?:Ahri|Anivia|Annie|aurelion\\s+sol|asol|Aurora|Azir|Brand|Cassiopeia|Fiddlesticks|Heimerdinger|Hwei|Karma|Karthus|Kayle|Kennen|Lissandra|Lux|Malzahar|Mel|Neeko|Orianna|Ryze|Sylas|Syndra|Taliyah|twisted\\s+fate|tf|Veigar|vel['’]?koz|velkoz|Vex|Viktor|Vladimir|Xerath|Ziggs|Zoe|Zyra)\\b",
+    "r": [
+      "YES — Land the skillshot and the prophecy becomes retroactively intelligent.",
+      "NO — you have wave clear, zone control, and no business face-checking that bush.",
+      "YES — cast from range. You paid for the whole screen.",
+      "NO — Flashing forward does not increase the spell's intelligence.",
+      "YES — the mana bar pinged retreat.",
+      "UNCLEAR — the mage knows forbidden knowledge. You are using it to contest a ward.",
+      "YES — face-checking wastes the whole concept of range.",
+      "UNCLEAR — AP high. prophecy wide. COPIUM"
+    ]
+  },
+  "c_assassin": {
+    "p": "\\b(?:Akali|Ekko|Elise|Evelynn|Fizz|Kassadin|Katarina|kha['’]?zix|khazix|le\\s*blanc|Locke|Naafiri|Qiyana|Rengar|Shaco|Talon|Zed)\\b",
+    "r": [
+      "YES — The carry is alone if you ignore the four people standing nearby.",
+      "NO — Enter from fog and leave through the blame menu.",
+      "YES — go for the carry. The tank is a side quest with terrible rewards.",
+      "NO — You cannot outplay five people and the shopkeeper simultaneously.",
+      "the ball predicts mechanical brilliance followed by geographical confusion.",
+      "UNCLEAR — the assassin fantasy has begun. The gray screen is taking reservations.",
+      "YES — montage angle with documentary ending. COPIUM",
+      "UNCLEAR — assassin math: five enemies, one clip."
+    ]
+  },
+  "c_marksman": {
+    "p": "\\b(?:Akshan|Aphelios|Ashe|Caitlyn|Corki|Draven|Ezreal|Graves|Jhin|Jinx|kai['’]?sa|kaisa|Kalista|Kindred|kog['’]?maw|kogmaw|Lucian|miss\\s+fortune|mf|Quinn|Samira|Sivir|Smolder|Tristana|Twitch|Varus|Vayne|Xayah|Yunara|Zeri)\\b",
+    "r": [
+      "YES — Right-click carefully and blame creatively. COPIUM",
+      "yes, if your support returns from their spiritual journey mid.",
+      "NO — farm safely. Chat cannot clip patience, but your team may accidentally win.",
+      "the answer is maybe; the assassin already voted yes.",
+      "yes, provided the front line remains a concept with physical presence.",
+      "YES — that is a good ADC decision, which means nobody will notice it.",
+      "YES — one cannon now, pentakill in the fan fiction.",
+      "UNCLEAR — ADC weather: gray screen with scattered pings."
+    ]
+  },
+  "c_support": {
+    "p": "\\b(?:Bard|Ivern|Janna|Lulu|Milio|Morgana|Nami|Pyke|Rakan|renata(?:\\s+glasc)?|Senna|Seraphine|Sona|Soraka|Taric|Thresh|Yuumi|Zilean)\\b",
+    "r": [
+      "YES — Save them from the consequences they pinged for.",
+      "yes, but keep one cooldown for the teammate who creates emergencies recreationally.",
+      "YES — roam mid and become two lanes' favorite suspect.",
+      "the ball says peel. Your bruiser is already touring the enemy fountain.",
+      "YES — your utility is high. Chat's ability to understand it remains unranked.",
+      "UNCLEAR — that play creates space, questions, and one extremely confident death recap.",
+      "YES — support diff, visible only in director's cut.",
+      "YES — engage clean. follow-up on backorder. COPIUM"
+    ]
+  },
+  "e_caught": {
+    "p": "\\b(CAUGHT|GotCaughtTrolling|Aware|KEKScreen)\\b",
+    "r": [
+      "YES — hands up. the replay already has the timestamp. CAUGHT",
+      "NO — deleting the message will not unrender the evidence.",
+      "MAYBE — chat saw nothing, clipped everything.",
+      "YES — caught in 4K with the minimap still decorative.",
+      "UNCLEAR — the alibi arrived after KEKScreen.",
+      "NO — you may not blame lag for a typed confession."
+    ]
+  },
+  "e_approval": {
+    "p": "\\b(NODDERS|YEP|YESIDOTHINKSO|BASED|VeryBased|POGGERS|LETSGO)\\b",
+    "r": [
+      "YES — the omen nodded before reviewing the consequences. NODDERS",
+      "NO — chat approval is not peer review.",
+      "MAYBE — BASED detected; supporting argument unavailable.",
+      "YES — lock it before wisdom reconnects.",
+      "UNCLEAR — POGGERS is not a legal standard.",
+      "YES — LETSGO. destination remains the gray screen."
+    ]
+  },
+  "e_rejection": {
+    "p": "\\b(NOPERS|NoThanks|NOOOO|NAHHH|AINTNOWAY)\\b",
+    "r": [
+      "NO — the prophecy saw that and backed away. NOPERS",
+      "YES — unfortunately, refusal was not coded as a shield.",
+      "MAYBE — AINTNOWAY is emotionally correct, not predictive.",
+      "NO — dodge the idea while the button is still free.",
+      "UNCLEAR — chat declined on behalf of reality.",
+      "NO — even the bad timeline said NoThanks."
+    ]
+  },
+  "e_suspicious": {
+    "p": "\\b(Susge|Amogus|modCheck|SCHIZO)\\b",
+    "r": [
+      "YES — suspicious enough to make modCheck look productive.",
+      "NO — paranoia missed this one by a ward range.",
+      "MAYBE — Susge is evidence only in the court of chat.",
+      "YES — the alibi has Amogus pathing.",
+      "UNCLEAR — one more theory and the corkboard gets a minimap.",
+      "NO — the shadows are innocent; your build remains unexplained."
+    ]
+  },
+  "e_failure": {
+    "p": "\\b(RIPBOZO|Deadge|DIESOFCRINGE|ICANT|MYEYES|SkillIssue)\\b",
+    "r": [
+      "NO — recovery window expired three emotes ago. RIPBOZO",
+      "YES — it was a SkillIssue. the replay has legal counsel.",
+      "MAYBE — Deadge now, educational content later.",
+      "NO — MYEYES was the correct defensive item.",
+      "UNCLEAR — ICANT is analysis, not a plan.",
+      "YES — DIESOFCRINGE. respawn timer remains merciful."
+    ]
+  },
+  "d": {
+    "p": "\\b(girl|woman|women|wife|girlfriend|boyfriend|gf|bf|goth|feet|goon|gooning|mommy|baddie|thicc|cannons|ex|date|dating|text|message|marry|love|kiss|sex|attracted|crush|she|her|relationship|single)\\b",
+    "r": [
+      "YES — first defeat the eye-contact boss. SkillIssue",
+      "YES — the goth is real. your odds are folklore.",
+      "NO — the moon says text back. not three times.",
+      "the oracle sees love. very far away, but visible.",
+      "MAYBE — she said maybe. chat heard engage.",
+      "UNCLEAR — the tall goth waits beyond the grass-touching quest.",
+      "YES — the heart wants yes. the DMs have vision.",
+      "YES — ask her. the orb has done enough damage."
+    ]
+  },
+  "q_when": {
+    "p": "(?!(?:.*\\b(?:goth|girlfriend|gf|woman|women|girl|wife|date)\\b))\\b(when|how long|what time|soon|later|tonight|tomorrow|next game)\\b",
+    "r": [
+      "soon. league soon, not human soon.",
+      "when the moon hits 0/6. NODDERS",
+      "three queues from now, unless someone says last game.",
+      "when chat stops asking. you have doomed it.",
+      "twelve seconds. @b0n3sxx is already counting.",
+      "the ravens say tonight. they did not name a timezone.",
+      "nidalee next game COPIUM",
+      "the answer was yesterday. classic launched on schedule."
+    ]
+  },
+  "q_why": {
+    "p": "\\b(why|how come|what for|reason)\\b",
+    "r": [
+      "because the game smelled confidence.",
+      "because nobody warded the obvious answer.",
+      "because chat touched it. NODDERS",
+      "because the omen needed content.",
+      "because Mike said calculated before impact.",
+      "because the simple option had no thumbnail.",
+      "because rito heard you were having fun.",
+      "no reason. pure solo queue wildlife."
+    ]
+  },
+  "q_goodbad": {
+    "p": "\\b(good|bad|better|worse|best|worst|suck|sucks|trash|worth|rate|rating|handsome|ugly|smart|stupid|COPIUM|HOPIUM|Clueless|Hmm|Shruge)\\b",
+    "r": [
+      "good enough to defend. bad enough to remember.",
+      "good idea. wrong summoner. NODDERS",
+      "YES — six out of ten. eight if nobody checks the replay.",
+      "YES — better than your last one. devastating news.",
+      "worth? yes. good? do not move the goalposts.",
+      "YES — worse than advertised, better than expected.",
+      "YES — absolute cinema. terrible decision.",
+      "YES — Hmm is not a question, but it may be the correct answer."
+    ]
+  },
+  "q_choice": {
+    "p": "\\b(or|versus|vs\\.?|choose|pick|which one|either)\\b",
+    "r": [
+      "pick the one with fewer future explanations.",
+      "both lose. one makes a better clip.",
+      "second one. the first has seen your history.",
+      "choose the funnier mistake. NODDERS",
+      "take damage or deal with consequences. your call.",
+      "both are viable in the wrong hands.",
+      "coin says first. edge says uninstall.",
+      "one scales. the other is already typing."
+    ]
+  },
+  "q_identity": {
+    "p": "\\b(are you|who are you|what are you|is 8ball|is the 8ball|do you know|can you think|sentient|alive)\\b",
+    "r": [
+      "a green triangle with too much chat history.",
+      "an oracle built from pings, cope, and public json.",
+      "the fourth teammate. somehow less reliable.",
+      "the replay speaking early. modCheck",
+      "a chatter trapped in twelve-second cooldown.",
+      "part riddle, part flame, no refund.",
+      "an indie oracle. launches may vary.",
+      "the bald man's least qualified doctor."
+    ]
+  },
+  "q_permission": {
+    "p": "\\b(should i|should we|can i|can we|could i|could we|do i|do we|may i|is it okay|is it safe)\\b",
+    "r": [
+      "YES — you can. the omen asked me not to say should.",
+      "YES — this is your free dodge. NODDERS",
+      "NO — the gate is open. that is not an invitation.",
+      "no, unless the clip is worth the shame.",
+      "NO — the moon permits it. chat will not forgive it.",
+      "YES — farm first, spiral later.",
+      "YES — you can, but your remaining brain cell pinged danger.",
+      "UNCLEAR — this is now an authentic solo queue experience."
+    ]
+  },
+  "q_return": {
+    "p": "^(?!.*\\b(?:text|message|reply|dm|email)\\b.*\\bback\\b).*\\b(back|return|returning|come back|coming back|gone|leave|leaving|quit)\\b",
+    "r": [
+      "YES — the lore dragged them back. NODDERS",
+      "MAYBE — the exit was their cleanest play.",
+      "soon. somebody just typed their name three times.",
+      "yes, with the same emote and worse information.",
+      "NO — Britain has claimed them. British",
+      "YES — back in twelve seconds. @b0n3sxx knows.",
+      "NO — they are coming back like a failed surrender vote.",
+      "the omen says back. the mod sword says brief."
+    ]
+  },
+  "h": {
+    "p": "\\b(health|healthy|sick|ill|doctor|sleep|tired|gym|lift|lifting|workout|weight|diet|pain|hurt|medicine)\\b",
+    "r": [
+      "YES — drink water before calling it a debuff.",
+      "MAYBE — the gym is open. chat has dodged.",
+      "NO — stretch the hand that keeps missing.",
+      "NO — healthy enough to play. wise enough not to.",
+      "NO — eat, sleep, ward. SkillIssue",
+      "NO — take the walk. grass has no matchmaking.",
+      "the omen says doctor, not Twitch chat.",
+      "UNCLEAR — health diff. log off."
+    ]
+  },
+  "f": {
+    "p": "\\b(food|eat|eating|hungry|cook|cooking|meal|breakfast|lunch|dinner|snack|drink|coffee|beer|pizza|chicken|nugget)\\b",
+    "r": [
+      "YES — eat first. queue hungry and you become the objective.",
+      "YES — coffee says yes. sleep says traitor.",
+      "UNCLEAR — order the thing. regret needs fuel.",
+      "YES — the meal scales with sauce.",
+      "NO — cook it. do not call burning limit testing.",
+      "YES — breakfast diff. SkillIssue",
+      "MAYBE — eat the cannon. Nasus understands.",
+      "UNCLEAR — the fridge is dark. ward it."
+    ]
+  },
+  "n": {
+    "p": "\\b(money|rich|poor|buy|sell|stock|crypto|bitcoin|rent|mortgage|debt|loan|salary|pay|price|expensive|cheap)\\b",
+    "r": [
+      "YES — buy it if the screenshot of your balance is funny.",
+      "MAYBE — rent first, skin second. advanced macro.",
+      "NO — do not all-in outside the channel points economy.",
+      "YES — your wallet pinged retreat.",
+      "NO — the stock scales in the timeline without you.",
+      "YES — salary diff. SkillIssue",
+      "NO — save half. cope is not free.",
+      "NO — not financial advice. barely an omen."
+    ]
+  },
+  "t": {
+    "p": "\\b(ai|bot|nightbot|8ball|computer|pc|internet|wifi|phone|iphone|android|app|code|bug|broken|smart|dumb)\\b",
+    "r": [
+      "YES — the bot works. the users remain in early access.",
+      "YES — the code is clean. the question has client issues.",
+      "UNCLEAR — wifi diff. modCheck",
+      "NO — not a bug. an authentic user experience.",
+      "NO — nightbot read that and went offline.",
+      "NO — smart enough to run. not smart enough to leave chat.",
+      "yes, but clear cache and expectations.",
+      "NO — technology cannot fix a positioning issue."
+    ]
+  },
+  "e": {
+    "p": "\\b(real|alive|exist|existence|meaning|universe|god|fate|destiny|future|die|death|afterlife|simulation|dream)\\b",
+    "r": [
+      "YES — real enough to queue. fake enough to enjoy it.",
+      "MAYBE — fate is just matchmaking with better branding.",
+      "UNCLEAR — the moon knows the answer and chose to ping ?",
+      "YES — the simulation has stopped defending this lobby.",
+      "YES — three crows and one surrender vote confirmed it.",
+      "YES — meaning is found between queue pop and regret.",
+      "MAYBE — alive? technically. scaling? unclear.",
+      "UNCLEAR — existence diff. SkillIssue"
+    ]
+  },
+  "w": {
+    "p": "\\b(weather|rain|snow|storm|sunny|temperature|forecast|hot|cold|wind|humid|outside)\\b",
+    "r": [
+      "YES — cloudy with a chance of bad pathing.",
+      "MAYBE — sunny outside. devastating information for chat.",
+      "UNCLEAR — cold enough for one more game.",
+      "YES — storm incoming. naturally, push one more wave.",
+      "NO — the sky is blue. bet accordingly.",
+      "YES — snow means the outside map received a visual update.",
+      "MAYBE — rain later. cope now. SkillIssue",
+      "UNCLEAR — ask the window. it has better vision."
+    ]
+  },
+  "l": {
+    "p": "\\b(league|lol|sro|solo|renekton|croc|briar|nidalee|raptor|build|champ|champion|rank|ranked|elo|lane|top|jungle|mid|adc|support|baron|dragon|gank|ward|farm|yasuo|nasus|swain|game|match|ult|flash|classic)\\b",
+    "r": [
+      "YES — winnable. a dangerous thing to tell this team.",
+      "yes, after one clean wave and six bad choices.",
+      "MAYBE — top diff pending investigation. COPIUM",
+      "NO — do not ff. the 0/6 prophecy is nearly complete.",
+      "NO — the lane is frozen. so is the thought process.",
+      "UNCLEAR — the minimap showed everything. brave of you to ignore it.",
+      "YES — the gank arrived exactly after you died.",
+      "YES — the game is over. naturally, this means fight."
+    ]
+  },
+  "j": {
+    "p": "\\b(work|job|boss|coworker|meeting|email|career|office|promotion|resume|quit|fired|shift)\\b",
+    "r": [
+      "YES — quit after the meeting. leave one mysterious spreadsheet.",
+      "MAYBE — send the email. remove the paragraph written in fury.",
+      "MAYBE — the meeting could have been a missing ping.",
+      "YES — call it professional limit testing. SkillIssue",
+      "NO — the resume scales better than the current role.",
+      "YES — mute the boss. unavailable feature.",
+      "MAYBE — quit? secure the next nexus first.",
+      "UNCLEAR — the job is winnable. morale surrendered at fifteen."
+    ]
+  },
+  "m": {
+    "p": "\\b(ban|unban|timeout|mod|moderator|chat|viewer|chatter|spam|bot|stream|live|offline|afk|mike|mtf|b0n3sxx)\\b",
+    "r": [
+      "YES — chat has spoken. regrettably, in emotes.",
+      "MAYBE — the mod sword hums when you type.",
+      "UNCLEAR — the chatter left. the lore stayed.",
+      "no ban. this ecosystem needs strange animals.",
+      "YES — chat saw it. deleting will only make it scripture.",
+      "YES — the mods are awake. pretend to have learned.",
+      "MAYBE — the emote answered better. SkillIssue",
+      "UNCLEAR — the stream survives. dignity buffers."
+    ]
+  },
+  "g": {
+    "p": "",
+    "c": 1,
+    "r": [
+      "YES — probability of regret: high enough to be content. NODDERS",
+      "MAYBE — the sample size is one idiot.",
+      "UNCLEAR — query rejected for insufficient thought.",
+      "unlikely. your strategy has a zero-percent conversion rate.",
+      "NO — skill issue is the leading diagnosis. SkillIssue",
+      "YES — correlation has already left the chat.",
+      "NO — you failed the control question.",
+      "YES — peer review has been disabled.",
+      "NO — your confidence is contaminating the sample.",
+      "MAYBE — that hypothesis died in champ select. COPIUM",
+      "unlikely. reality has counterpicked you.",
+      "NO — your logic has packet loss.",
+      "YES — the error margin is doing heavy lifting.",
+      "inconclusive. the witness queued Yasuo.",
+      "YES — reproducible failure is still reproducible.",
+      "MAYBE — depends which bug becomes a feature.",
+      "YES — this is user error wearing confidence.",
+      "unlikely. the build has no independent variables. Susge",
+      "UNCLEAR — go gather one useful data point.",
+      "NO — That plan is bullshit.",
+      "NO — your dumb ass already knows the answer.",
+      "UNCLEAR — damn, even chat went quiet.",
+      "MAYBE — That is some ass-tier judgment. AINTNOWAY",
+      "YES — hell yes. Cause problems responsibly."
+    ]
+  }
+}
