@@ -6,6 +6,8 @@ const LEAGUE_DOMAINS = new Set([
   'lane_wave_state', 'player_role_performance', 'objective_macro', 'fight_dive_trade_shutdown',
 ]);
 
+const ROOM_PERSON_IDS = new Set(['mtf', 'john_west_gamer', 'teamplay', 'misanthrope', 'bones']);
+
 function setOf(items, key) {
   return new Set(items.map((item) => key ? item[key] : item));
 }
@@ -100,6 +102,23 @@ function chaosPermission(response, bundle, deliveryModes) {
   return reasons;
 }
 
+function answerShapePermission(response, bundle) {
+  if (!String(bundle.route_family ?? '').startsWith('answer_shape:')) return [];
+
+  const responseEntities = new Set([
+    ...(response.entities_required ?? []),
+    ...(response.entities_preferred ?? []),
+  ]);
+  if (![...responseEntities].some((entity) => ROOM_PERSON_IDS.has(entity))) return [];
+
+  const responseConcepts = new Set([
+    ...(response.concepts_all ?? []),
+    ...(response.concepts_any ?? []),
+  ]);
+  if (responseConcepts.size > 0) return [];
+  return ['named_lore_does_not_answer_requested_form'];
+}
+
 export function evaluateEligibility(bundle, response, mode = 'production', activeEmotes = new Set()) {
   const data = loadRuntimeData();
   const reasons = [];
@@ -140,6 +159,7 @@ export function evaluateEligibility(bundle, response, mode = 'production', activ
   }
   if (response.league_intensity > supportedLeagueIntensity(bundle)) reasons.push('league_intensity_unsupported');
   if (response.sro_intensity > supportedSroIntensity(bundle)) reasons.push('sro_intensity_unsupported');
+  reasons.push(...answerShapePermission(response, bundle));
   reasons.push(...referencePermission(response, bundle, data.references));
   reasons.push(...chaosPermission(response, bundle, data.deliveryModes));
   const pinnedEmote = response.emote_policy?.pinned_emote ?? response.emote;

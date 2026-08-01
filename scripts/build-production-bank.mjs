@@ -62,23 +62,23 @@ function addGroup(prefix, meta, lines) {
 addGroup('general_prediction', {
   intents: ['prediction'], domains_any: ['general_oracle'], delivery: 'classic', min_specificity: 0, max_specificity: 0.65,
 }, [
-  { text: 'YES — the signs are unusually cooperative.', verdict: 'yes' },
-  { text: 'NO — this ends before it improves.', verdict: 'no', delivery: 'direct' },
+  { text: 'YES — chat is early, but not wrong yet.', verdict: 'yes' },
+  { text: 'NO — this is already asking for a replay.', verdict: 'no', delivery: 'direct' },
   { text: 'MAYBE — one useful mistake could change it.', verdict: 'maybe' },
   { text: 'OUTLOOK GOOD — not safely, but convincingly.', verdict: 'outlook_good' },
   { text: 'VERY DOUBTFUL — confidence arrived without evidence.', verdict: 'very_doubtful', delivery: 'dry' },
-  { text: 'ASK AGAIN LATER — the answer is still moving.', verdict: 'ask_again_later' },
+  { text: 'ASK AGAIN LATER — the lobby is still confessing.', verdict: 'ask_again_later' },
   { text: 'LIKELY — the path is ugly, not closed.', verdict: 'likely' },
   { text: 'UNLIKELY — the timing has already turned.', verdict: 'unlikely' },
   { text: 'YES — somehow, the door remains open.', verdict: 'yes' },
-  { text: 'NO — the Ball has seen enough.', verdict: 'no', delivery: 'direct' },
+  { text: 'NO — the evidence got here first.', verdict: 'no', delivery: 'direct' },
   { text: 'OUTLOOK UNCLEAR — the next decision owns it.', verdict: 'outlook_unclear' },
   { text: 'NOT YET — the moment has not committed.', verdict: 'not_yet' },
-  { text: 'THE SIGNS SAY YES — proceed without celebrating.', verdict: 'yes', delivery: 'dry' },
-  { text: 'THE SIGNS SAY NO — optimism has lost standing.', verdict: 'no', delivery: 'dry' },
-  { text: 'MAYBE — fortune is waiting for someone else to blink.', verdict: 'maybe' },
+  { text: 'THE SIGNS SAY YES — chat may not celebrate yet.', verdict: 'yes', delivery: 'dry' },
+  { text: 'THE SIGNS SAY NO — the cope arrived overdressed.', verdict: 'no', delivery: 'dry' },
+  { text: 'MAYBE — one normal decision opens the door.', verdict: 'maybe' },
   { text: 'YES — against better judgment.', verdict: 'yes', delivery: 'dry' },
-  { text: 'NO — the prophecy has chosen a victim.', verdict: 'no', delivery: 'dry' },
+  { text: 'NO — somebody already made it educational.', verdict: 'no', delivery: 'dry' },
   { text: 'OUTLOOK GOOD — barely, which still counts.', verdict: 'outlook_good' },
 ]);
 
@@ -103,15 +103,15 @@ addGroup('general_evaluation', {
   intents: ['evaluation', 'reaction'], domains_any: ['general_oracle'], delivery: 'classic', min_specificity: 0, max_specificity: 0.7,
 }, [
   { text: 'YES — better than it has any right to be.', verdict: 'yes', delivery: 'dry' },
-  { text: 'NO — the premise is carrying the result.', verdict: 'no', delivery: 'dry' },
+  { text: 'NO — the result is doing charity work.', verdict: 'no', delivery: 'dry' },
   { text: 'MAYBE — the evidence is split.', verdict: 'maybe' },
   { text: 'OUTLOOK GOOD — the flaws are not fatal.', verdict: 'outlook_good', delivery: 'direct' },
-  { text: 'VERY DOUBTFUL — the confidence is decorative.', verdict: 'very_doubtful', delivery: 'dry' },
-  { text: 'NO — this did not survive inspection.', verdict: 'no', delivery: 'direct' },
+  { text: 'VERY DOUBTFUL — confidence is typing over the footage.', verdict: 'very_doubtful', delivery: 'dry' },
+  { text: 'NO — the replay is less generous.', verdict: 'no', delivery: 'direct' },
   { text: 'YES — the result counts, even if the method does not.', verdict: 'yes', delivery: 'direct' },
-  { text: 'OUTLOOK UNCLEAR — success and good judgment are arguing.', verdict: 'outlook_unclear', delivery: 'dry' },
+  { text: 'OUTLOOK UNCLEAR — the result and the play disagree.', verdict: 'outlook_unclear', delivery: 'dry' },
   { text: 'MAYBE — technically alive.', verdict: 'maybe', delivery: 'dry' },
-  { text: 'NO — the Ball rejects the appeal.', verdict: 'no', delivery: 'dry' },
+  { text: 'NO — appeals close after the timestamp.', verdict: 'no', delivery: 'dry' },
   { text: 'YES — regrettably valid.', verdict: 'yes', delivery: 'dry' },
   { text: 'OUTLOOK UNCLEAR — one more failure will clarify it.', verdict: 'outlook_unclear' },
 ]);
@@ -120,12 +120,12 @@ addGroup('general_timing', {
   intents: ['timing'], domains_any: ['general_oracle'], delivery: 'classic', min_specificity: 0, max_specificity: 0.8,
 }, [
   { text: 'SOON — sooner than wisdom recommends.', verdict: 'soon', delivery: 'dry' },
-  { text: 'NOT YET — the moment is still forming.', verdict: 'not_yet' },
-  { text: 'ASK AGAIN LATER — the timing is still hiding.', verdict: 'ask_again_later' },
-  { text: 'OUTLOOK UNCLEAR — the clock is hiding behind circumstance.', verdict: 'unclear' },
+  { text: 'NOT YET — chat is early again.', verdict: 'not_yet' },
+  { text: 'ASK AGAIN LATER — the queue has not committed.', verdict: 'ask_again_later' },
+  { text: 'OUTLOOK UNCLEAR — the timer is mostly vibes.', verdict: 'unclear' },
   { text: 'SOON — after one unnecessary delay.', verdict: 'soon' },
   { text: 'NOT YET — impatience is early.', verdict: 'not_yet', delivery: 'dry' },
-  { text: 'ASK AGAIN LATER — the answer has not arrived.', verdict: 'ask_again_later' },
+  { text: 'ASK AGAIN LATER — the timestamp is still loading.', verdict: 'ask_again_later' },
   { text: 'OUTLOOK UNCLEAR — before too long, after too much.', verdict: 'unclear', delivery: 'dry' },
 ]);
 
@@ -157,11 +157,11 @@ addGroup('general_location', {
   intents: ['location'], domains_any: ['general_oracle'], delivery: 'direct', min_specificity: 0, max_specificity: 0.8,
 }, [
   { text: 'NEARBY — avoiding responsibility.', verdict: 'direct_location', delivery: 'dry' },
-  { text: 'OUTLOOK UNCLEAR — the trail ends at poor judgment.', verdict: 'unclear', delivery: 'dry' },
+  { text: 'OUTLOOK UNCLEAR — the ping went unanswered.', verdict: 'unclear', delivery: 'dry' },
   { text: 'RIGHT WHERE YOU LEFT IT — probably.', verdict: 'direct_location' },
-  { text: 'ELSEWHERE — with the better decision.', verdict: 'direct_location', delivery: 'dry' },
+  { text: 'ELSEWHERE — probably dodging the next question.', verdict: 'direct_location', delivery: 'dry' },
   { text: 'CLOSER THAN EXPECTED — farther than useful.', verdict: 'direct_location' },
-  { text: 'ASK AGAIN LATER — location services have chosen secrecy.', verdict: 'ask_again_later', delivery: 'dry' },
+  { text: 'ASK AGAIN LATER — chat has not found the minimap.', verdict: 'ask_again_later', delivery: 'dry' },
 ]);
 
 addGroup('general_fragment', {
@@ -896,10 +896,10 @@ addGroup('food_outside', {
 addGroup('bot_status', {
   intents: ['identity', 'evaluation'], domains_any: ['stream_chat_moderation'], concepts_any: ['bot_status'], delivery: 'direct', min_specificity: 0.35, max_specificity: 1,
 }, [
-  { text: 'NO — the Ball is an object with excellent timing.', verdict: 'direct_identity', delivery: 'dry' },
+  { text: 'NO — it is a command with good timing.', verdict: 'direct_identity', delivery: 'dry' },
   { text: 'YES — it works; that is all the personality you get.', verdict: 'direct_identity', syntax_family: 'verdict_semicolon_clause' },
   { text: 'NO — the Ball does not have feelings to hurt.', verdict: 'direct_identity' },
-  { text: 'OUTLOOK UNCLEAR — ask a better object.', verdict: 'unclear', delivery: 'dry' },
+  { text: 'OUTLOOK UNCLEAR — ask a better question first.', verdict: 'unclear', delivery: 'dry' },
 ]);
 
 addGroup('creator_origin', {

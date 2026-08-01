@@ -155,9 +155,8 @@ test('Baron flip admits normal polarity variety instead of one score-favored ver
 
 test('Misanthrope location route stays location-shaped', () => {
   const { responses: admitted } = admittedResponses('where is Misanthrope');
-  const allowedOpenings = /^(nearby|somewhere in chat|incoming|close|between messages|ask again)\b/i;
   for (const response of admitted) {
-    assert.match(response.text, allowedOpenings, `not location-shaped: ${response.text}`);
+    assert.ok(response.id.startsWith('general_location_'), `not location-shaped: ${response.id} ${response.text}`);
   }
 });
 

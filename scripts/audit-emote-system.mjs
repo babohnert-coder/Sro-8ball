@@ -22,7 +22,7 @@ const runtime = new OracleRuntime({ mode: 'production', env, memory: new InMemor
 const prompts = [
   'will Mike win', 'is this game doomed', 'is this build troll', 'can he hit masters',
   'was that worth', 'should he flip baron', 'why did he flash', 'doubt or believe',
-  'where is misanthrope', 'why is mtf such a hater', 'does bones put pineapple on pizza',
+  'is this Feedmax', 'why is mtf such a hater', 'does bones put pineapple on pizza',
   'will the comeback happen', 'is renekton good here', 'should he keep cooking',
   'is top free', 'did he give the shutdown', 'viewer games?', 'do you love me',
   'what happens next', 'is this a good idea', 'are you fucking high', 'mods ban?',

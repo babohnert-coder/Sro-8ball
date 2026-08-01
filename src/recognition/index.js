@@ -450,6 +450,8 @@ function choosePrimaryDomain(normalized, domains, concepts, entities) {
 const ROUTE_CONCEPT_PRIORITY = [
   'creator_collab_money', 'bot_completion', 'bot_challenge', 'mock_mod_call',
   'viewer_games', 'mtf_hater', 'room_doubters_believers', 'love_question',
+  'sro_future_performance', 'sro_skill_evaluation', 'john_direction_choice',
+  'gamba_outcome', 'person_appearance', 'person_problem',
   'gold_reset_cope', 'shutdown_given', 'shutdown_collected', 'worth_cope',
   'mock_diff', 'wave_clear_jab', 'premature_hype', 'reckless_commitment',
   'game_outcome_question', 'game_winnable_question', 'game_over_question',
@@ -463,11 +465,39 @@ const ROUTE_CONCEPT_PRIORITY = [
   'creator_origin', 'bot_status', 'chat_laugh_reaction',
 ];
 
-function deriveRouteFamily(primaryDomain, concepts, entities) {
+const FORM_DOMINANT_INTENTS = new Set([
+  'comparison', 'timing', 'location', 'prediction', 'permission', 'evaluation', 'explanation',
+]);
+
+const ROOM_NATIVE_ROUTE_CONCEPTS = new Set([
+  'creator_collab_money', 'bot_completion', 'bot_challenge', 'mock_mod_call',
+  'viewer_games', 'mtf_hater', 'room_doubters_believers', 'love_question',
+  'creator_origin', 'bot_status', 'chat_laugh_reaction',
+]);
+
+const ROOM_PERSON_IDS = new Set(['mtf', 'john_west_gamer', 'teamplay', 'misanthrope', 'bones']);
+
+function hasRouteConcept(concepts) {
+  const conceptSet = new Set(concepts.map((item) => item.label));
+  return ROUTE_CONCEPT_PRIORITY.some((concept) => conceptSet.has(concept));
+}
+
+function formDominatesNamedLore(intent, concepts, domains, entities) {
+  if (!FORM_DOMINANT_INTENTS.has(intent.label)) return false;
+  if (!entities.some((item) => item.resolution_status === 'verified' && ROOM_PERSON_IDS.has(item.value))) return false;
+  const domainSet = new Set(domains.map((item) => item.label));
+  if (['food_health_outside', 'ordinary_life', 'work_money', 'relationships_social'].some((domain) => domainSet.has(domain))) return false;
+  if (!hasRouteConcept(concepts)) return true;
+  const conceptSet = new Set(concepts.map((item) => item.label));
+  return [...conceptSet].every((concept) => !ROOM_NATIVE_ROUTE_CONCEPTS.has(concept));
+}
+
+function deriveRouteFamily(primaryDomain, concepts, entities, intent, domains) {
   const conceptSet = new Set(concepts.map((item) => item.label));
   for (const concept of ROUTE_CONCEPT_PRIORITY) if (conceptSet.has(concept)) return concept;
+  if (formDominatesNamedLore(intent, concepts, domains, entities)) return `answer_shape:${intent.label}`;
   const named = entities.find((item) => item.resolution_status === 'verified'
-    && ['mtf', 'john_west_gamer', 'teamplay', 'misanthrope', 'bones'].includes(item.value));
+    && ROOM_PERSON_IDS.has(item.value));
   if (named) return `room_person:${named.value}`;
   return `domain:${primaryDomain}`;
 }
@@ -590,7 +620,7 @@ export function recognizeInquiry(raw) {
   const specificity = computeSpecificity({ normalized: normalizedInput.normalized, intent, primaryDomain, entities, concepts, states, ambiguities });
   const confidence = computeConfidence({ normalized: normalizedInput.normalized, intent, primaryDomain, entities, concepts, ambiguities });
 
-  const routeFamily = deriveRouteFamily(primaryDomain, concepts, entities);
+  const routeFamily = deriveRouteFamily(primaryDomain, concepts, entities, intent, domains);
   evidence.push(`route_family:${routeFamily}`);
 
   return {

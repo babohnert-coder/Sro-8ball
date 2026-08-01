@@ -1,0 +1,236 @@
+{
+  "version": "2026-08-01.chat-language-pass.proposal",
+  "source": {
+    "chat_file": "C:\\Users\\BABoh\\AppData\\Local\\Temp\\SRO_CHAT_INPUTS_MINIMAL.jsonl",
+    "message_count": 12480,
+    "user_count": 1043,
+    "purpose": "Evidence for phrasing, room behavior, emote placement, and possible future ontology review. This file is not an automatic production approval list."
+  },
+  "product_boundaries": [
+    "Do not convert frequency alone into permanent lore.",
+    "Do not add runtime generation or sentence fragments.",
+    "Do not alter the corrected router hierarchy.",
+    "Do not add new response lanes from this proposal during the language pass.",
+    "Keep existing reference permissions authoritative."
+  ],
+  "entity_aliases": [
+    {
+      "entity": "sro",
+      "aliases_observed": ["SRO", "Mike", "SoloRenektonOnly", "Solo"],
+      "evidence_count": 252,
+      "confidence": "high",
+      "recommendation": "Already supported; use to inform wording only."
+    },
+    {
+      "entity": "john_west_gamer",
+      "aliases_observed": ["John", "johnwestgamer", "JWG"],
+      "evidence_count": 58,
+      "confidence": "medium",
+      "recommendation": "Already supported; do not let entity override clear answer forms."
+    },
+    {
+      "entity": "mtf",
+      "aliases_observed": ["MTF", "Londonbert"],
+      "evidence_count": 27,
+      "confidence": "medium",
+      "recommendation": "Existing MTF/Nidalee/British associations remain plausible."
+    },
+    {
+      "entity": "teamplay",
+      "aliases_observed": ["Teamplay"],
+      "evidence_count": 14,
+      "confidence": "medium_low",
+      "recommendation": "Keep current moderation framing; do not broaden."
+    },
+    {
+      "entity": "misanthrope",
+      "aliases_observed": ["misanthrope"],
+      "evidence_count": 5,
+      "confidence": "low_in_this_sample",
+      "recommendation": "Existing lore may rely on other verified sources; this chat slice alone does not justify expansion."
+    }
+  ],
+  "person_concept_associations": [
+    {
+      "entity": "sro",
+      "concepts": ["top lane", "Renekton", "Darius", "rank", "win/loss", "builds", "bald", "plumber", "boom/waddup"],
+      "evidence_counts": {
+        "mike": 252,
+        "sro": 222,
+        "renekton": 75,
+        "darius": 57,
+        "build": 47,
+        "bald": 62,
+        "plumber": 8,
+        "boom": 101,
+        "waddup": 17
+      },
+      "confidence": "high",
+      "production_note": "Use only on existing SRO/domain routes."
+    },
+    {
+      "entity": "mtf",
+      "concepts": ["Nidalee", "British/Londonbert request energy"],
+      "evidence_counts": {
+        "mtf": 27,
+        "nidalee": 12
+      },
+      "confidence": "medium",
+      "production_note": "Retain existing route-specific responses; no new broad named-person behavior."
+    },
+    {
+      "entity": "john_west_gamer",
+      "concepts": ["room regular", "doubter/believer adjacency", "John West/East direction joke"],
+      "evidence_counts": {
+        "john": 58,
+        "JWG": 17,
+        "explicit_believer": 1,
+        "explicit_doubter": 1
+      },
+      "confidence": "medium",
+      "production_note": "Do not broaden from sparse believer/doubter wording in this slice."
+    },
+    {
+      "entity": "teamplay",
+      "concepts": ["moderation", "ban/delete/rules framing"],
+      "evidence_counts": {
+        "teamplay": 14,
+        "modCheck": 9,
+        "PepePolice": 8
+      },
+      "confidence": "medium",
+      "production_note": "Existing moderator tone is supported."
+    }
+  ],
+  "champion_concept_associations": [
+    {
+      "champion": "Renekton",
+      "evidence_count": 75,
+      "concepts": ["SRO identity", "top lane", "responsible/default pick"],
+      "confidence": "high"
+    },
+    {
+      "champion": "Darius",
+      "evidence_count": 57,
+      "concepts": ["top lane matchup", "extended trades", "ranked volatility"],
+      "confidence": "medium_high"
+    },
+    {
+      "champion": "Garen",
+      "evidence_count": 33,
+      "concepts": ["simple top lane champion", "execute/spin jokes"],
+      "confidence": "medium"
+    },
+    {
+      "champion": "Mundo",
+      "evidence_count": 26,
+      "concepts": ["top lane matchup", "tank/health framing"],
+      "confidence": "medium"
+    },
+    {
+      "champion": "Nasus",
+      "evidence_count": 17,
+      "concepts": ["scaling", "stacking"],
+      "confidence": "medium"
+    },
+    {
+      "champion": "Jax",
+      "evidence_count": 16,
+      "concepts": ["scaling", "side lane"],
+      "confidence": "medium"
+    },
+    {
+      "champion": "Nidalee",
+      "evidence_count": 12,
+      "concepts": ["MTF request", "spear/campaign callback"],
+      "confidence": "medium"
+    }
+  ],
+  "durable_room_phrases": [
+    {
+      "phrase_family": "boom/waddup greeting",
+      "evidence_count": 118,
+      "confidence": "high",
+      "production_note": "Already represented by BOOMWADDUP and SRO identity tone."
+    },
+    {
+      "phrase_family": "winnable/doomed/free/worth shorthand",
+      "evidence_count": 100,
+      "confidence": "high",
+      "production_note": "Use for answer-shape review; no new lane needed."
+    },
+    {
+      "phrase_family": "paypal/wintrading accusation",
+      "evidence_count": 10,
+      "confidence": "medium",
+      "production_note": "Can inform mock-accusation style; do not imply real misconduct."
+    },
+    {
+      "phrase_family": "bald/plumber SRO identity",
+      "evidence_count": 70,
+      "confidence": "high",
+      "production_note": "Existing lore routes are enough."
+    },
+    {
+      "phrase_family": "gamba/believer/doubter",
+      "evidence_count": 14,
+      "confidence": "medium_low",
+      "production_note": "Keep specific route gating."
+    }
+  ],
+  "recurring_league_concepts": [
+    {"concept": "build/item evaluation", "evidence_count": 47, "confidence": "high"},
+    {"concept": "rank/LP/Masters", "evidence_count": 60, "confidence": "high"},
+    {"concept": "flash usage", "evidence_count": 23, "confidence": "medium_high"},
+    {"concept": "dragon/drake/objective", "evidence_count": 14, "confidence": "medium"},
+    {"concept": "Baron/objective", "evidence_count": 12, "confidence": "medium"},
+    {"concept": "Smite/objective execution", "evidence_count": 9, "confidence": "medium"},
+    {"concept": "wave/lane/top state", "evidence_count": 100, "confidence": "high"}
+  ],
+  "question_phrasings": [
+    {"pattern": "is this/that [thing]", "count": 54, "intent_hint": "evaluation"},
+    {"pattern": "did he/you [action]", "count": 21, "intent_hint": "evaluation_or_past_outcome"},
+    {"pattern": "can we/you/I [action]", "count": 35, "intent_hint": "permission_or_prediction"},
+    {"pattern": "what rank/what is/what about", "count": 46, "intent_hint": "identity_or_evaluation"},
+    {"pattern": "how much/how many/how did/how do", "count": 38, "intent_hint": "quantity_or_explanation"},
+    {"pattern": "winnable/doomed/worth/free as fragments", "count": 100, "intent_hint": "prediction_or_evaluation"},
+    {"pattern": "[champion/player/build]?", "count": 200, "intent_hint": "contextual evaluation"}
+  ],
+  "emote_language": {
+    "validated_common": [
+      {"alias": "xxd", "count": 187, "function": "goofy irony or mock pride"},
+      {"alias": "KEKW", "count": 145, "function": "hard laughter"},
+      {"alias": "NODDERS", "count": 144, "function": "agreement or verdict seal"},
+      {"alias": "LUL", "count": 140, "function": "light laughter"},
+      {"alias": "KEKL", "count": 118, "function": "mockery or failure laughter"},
+      {"alias": "POGGERS", "count": 112, "function": "hype or approval"},
+      {"alias": "HUH", "count": 57, "function": "confused disbelief"},
+      {"alias": "lookUp", "count": 42, "function": "watching or suspicion"}
+    ],
+    "not_validated_for_production": ["STRONGERS", "KEKG", "peepoYELLING", "pagPause", "IHaveAQuestion", "BLUBBERS", "LMAODD", "OMEGALUL", "PogChamp", "ResidentSleeper"]
+  },
+  "temporary_or_uncertain_material": [
+    {
+      "topic": "one-stream champion/game details",
+      "reason": "May reflect the day's games rather than durable lore.",
+      "recommendation": "Do not promote without cross-log evidence."
+    },
+    {
+      "topic": "non-inventory emote-like tokens",
+      "reason": "Capitalized/CamelCase does not equal active 7TV availability.",
+      "recommendation": "Validate against live active set before production use."
+    },
+    {
+      "topic": "low-count person references",
+      "reason": "Counts are too sparse in this file to broaden lore.",
+      "recommendation": "Keep existing verified references authoritative."
+    }
+  ],
+  "unsupported_answer_forms_to_document_separately": [
+    {
+      "form": "quantity/count",
+      "example_patterns": ["how many", "how much"],
+      "current_handling": "Recognized through existing forms/routes where possible; no new quantity response lane should be added in this task."
+    }
+  ]
+}

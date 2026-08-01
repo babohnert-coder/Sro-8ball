@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { recognizeInquiry } from '../src/recognition/index.js';
 import { getEligibleResponses } from '../src/selection/eligibility.js';
 import { scoreEligibleResponse, emptyVarietySnapshot } from '../src/selection/scoring.js';
@@ -10,7 +11,7 @@ import { FileMemoryStore } from '../src/memory/file.js';
 import { validateResponsePool } from '../src/validation/index.js';
 import { loadRuntimeData } from '../src/data.js';
 
-const root = path.resolve(new URL('..', import.meta.url).pathname);
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const responses = JSON.parse(fs.readFileSync(path.join(root, 'data/runtime/responses.json'), 'utf8')).responses;
 const fixtures = JSON.parse(fs.readFileSync(path.join(root, 'test/fixtures/golden-router-pilot.json'), 'utf8')).fixtures;
 const cfg = loadRuntimeData();

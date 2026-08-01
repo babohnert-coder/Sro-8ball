@@ -1,9 +1,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { OracleRuntime } from '../src/runtime.js';
 import { InMemoryStore } from '../src/memory/in-memory.js';
 
-const root = path.resolve(new URL('..', import.meta.url).pathname);
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const fixtures = JSON.parse(fs.readFileSync(path.join(root, 'test/fixtures/golden-router-pilot.json'), 'utf8')).fixtures;
 const integrationPrompts = [
   ['i001', 'good gold reset?'],

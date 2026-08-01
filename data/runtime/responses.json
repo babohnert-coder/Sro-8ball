@@ -3,7 +3,7 @@
   "responses": [
     {
       "id": "general_prediction_01",
-      "text": "YES — the signs are unusually cooperative.",
+      "text": "YES — chat is early, but not wrong yet.",
       "intents": [
         "prediction"
       ],
@@ -36,10 +36,10 @@
       "syntax_family": "verdict_dash_single_clause",
       "editorial_notes": "Reviewed and retained during the V4.5 editorial rebuild. V4.6 humor grammar reviewed. V4.7 emote policy applied. V4.8 integrated emote contract applied. V4.9 contextual emote grammar applied.",
       "source_assumptions": [],
-      "reply_move": "straight_verdict",
+      "reply_move": "conditional_verdict",
       "twist_family": "none",
-      "target_family": "fate",
-      "payoff_family": "utility",
+      "target_family": "chat",
+      "payoff_family": "reversal",
       "emote_policy": {
         "expressions_any": [
           "hype",
@@ -47,11 +47,14 @@
           "smug",
           "ironic_endorsement",
           "mild_hype",
-          "agreement",
-          "approval",
+          "hope",
+          "cope",
+          "suspicion",
+          "desperate_hope",
           "disbelief",
-          "neutral_reaction",
-          "hope"
+          "goofy_irony",
+          "agreement",
+          "approval"
         ],
         "expressions_preferred": [
           "agreement",
@@ -64,12 +67,14 @@
           "prediction_yes"
         ],
         "visual_families_preferred": [],
-        "context_tags": [],
+        "context_tags": [
+          "negative_outcome"
+        ],
         "target_contexts": [
           "prediction",
-          "straight_verdict",
-          "fate",
-          "utility",
+          "conditional_verdict",
+          "chat",
+          "reversal",
           "prediction_unclear",
           "prediction_yes"
         ],
@@ -86,7 +91,7 @@
     },
     {
       "id": "general_prediction_02",
-      "text": "NO — this ends before it improves.",
+      "text": "NO — this is already asking for a replay.",
       "intents": [
         "prediction"
       ],
@@ -420,7 +425,7 @@
     },
     {
       "id": "general_prediction_06",
-      "text": "ASK AGAIN LATER — the answer is still moving.",
+      "text": "ASK AGAIN LATER — the lobby is still confessing.",
       "intents": [
         "prediction"
       ],
@@ -455,7 +460,7 @@
       "source_assumptions": [],
       "reply_move": "instruction",
       "twist_family": "none",
-      "target_family": "fate",
+      "target_family": "game_state",
       "payoff_family": "reversal",
       "emote_policy": {
         "expressions_any": [
@@ -487,7 +492,7 @@
         "target_contexts": [
           "prediction",
           "instruction",
-          "fate",
+          "game_state",
           "reversal",
           "prediction_unclear"
         ],
@@ -753,7 +758,7 @@
     },
     {
       "id": "general_prediction_10",
-      "text": "NO — the Ball has seen enough.",
+      "text": "NO — the evidence got here first.",
       "intents": [
         "prediction"
       ],
@@ -786,24 +791,29 @@
       "syntax_family": "verdict_dash_single_clause",
       "editorial_notes": "Reviewed and retained during the V4.5 editorial rebuild. V4.6 humor grammar reviewed. V4.7 emote policy applied. V4.8 integrated emote contract applied. V4.9 contextual emote grammar applied.",
       "source_assumptions": [],
-      "reply_move": "straight_verdict",
-      "twist_family": "none",
+      "reply_move": "mock_sentence",
+      "twist_family": "mock_authority",
       "target_family": "fate",
-      "payoff_family": "utility",
+      "payoff_family": "judgment",
       "emote_policy": {
         "expressions_any": [
           "disbelief",
           "sadness",
           "mockery",
           "dry_disapproval",
-          "agreement",
-          "approval",
-          "neutral_reaction",
+          "judgment",
+          "recognition",
+          "suspicion",
+          "accusatory_disbelief",
+          "bait",
           "doom",
           "failure",
           "refusal"
         ],
         "expressions_preferred": [
+          "suspicion",
+          "bait",
+          "mockery",
           "doom",
           "failure",
           "refusal"
@@ -811,15 +821,16 @@
         "expressions_forbidden": [],
         "discourse_functions_any": [
           "prediction_unclear",
-          "prediction_no"
+          "prediction_no",
+          "mock_sentence"
         ],
         "visual_families_preferred": [],
         "context_tags": [],
         "target_contexts": [
           "prediction",
-          "straight_verdict",
+          "mock_sentence",
           "fate",
-          "utility",
+          "judgment",
           "prediction_unclear",
           "prediction_no"
         ],
@@ -1000,7 +1011,7 @@
     },
     {
       "id": "general_prediction_13",
-      "text": "THE SIGNS SAY YES — proceed without celebrating.",
+      "text": "THE SIGNS SAY YES — chat may not celebrate yet.",
       "intents": [
         "prediction"
       ],
@@ -1035,7 +1046,7 @@
       "source_assumptions": [],
       "reply_move": "straight_verdict",
       "twist_family": "none",
-      "target_family": "fate",
+      "target_family": "chat",
       "payoff_family": "utility",
       "emote_policy": {
         "expressions_any": [
@@ -1065,7 +1076,7 @@
         "target_contexts": [
           "prediction",
           "straight_verdict",
-          "fate",
+          "chat",
           "utility",
           "prediction_unclear",
           "prediction_yes"
@@ -1083,7 +1094,7 @@
     },
     {
       "id": "general_prediction_14",
-      "text": "THE SIGNS SAY NO — optimism has lost standing.",
+      "text": "THE SIGNS SAY NO — the cope arrived overdressed.",
       "intents": [
         "prediction"
       ],
@@ -1119,7 +1130,7 @@
       "reply_move": "straight_verdict",
       "twist_family": "none",
       "target_family": "fate",
-      "payoff_family": "utility",
+      "payoff_family": "cope",
       "emote_policy": {
         "expressions_any": [
           "disbelief",
@@ -1128,7 +1139,9 @@
           "dry_disapproval",
           "agreement",
           "approval",
-          "neutral_reaction",
+          "cope",
+          "hope",
+          "desperate_hope",
           "doom",
           "failure",
           "refusal"
@@ -1141,19 +1154,19 @@
         "expressions_forbidden": [],
         "discourse_functions_any": [
           "prediction_unclear",
-          "prediction_no"
+          "prediction_no",
+          "cope_prophecy"
         ],
         "visual_families_preferred": [],
-        "context_tags": [
-          "negative_outcome"
-        ],
+        "context_tags": [],
         "target_contexts": [
           "prediction",
           "straight_verdict",
           "fate",
-          "utility",
+          "cope",
           "prediction_unclear",
-          "prediction_no"
+          "prediction_no",
+          "cope_prophecy"
         ],
         "compound_roles_any": [],
         "compound_preferred": false,
@@ -1168,7 +1181,7 @@
     },
     {
       "id": "general_prediction_15",
-      "text": "MAYBE — fortune is waiting for someone else to blink.",
+      "text": "MAYBE — one normal decision opens the door.",
       "intents": [
         "prediction"
       ],
@@ -1333,7 +1346,7 @@
     },
     {
       "id": "general_prediction_17",
-      "text": "NO — the prophecy has chosen a victim.",
+      "text": "NO — somebody already made it educational.",
       "intents": [
         "prediction"
       ],
@@ -1367,9 +1380,9 @@
       "editorial_notes": "Reviewed and retained during the V4.5 editorial rebuild. V4.6 humor grammar reviewed. V4.7 emote policy applied. V4.8 integrated emote contract applied. V4.9 contextual emote grammar applied.",
       "source_assumptions": [],
       "reply_move": "straight_verdict",
-      "twist_family": "role_reversal",
+      "twist_family": "none",
       "target_family": "fate",
-      "payoff_family": "reversal",
+      "payoff_family": "utility",
       "emote_policy": {
         "expressions_any": [
           "disbelief",
@@ -1378,8 +1391,7 @@
           "dry_disapproval",
           "agreement",
           "approval",
-          "smug",
-          "goofy_irony",
+          "neutral_reaction",
           "doom",
           "failure",
           "refusal"
@@ -1400,7 +1412,7 @@
           "prediction",
           "straight_verdict",
           "fate",
-          "reversal",
+          "utility",
           "prediction_unclear",
           "prediction_no"
         ],
@@ -2596,7 +2608,7 @@
     },
     {
       "id": "general_evaluation_02",
-      "text": "NO — the premise is carrying the result.",
+      "text": "NO — the result is doing charity work.",
       "intents": [
         "evaluation",
         "reaction"
@@ -2631,9 +2643,9 @@
       "editorial_notes": "Reviewed and retained during the V4.5 editorial rebuild. V4.6 humor grammar reviewed. V4.7 emote policy applied. V4.8 integrated emote contract applied. V4.9 contextual emote grammar applied.",
       "source_assumptions": [],
       "reply_move": "straight_verdict",
-      "twist_family": "premise_undercut",
+      "twist_family": "none",
       "target_family": "fate",
-      "payoff_family": "reversal",
+      "payoff_family": "utility",
       "emote_policy": {
         "expressions_any": [
           "disbelief",
@@ -2642,8 +2654,7 @@
           "dry_disapproval",
           "agreement",
           "approval",
-          "smug",
-          "goofy_irony",
+          "neutral_reaction",
           "doom",
           "failure",
           "refusal"
@@ -2664,7 +2675,7 @@
           "evaluation",
           "straight_verdict",
           "fate",
-          "reversal",
+          "utility",
           "general_reaction",
           "prediction_no"
         ],
@@ -2851,7 +2862,7 @@
     },
     {
       "id": "general_evaluation_05",
-      "text": "VERY DOUBTFUL — the confidence is decorative.",
+      "text": "VERY DOUBTFUL — confidence is typing over the footage.",
       "intents": [
         "evaluation",
         "reaction"
@@ -2935,7 +2946,7 @@
     },
     {
       "id": "general_evaluation_06",
-      "text": "NO — this did not survive inspection.",
+      "text": "NO — the replay is less generous.",
       "intents": [
         "evaluation",
         "reaction"
@@ -3105,7 +3116,7 @@
     },
     {
       "id": "general_evaluation_08",
-      "text": "OUTLOOK UNCLEAR — success and good judgment are arguing.",
+      "text": "OUTLOOK UNCLEAR — the result and the play disagree.",
       "intents": [
         "evaluation",
         "reaction"
@@ -3277,7 +3288,7 @@
     },
     {
       "id": "general_evaluation_10",
-      "text": "NO — the Ball rejects the appeal.",
+      "text": "NO — appeals close after the timestamp.",
       "intents": [
         "evaluation",
         "reaction"
@@ -3311,20 +3322,19 @@
       "syntax_family": "verdict_dash_single_clause",
       "editorial_notes": "Reviewed and retained during the V4.5 editorial rebuild. V4.6 humor grammar reviewed. V4.7 emote policy applied. V4.8 integrated emote contract applied. V4.9 contextual emote grammar applied.",
       "source_assumptions": [],
-      "reply_move": "mock_sentence",
-      "twist_family": "mock_authority",
+      "reply_move": "straight_verdict",
+      "twist_family": "none",
       "target_family": "fate",
-      "payoff_family": "judgment",
+      "payoff_family": "utility",
       "emote_policy": {
         "expressions_any": [
           "disbelief",
           "sadness",
           "mockery",
           "dry_disapproval",
-          "judgment",
-          "recognition",
-          "suspicion",
-          "accusatory_disbelief",
+          "agreement",
+          "approval",
+          "neutral_reaction",
           "doom",
           "failure",
           "refusal"
@@ -3337,16 +3347,15 @@
         "expressions_forbidden": [],
         "discourse_functions_any": [
           "general_reaction",
-          "prediction_no",
-          "mock_sentence"
+          "prediction_no"
         ],
         "visual_families_preferred": [],
         "context_tags": [],
         "target_contexts": [
           "evaluation",
-          "mock_sentence",
+          "straight_verdict",
           "fate",
-          "judgment",
+          "utility",
           "general_reaction",
           "prediction_no"
         ],
@@ -3611,7 +3620,7 @@
     },
     {
       "id": "general_timing_02",
-      "text": "NOT YET — the moment is still forming.",
+      "text": "NOT YET — chat is early again.",
       "intents": [
         "timing"
       ],
@@ -3646,7 +3655,7 @@
       "source_assumptions": [],
       "reply_move": "straight_verdict",
       "twist_family": "premise_undercut",
-      "target_family": "fate",
+      "target_family": "chat",
       "payoff_family": "reversal",
       "emote_policy": {
         "expressions_any": [
@@ -3678,7 +3687,7 @@
         "target_contexts": [
           "timing",
           "straight_verdict",
-          "fate",
+          "chat",
           "reversal",
           "watching_reaction",
           "prediction_unclear"
@@ -3696,7 +3705,7 @@
     },
     {
       "id": "general_timing_03",
-      "text": "ASK AGAIN LATER — the timing is still hiding.",
+      "text": "ASK AGAIN LATER — the queue has not committed.",
       "intents": [
         "timing"
       ],
@@ -3731,7 +3740,7 @@
       "source_assumptions": [],
       "reply_move": "instruction",
       "twist_family": "none",
-      "target_family": "fate",
+      "target_family": "game_state",
       "payoff_family": "reversal",
       "emote_policy": {
         "expressions_any": [
@@ -3764,7 +3773,7 @@
         "target_contexts": [
           "timing",
           "instruction",
-          "fate",
+          "game_state",
           "reversal",
           "watching_reaction",
           "prediction_unclear"
@@ -3782,7 +3791,7 @@
     },
     {
       "id": "general_timing_04",
-      "text": "OUTLOOK UNCLEAR — the clock is hiding behind circumstance.",
+      "text": "OUTLOOK UNCLEAR — the timer is mostly vibes.",
       "intents": [
         "timing"
       ],
@@ -3844,9 +3853,7 @@
           "prediction_unclear"
         ],
         "visual_families_preferred": [],
-        "context_tags": [
-          "negative_outcome"
-        ],
+        "context_tags": [],
         "target_contexts": [
           "timing",
           "straight_verdict",
@@ -4026,7 +4033,7 @@
     },
     {
       "id": "general_timing_07",
-      "text": "ASK AGAIN LATER — the answer has not arrived.",
+      "text": "ASK AGAIN LATER — the timestamp is still loading.",
       "intents": [
         "timing"
       ],
@@ -5370,7 +5377,7 @@
     },
     {
       "id": "general_location_02",
-      "text": "OUTLOOK UNCLEAR — the trail ends at poor judgment.",
+      "text": "OUTLOOK UNCLEAR — the ping went unanswered.",
       "intents": [
         "location"
       ],
@@ -5530,7 +5537,7 @@
     },
     {
       "id": "general_location_04",
-      "text": "ELSEWHERE — with the better decision.",
+      "text": "ELSEWHERE — probably dodging the next question.",
       "intents": [
         "location"
       ],
@@ -5686,7 +5693,7 @@
     },
     {
       "id": "general_location_06",
-      "text": "ASK AGAIN LATER — location services have chosen secrecy.",
+      "text": "ASK AGAIN LATER — chat has not found the minimap.",
       "intents": [
         "location"
       ],
@@ -5721,7 +5728,7 @@
       "source_assumptions": [],
       "reply_move": "instruction",
       "twist_family": "none",
-      "target_family": "fate",
+      "target_family": "chat",
       "payoff_family": "reversal",
       "emote_policy": {
         "expressions_any": [
@@ -5754,7 +5761,7 @@
         "target_contexts": [
           "location",
           "instruction",
-          "fate",
+          "chat",
           "reversal",
           "general_reaction",
           "prediction_unclear"
@@ -47190,7 +47197,7 @@
     },
     {
       "id": "bot_status_01",
-      "text": "The Ball is an object with excellent timing.",
+      "text": "It is a command with good timing.",
       "intents": [
         "identity",
         "evaluation"
@@ -47434,7 +47441,7 @@
     },
     {
       "id": "bot_status_04",
-      "text": "Ask the cursed object a better question.",
+      "text": "Ask a better question first.",
       "intents": [
         "identity",
         "evaluation"

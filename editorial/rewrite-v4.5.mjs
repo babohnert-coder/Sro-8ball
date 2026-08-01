@@ -478,10 +478,10 @@ export const groupRewrites = {
   ],
 
   bot_status: [
-    { text: 'The Ball is an object with excellent timing.', delivery: 'dry' },
+    { text: 'It is a command with good timing.', delivery: 'dry' },
     { text: 'It works. That is all the personality you get.', delivery: 'direct' },
     { text: 'No feelings. Plenty of verdicts.', delivery: 'dry' },
-    { text: 'Ask the cursed object a better question.', delivery: 'dry' },
+    { text: 'Ask a better question first.', delivery: 'dry' },
   ],
 
   john_west: [

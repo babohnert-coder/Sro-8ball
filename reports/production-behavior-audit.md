@@ -175,9 +175,7 @@
 ## Coverage lows
 - r014 (4): is Baron free
 - r028 (4): is dragon a flip
-- r036 (4): is JohnWestGamer winning
 - r039 (4): did Bones build the Ball
-- r040 (4): is Teamplay banning me
 - r042 (4): is SRO a plumber
 - r043 (4): should Mike buy Bitcoin
 - r044 (4): did Jokic wear the merch
@@ -193,3 +191,5 @@
 - r016 (6): should I cook dinner
 - r017 (6): is Mike cooking
 - r018 (6): can we ff
+- r019 (6): why did he flash
+- r020 (6): when will Mike hit Masters
