@@ -1,0 +1,18 @@
+{
+  "version": "4.6.0",
+  "source": "Four supplied SRO Twitch chat logs from July 2026",
+  "chat_logs_inspected": 4,
+  "chat_messages_inspected": 6044,
+  "short_messages": {
+    "definition": "12 words or fewer and 100 characters or fewer",
+    "count": 5580,
+    "share": 0.923
+  },
+  "pattern_counts": {
+    "correction_or_reversal": 56,
+    "imperative_retort": 98,
+    "cope_reframe": 30,
+    "mock_authority": 94,
+    "understatement": 298
+  }
+}

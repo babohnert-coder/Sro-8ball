@@ -1,0 +1,35 @@
+{
+  "version": "5.0.2",
+  "set_id": "01GBAYMGX0000B23ECE97RP321",
+  "api_base": "https://api.7tv.app/v3/emote-sets",
+  "cache_ttl_seconds": 300,
+  "error_cache_ttl_seconds": 60,
+  "rolling_target": {
+    "enabled": true,
+    "minimum_ratio": 0.7,
+    "window_size": 20,
+    "base_probability": 0.7,
+    "maximum_consecutive_plain_replies": 1,
+    "force_when_behind_target": true,
+    "never_force_semantic_mismatch": true
+  },
+  "selection": {
+    "recent_exact_window": 8,
+    "recent_expression_window": 5,
+    "candidate_score_band": 2,
+    "minimum_confidence_for_normal_reply": 0.45,
+    "minimum_confidence_for_obscure_chaos": 0.15,
+    "allow_uncategorized_only_for_chaos": true,
+    "exclude_zero_width": true,
+    "compound_probability": 0.12,
+    "compound_recent_window": 6
+  },
+  "inventory": {
+    "require_full_active_set": true,
+    "preserve_aliases": true,
+    "key_by_set_alias_and_emote_id": true,
+    "unknown_default_expression": "hidden_nonsense",
+    "unknown_default_visual_family": "obscure",
+    "report_uncategorized": true
+  }
+}

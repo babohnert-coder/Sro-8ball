@@ -1,0 +1,1533 @@
+{
+  "version": "4.8.0",
+  "concepts": [
+    {
+      "id": "game_outcome_question",
+      "phrases": [
+        "outcome of this game",
+        "what happens this game",
+        "who wins this game",
+        "will they win"
+      ],
+      "domains": [
+        "current_game"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "prediction"
+      ]
+    },
+    {
+      "id": "game_winnable_question",
+      "phrases": [
+        "is this game winnable",
+        "can they still win",
+        "is it winnable"
+      ],
+      "domains": [
+        "current_game"
+      ],
+      "implied_states": [
+        "uncertain"
+      ],
+      "compatible_intents": [
+        "evaluation",
+        "prediction"
+      ]
+    },
+    {
+      "id": "game_over_question",
+      "phrases": [
+        "is this game over",
+        "is it over",
+        "game is over"
+      ],
+      "domains": [
+        "current_game"
+      ],
+      "implied_states": [
+        "negative_event"
+      ],
+      "compatible_intents": [
+        "evaluation",
+        "prediction"
+      ]
+    },
+    {
+      "id": "shutdown_given",
+      "phrases": [
+        "gave the shutdown",
+        "donated the bounty",
+        "handed over 700g",
+        "cashed him out",
+        "resetting his gold",
+        "reset his gold",
+        "donate the shutdown",
+        "donated the shutdown",
+        "donate shutdown",
+        "donated shutdown"
+      ],
+      "domains": [
+        "fight_dive_trade_shutdown",
+        "current_game"
+      ],
+      "implied_states": [
+        "negative_event",
+        "reversible",
+        "sarcastic_or_cope"
+      ],
+      "compatible_intents": [
+        "evaluation",
+        "prediction",
+        "reaction"
+      ]
+    },
+    {
+      "id": "shutdown_collected",
+      "phrases": [
+        "got the shutdown",
+        "collected the bounty",
+        "cashed the shutdown",
+        "claimed 700g"
+      ],
+      "domains": [
+        "fight_dive_trade_shutdown",
+        "current_game"
+      ],
+      "implied_states": [
+        "positive_event"
+      ],
+      "compatible_intents": [
+        "evaluation",
+        "reaction"
+      ]
+    },
+    {
+      "id": "throw_risk",
+      "phrases": [
+        "throw",
+        "throwing",
+        "nice throw",
+        "threw the game",
+        "about to throw"
+      ],
+      "domains": [
+        "current_game",
+        "fight_dive_trade_shutdown"
+      ],
+      "implied_states": [
+        "negative_event",
+        "throw_risk"
+      ],
+      "compatible_intents": [
+        "evaluation",
+        "prediction",
+        "reaction"
+      ]
+    },
+    {
+      "id": "comeback_possible",
+      "phrases": [
+        "come back",
+        "coming back",
+        "can they come back",
+        "back in it"
+      ],
+      "domains": [
+        "current_game"
+      ],
+      "implied_states": [
+        "comeback_possible",
+        "reversible"
+      ],
+      "compatible_intents": [
+        "prediction",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "won_lane",
+      "phrases": [
+        "won lane",
+        "win lane",
+        "lane kingdom",
+        "top gap"
+      ],
+      "domains": [
+        "lane_wave_state",
+        "player_role_performance"
+      ],
+      "implied_states": [
+        "positive_event"
+      ],
+      "compatible_intents": [
+        "evaluation",
+        "prediction"
+      ]
+    },
+    {
+      "id": "lost_lane",
+      "phrases": [
+        "lost lane",
+        "lose lane",
+        "lane gap",
+        "got gapped"
+      ],
+      "domains": [
+        "lane_wave_state",
+        "player_role_performance"
+      ],
+      "implied_states": [
+        "negative_event"
+      ],
+      "compatible_intents": [
+        "evaluation",
+        "prediction"
+      ]
+    },
+    {
+      "id": "jungle_pressure_enemy",
+      "phrases": [
+        "camped top",
+        "three man top",
+        "jungle lives top",
+        "ganked again",
+        "enemy jungle top"
+      ],
+      "domains": [
+        "lane_wave_state",
+        "player_role_performance"
+      ],
+      "implied_states": [
+        "negative_event"
+      ],
+      "compatible_intents": [
+        "evaluation",
+        "reaction"
+      ]
+    },
+    {
+      "id": "jungle_pressure_ally",
+      "phrases": [
+        "our jungle came top",
+        "jungler helped top",
+        "got a gank",
+        "jungle is top"
+      ],
+      "domains": [
+        "lane_wave_state",
+        "player_role_performance"
+      ],
+      "implied_states": [
+        "positive_event"
+      ],
+      "compatible_intents": [
+        "evaluation",
+        "reaction"
+      ]
+    },
+    {
+      "id": "counterpick",
+      "phrases": [
+        "counterpick",
+        "counter picked",
+        "hard counter",
+        "picked into"
+      ],
+      "domains": [
+        "champion_matchup"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "evaluation",
+        "prediction"
+      ]
+    },
+    {
+      "id": "wave_freeze",
+      "phrases": [
+        "wave is frozen",
+        "frozen on",
+        "freeze this",
+        "holding the wave"
+      ],
+      "domains": [
+        "lane_wave_state"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "evaluation",
+        "permission"
+      ]
+    },
+    {
+      "id": "wave_denial",
+      "phrases": [
+        "cannot walk up",
+        "zoned off xp",
+        "denied xp",
+        "wave is doomed",
+        "cannot touch wave"
+      ],
+      "domains": [
+        "lane_wave_state"
+      ],
+      "implied_states": [
+        "negative_event"
+      ],
+      "compatible_intents": [
+        "evaluation",
+        "prediction"
+      ]
+    },
+    {
+      "id": "dive_attempt",
+      "phrases": [
+        "dive this",
+        "tower dive",
+        "diving top",
+        "can he dive"
+      ],
+      "domains": [
+        "fight_dive_trade_shutdown"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "permission",
+        "prediction",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "trade_attempt",
+      "phrases": [
+        "take this trade",
+        "win the trade",
+        "trade here",
+        "can he trade"
+      ],
+      "domains": [
+        "fight_dive_trade_shutdown"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "permission",
+        "prediction",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "objective_free",
+      "phrases": [
+        "baron free",
+        "dragon free",
+        "objective free",
+        "herald free",
+        "grubs free"
+      ],
+      "domains": [
+        "objective_macro"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "evaluation",
+        "prediction"
+      ]
+    },
+    {
+      "id": "objective_flip",
+      "phrases": [
+        "baron flip",
+        "dragon flip",
+        "coinflip objective",
+        "50 50",
+        "flip baron",
+        "flip dragon",
+        "flip the objective"
+      ],
+      "domains": [
+        "objective_macro"
+      ],
+      "implied_states": [
+        "uncertain"
+      ],
+      "compatible_intents": [
+        "evaluation",
+        "permission"
+      ]
+    },
+    {
+      "id": "baron_call",
+      "phrases": [
+        "take baron",
+        "do baron",
+        "start baron",
+        "baron call"
+      ],
+      "domains": [
+        "objective_macro"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "permission",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "dragon_call",
+      "phrases": [
+        "take dragon",
+        "do dragon",
+        "start dragon",
+        "dragon call"
+      ],
+      "domains": [
+        "objective_macro"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "permission",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "experimental_build",
+      "phrases": [
+        "interesting build",
+        "interesting builds",
+        "cooked with this build",
+        "off meta",
+        "off-meta",
+        "thumbnail build",
+        "weird build",
+        "feedmax",
+        "feedmaxing"
+      ],
+      "domains": [
+        "builds_items_runes",
+        "sro"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "evaluation",
+        "prediction",
+        "reaction"
+      ]
+    },
+    {
+      "id": "build_evaluation",
+      "phrases": [
+        "is this build good",
+        "is this build bad",
+        "build viable",
+        "troll build",
+        "does this build work",
+        "will this build win"
+      ],
+      "domains": [
+        "builds_items_runes"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "evaluation",
+        "prediction"
+      ]
+    },
+    {
+      "id": "build_success",
+      "phrases": [
+        "build worked",
+        "this build wins",
+        "build is working"
+      ],
+      "domains": [
+        "builds_items_runes"
+      ],
+      "implied_states": [
+        "positive_event"
+      ],
+      "compatible_intents": [
+        "evaluation",
+        "reaction"
+      ]
+    },
+    {
+      "id": "build_failure",
+      "phrases": [
+        "build failed",
+        "build is grief",
+        "build is trolling",
+        "build does no damage"
+      ],
+      "domains": [
+        "builds_items_runes"
+      ],
+      "implied_states": [
+        "negative_event"
+      ],
+      "compatible_intents": [
+        "evaluation",
+        "reaction"
+      ]
+    },
+    {
+      "id": "rank_goal_masters",
+      "phrases": [
+        "hit masters",
+        "get masters",
+        "masters today",
+        "masters again",
+        "mikey masters"
+      ],
+      "domains": [
+        "rank_climb",
+        "sro"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "prediction",
+        "timing",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "rank_goal_challenger",
+      "phrases": [
+        "hit challenger",
+        "get challenger",
+        "challenger today",
+        "rank 1"
+      ],
+      "domains": [
+        "rank_climb",
+        "sro"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "prediction",
+        "timing",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "rank_streak_goal",
+      "phrases": [
+        "six wins before six losses",
+        "win streak",
+        "one streak away"
+      ],
+      "domains": [
+        "rank_climb",
+        "sro"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "prediction",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "lp_movement",
+      "phrases": [
+        "gain lp",
+        "lose lp",
+        "lp cooked",
+        "mmr",
+        "promo",
+        "99 lp"
+      ],
+      "domains": [
+        "rank_climb"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "prediction",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "worth_literal",
+      "phrases": [
+        "is it worth",
+        "worth buying",
+        "worth doing"
+      ],
+      "domains": [],
+      "implied_states": [],
+      "compatible_intents": [
+        "evaluation"
+      ]
+    },
+    {
+      "id": "worth_cope",
+      "phrases": [
+        "was that worth",
+        "worth?",
+        "totally worth",
+        "worth it after dying",
+        "was that actually worth it",
+        "was that even worth it",
+        "was that really worth it"
+      ],
+      "domains": [
+        "fight_dive_trade_shutdown"
+      ],
+      "implied_states": [
+        "sarcastic_or_cope"
+      ],
+      "compatible_intents": [
+        "evaluation",
+        "reaction"
+      ]
+    },
+    {
+      "id": "creator_origin",
+      "phrases": [
+        "who built you",
+        "who made you",
+        "who coded you",
+        "your creator",
+        "where did you come from"
+      ],
+      "domains": [
+        "stream_chat_moderation"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "identity"
+      ]
+    },
+    {
+      "id": "bot_status",
+      "phrases": [
+        "are you working",
+        "is the bot alive",
+        "is 8ball broken",
+        "bot working"
+      ],
+      "domains": [
+        "stream_chat_moderation"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "identity",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "room_doubters_believers",
+      "phrases": [
+        "doubters",
+        "believers",
+        "prediction believers",
+        "prediction doubters",
+        "doubt",
+        "believe",
+        "doubt or believe",
+        "believe or doubt",
+        "gamba believers",
+        "gamba doubters"
+      ],
+      "domains": [
+        "room_lore",
+        "rank_climb"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "prediction",
+        "evaluation",
+        "reaction",
+        "comparison",
+        "permission"
+      ]
+    },
+    {
+      "id": "old_six_nashors_jax",
+      "phrases": [
+        "six nashors",
+        "6 nashors",
+        "nashors jax",
+        "old youtube build"
+      ],
+      "domains": [
+        "room_lore",
+        "builds_items_runes",
+        "champion_matchup"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "evaluation",
+        "identity",
+        "reaction"
+      ]
+    },
+    {
+      "id": "plumbing_topic",
+      "phrases": [
+        "plumbing",
+        "plumber",
+        "pipes",
+        "drains",
+        "toilet business"
+      ],
+      "domains": [
+        "room_lore",
+        "work_money"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "identity",
+        "evaluation",
+        "prediction"
+      ]
+    },
+    {
+      "id": "bitcoin_topic",
+      "phrases": [
+        "bitcoin",
+        "crypto",
+        "hodl"
+      ],
+      "domains": [
+        "room_lore",
+        "work_money"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "evaluation",
+        "permission",
+        "prediction"
+      ]
+    },
+    {
+      "id": "jokic_topic",
+      "phrases": [
+        "jokic",
+        "nuggets",
+        "basketball merch"
+      ],
+      "domains": [
+        "room_lore"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "identity",
+        "evaluation",
+        "reaction"
+      ]
+    },
+    {
+      "id": "serious_direct",
+      "phrases": [
+        "seriously",
+        "real answer",
+        "no joke",
+        "be serious"
+      ],
+      "domains": [],
+      "implied_states": [
+        "serious"
+      ],
+      "compatible_intents": [
+        "prediction",
+        "evaluation",
+        "permission",
+        "timing"
+      ]
+    },
+    {
+      "id": "surrender_question",
+      "phrases": [
+        "can we ff",
+        "should we ff",
+        "ff this",
+        "surrender",
+        "go next"
+      ],
+      "domains": [
+        "current_game"
+      ],
+      "implied_states": [
+        "negative_event"
+      ],
+      "compatible_intents": [
+        "permission",
+        "prediction",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "carry_game",
+      "phrases": [
+        "carry this game",
+        "can he carry",
+        "can mike carry",
+        "1v9",
+        "one v nine",
+        "carryable"
+      ],
+      "domains": [
+        "current_game",
+        "player_role_performance"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "prediction",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "scaling_question",
+      "phrases": [
+        "will they scale",
+        "will he scale",
+        "will she scale",
+        "outscale",
+        "scaling comp",
+        "scale into late"
+      ],
+      "domains": [
+        "current_game",
+        "champion_matchup"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "prediction",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "matchup_evaluation",
+      "phrases": [
+        "is this matchup playable",
+        "good matchup",
+        "bad matchup",
+        "win this matchup",
+        "win the matchup",
+        "matchup good"
+      ],
+      "domains": [
+        "champion_matchup"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "evaluation",
+        "prediction"
+      ]
+    },
+    {
+      "id": "proxy_lane",
+      "phrases": [
+        "can he proxy",
+        "should he proxy",
+        "proxy the wave",
+        "proxying the wave",
+        "proxy top"
+      ],
+      "domains": [
+        "lane_wave_state"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "permission",
+        "prediction",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "item_spike",
+      "phrases": [
+        "item spike",
+        "power spike",
+        "does this item spike",
+        "spike on this item",
+        "two item spike",
+        "three item spike"
+      ],
+      "domains": [
+        "builds_items_runes"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "evaluation",
+        "prediction",
+        "timing"
+      ]
+    },
+    {
+      "id": "int_feed",
+      "phrases": [
+        "did he int",
+        "int the lane",
+        "ran it down",
+        "running it down",
+        "is he feeding",
+        "feed the lane",
+        "run it down",
+        "running it"
+      ],
+      "domains": [
+        "player_role_performance",
+        "fight_dive_trade_shutdown"
+      ],
+      "implied_states": [
+        "negative_event"
+      ],
+      "compatible_intents": [
+        "evaluation",
+        "reaction",
+        "prediction"
+      ]
+    },
+    {
+      "id": "jungle_gank_prediction",
+      "phrases": [
+        "will jungle come top",
+        "will jungler come top",
+        "will jungle gank",
+        "jungler coming top",
+        "jungle path top"
+      ],
+      "domains": [
+        "lane_wave_state",
+        "player_role_performance"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "prediction",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "smite_objective",
+      "phrases": [
+        "smite baron",
+        "smite dragon",
+        "smite the objective",
+        "does mike smite baron"
+      ],
+      "domains": [
+        "objective_macro"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "prediction",
+        "evaluation",
+        "permission"
+      ]
+    },
+    {
+      "id": "champion_pick",
+      "phrases": [
+        "play nidalee",
+        "play renekton",
+        "lock renekton",
+        "pick jax",
+        "lock in",
+        "champion pick"
+      ],
+      "domains": [
+        "champion_matchup"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "prediction",
+        "permission",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "weather_question",
+      "phrases": [
+        "will it rain",
+        "going to rain",
+        "weather today",
+        "will it snow",
+        "weather tomorrow"
+      ],
+      "domains": [
+        "food_health_outside"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "prediction",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "food_decision",
+      "phrases": [
+        "cook dinner",
+        "eat dinner",
+        "should i eat",
+        "get food",
+        "make dinner",
+        "order food"
+      ],
+      "domains": [
+        "food_health_outside"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "permission",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "groceries_task",
+      "phrases": [
+        "carry groceries",
+        "get groceries",
+        "buy groceries",
+        "bring in the groceries"
+      ],
+      "domains": [
+        "food_health_outside",
+        "ordinary_life"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "permission",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "job_decision",
+      "phrases": [
+        "quit my job",
+        "leave my job",
+        "quit work",
+        "take the job",
+        "new job"
+      ],
+      "domains": [
+        "work_money"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "permission",
+        "prediction",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "purchase_decision",
+      "phrases": [
+        "worth buying",
+        "should i buy",
+        "buy it",
+        "worth the price",
+        "worth the money"
+      ],
+      "domains": [
+        "work_money"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "permission",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "social_message",
+      "phrases": [
+        "text her",
+        "text him",
+        "message her",
+        "message him",
+        "double text",
+        "send the text"
+      ],
+      "domains": [
+        "relationships_social"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "permission",
+        "prediction",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "personal_cooked",
+      "phrases": [
+        "am i cooked",
+        "are we cooked",
+        "i am cooked"
+      ],
+      "domains": [
+        "ordinary_life"
+      ],
+      "implied_states": [
+        "uncertain"
+      ],
+      "compatible_intents": [
+        "evaluation",
+        "reaction"
+      ]
+    },
+    {
+      "id": "lead_built",
+      "phrases": [
+        "build a lead",
+        "built a lead",
+        "building a lead"
+      ],
+      "domains": [
+        "current_game",
+        "player_role_performance"
+      ],
+      "implied_states": [
+        "positive_event"
+      ],
+      "compatible_intents": [
+        "evaluation",
+        "prediction"
+      ]
+    },
+    {
+      "id": "build_free",
+      "phrases": [
+        "is this build free",
+        "is the build free",
+        "build free"
+      ],
+      "domains": [
+        "builds_items_runes"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "evaluation",
+        "prediction"
+      ]
+    },
+    {
+      "id": "lane_free",
+      "phrases": [
+        "is top free",
+        "is lane free",
+        "top free",
+        "lane free"
+      ],
+      "domains": [
+        "lane_wave_state"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "evaluation",
+        "prediction"
+      ]
+    },
+    {
+      "id": "flash_use",
+      "phrases": [
+        "why did he flash",
+        "why flash",
+        "did he flash"
+      ],
+      "domains": [
+        "fight_dive_trade_shutdown"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "explanation",
+        "evaluation",
+        "reaction"
+      ]
+    },
+    {
+      "id": "champion_comparison",
+      "phrases": [
+        "jax or renekton",
+        "renekton or jax"
+      ],
+      "domains": [
+        "champion_matchup"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "comparison"
+      ]
+    },
+    {
+      "id": "sro_skill_evaluation",
+      "phrases": [
+        "is mike good",
+        "is sro good",
+        "is solo renekton only good"
+      ],
+      "domains": [
+        "sro",
+        "player_role_performance"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "evaluation",
+        "reaction"
+      ]
+    },
+    {
+      "id": "availability_question",
+      "phrases": [
+        "free tomorrow",
+        "available tomorrow",
+        "free later",
+        "available later"
+      ],
+      "domains": [
+        "ordinary_life"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "evaluation",
+        "prediction"
+      ]
+    },
+    {
+      "id": "structure_building",
+      "phrases": [
+        "build a house",
+        "build a home",
+        "build a deck",
+        "build the house"
+      ],
+      "domains": [
+        "ordinary_life"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "permission",
+        "evaluation",
+        "prediction"
+      ]
+    },
+    {
+      "id": "recipe_scaling",
+      "phrases": [
+        "scale this recipe",
+        "scale the recipe",
+        "double this recipe",
+        "halve this recipe"
+      ],
+      "domains": [
+        "food_health_outside"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "permission",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "item_scaling",
+      "phrases": [
+        "does this item scale",
+        "will this item scale",
+        "item scaling",
+        "scaling item"
+      ],
+      "domains": [
+        "builds_items_runes"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "evaluation",
+        "prediction"
+      ]
+    },
+    {
+      "id": "lane_over",
+      "phrases": [
+        "top lane over",
+        "lane is over",
+        "is top over",
+        "is the lane over"
+      ],
+      "domains": [
+        "lane_wave_state"
+      ],
+      "implied_states": [
+        "negative_event"
+      ],
+      "compatible_intents": [
+        "evaluation",
+        "prediction"
+      ]
+    },
+    {
+      "id": "wave_lost",
+      "phrases": [
+        "lose the wave",
+        "lost the wave",
+        "missed the wave",
+        "wave is lost"
+      ],
+      "domains": [
+        "lane_wave_state"
+      ],
+      "implied_states": [
+        "negative_event"
+      ],
+      "compatible_intents": [
+        "evaluation",
+        "reaction"
+      ]
+    },
+    {
+      "id": "mtf_hater",
+      "phrases": [
+        "mtf hater",
+        "michaelthefan hater",
+        "michael the fan hater",
+        "why is mtf such a hater",
+        "why is michaelthefan such a hater",
+        "mtf is wrong"
+      ],
+      "domains": [
+        "room_lore",
+        "stream_chat_moderation"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "explanation",
+        "evaluation",
+        "reaction"
+      ]
+    },
+    {
+      "id": "gold_reset_cope",
+      "phrases": [
+        "good gold reset",
+        "gold reset",
+        "reset the gold"
+      ],
+      "domains": [
+        "fight_dive_trade_shutdown",
+        "current_game"
+      ],
+      "implied_states": [
+        "negative_event",
+        "reversible",
+        "sarcastic_or_cope"
+      ],
+      "compatible_intents": [
+        "reaction",
+        "evaluation",
+        "prediction"
+      ]
+    },
+    {
+      "id": "mock_diff",
+      "phrases": [
+        "mana diff",
+        "mental diff",
+        "hands diff",
+        "macro diff",
+        "wave clear diff"
+      ],
+      "domains": [
+        "player_role_performance",
+        "current_game"
+      ],
+      "implied_states": [
+        "sarcastic_or_cope"
+      ],
+      "compatible_intents": [
+        "reaction",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "wave_clear_jab",
+      "phrases": [
+        "na wave clear",
+        "wave clear"
+      ],
+      "domains": [
+        "lane_wave_state"
+      ],
+      "implied_states": [
+        "negative_event"
+      ],
+      "compatible_intents": [
+        "reaction",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "premature_hype",
+      "phrases": [
+        "easy penta",
+        "free penta",
+        "penta incoming",
+        "easy win"
+      ],
+      "domains": [
+        "current_game"
+      ],
+      "implied_states": [
+        "uncertain"
+      ],
+      "compatible_intents": [
+        "reaction",
+        "prediction",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "reckless_commitment",
+      "phrases": [
+        "send it",
+        "full send",
+        "let him cook",
+        "let mike cook",
+        "run it back"
+      ],
+      "domains": [
+        "current_game",
+        "builds_items_runes"
+      ],
+      "implied_states": [
+        "throw_risk"
+      ],
+      "compatible_intents": [
+        "reaction",
+        "permission",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "viewer_games",
+      "phrases": [
+        "viewer games",
+        "bring back viewer games"
+      ],
+      "domains": [
+        "room_lore",
+        "stream_chat_moderation"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "reaction",
+        "prediction",
+        "evaluation",
+        "timing"
+      ]
+    },
+    {
+      "id": "creator_collab_money",
+      "phrases": [
+        "creator collab",
+        "paid collab",
+        "sponsor deal",
+        "sponsorship",
+        "integration deal",
+        "how much are they paying"
+      ],
+      "domains": [
+        "work_money",
+        "sro"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "explanation",
+        "evaluation",
+        "prediction"
+      ]
+    },
+    {
+      "id": "bot_completion",
+      "phrases": [
+        "when will you be finished",
+        "is the bot finished",
+        "is the ball finished",
+        "what version are you",
+        "when is the bot done"
+      ],
+      "domains": [
+        "stream_chat_moderation"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "timing",
+        "evaluation",
+        "identity"
+      ]
+    },
+    {
+      "id": "bot_challenge",
+      "phrases": [
+        "are you high",
+        "are you drunk",
+        "what are you smoking",
+        "did bones break you"
+      ],
+      "domains": [
+        "stream_chat_moderation"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "evaluation",
+        "reaction",
+        "explanation"
+      ]
+    },
+    {
+      "id": "mock_mod_call",
+      "phrases": [
+        "mods ban",
+        "mod ban",
+        "mods take him",
+        "take him to alcatraz",
+        "another prisoner"
+      ],
+      "domains": [
+        "stream_chat_moderation"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "reaction",
+        "permission",
+        "prediction"
+      ]
+    },
+    {
+      "id": "love_question",
+      "phrases": [
+        "do you love me",
+        "does the ball love me",
+        "will you love me"
+      ],
+      "domains": [
+        "relationships_social"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "evaluation",
+        "prediction"
+      ]
+    },
+    {
+      "id": "chat_laugh_reaction",
+      "phrases": [
+        "kekw",
+        "kekl",
+        "xxd",
+        "xddyep"
+      ],
+      "domains": [
+        "stream_chat_moderation"
+      ],
+      "implied_states": [],
+      "compatible_intents": [
+        "reaction"
+      ]
+    }
+  ],
+  "rules": {
+    "longest_phrase_first": true,
+    "multiword_exact_bonus": 0.25,
+    "single_word_match_requires_context_when_ambiguous": true,
+    "concepts_do_not_imply_unstated_live_state": true
+  }
+}

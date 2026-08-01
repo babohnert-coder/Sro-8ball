@@ -1,0 +1,45 @@
+{
+  "spec_version": "4.0.0",
+  "product_name": "SRO Twitch Magic 8 Ball",
+  "runtime_type": "finite_authored_response_selector",
+  "runtime_llm_allowed": false,
+  "dynamic_sentence_assembly_allowed": false,
+  "streamer_impersonation_allowed": false,
+  "primary_principle": "Precise recognition underneath; the correct finished room-native response on the surface.",
+  "priority_order": [
+    "preserve_magic_8_ball_identity",
+    "never_invent_context_or_live_state",
+    "answer_the_question_form",
+    "match_explicit_concepts",
+    "be_concise_and_readable",
+    "maintain_variety",
+    "be_funny_when_earned",
+    "use_room_lore_and_emotes_only_when_earned"
+  ],
+  "authority_order": [
+    "authoritative_product_spec",
+    "machine_readable_ontology_and_references",
+    "golden_test_fixtures",
+    "explicit_user_approvals_and_rejections",
+    "verified_raw_chat_evidence",
+    "verified_current_channel_data",
+    "public_league_language_research",
+    "legacy_code_and_response_banks"
+  ],
+  "surface_rules": {
+    "prefer_one_sentence": true,
+    "editorial_target_chars": 140,
+    "hard_cap_chars": 390,
+    "recognizable_verdict_preferred": true,
+    "humor_required": false,
+    "league_detail_must_be_supported": true,
+    "second_punchline_after_landing_forbidden": true
+  },
+  "forbidden_completion_claims": [
+    "response_bank_complete_without_human_approval",
+    "production_ready_without_persistent_memory_test",
+    "room_lore_verified_from_legacy_response_only",
+    "deployment_completed_without_explicit_user_instruction"
+  ],
+  "version": "4.5.0"
+}

@@ -1,0 +1,1107 @@
+{
+  "version": "4.9.0",
+  "overrides": {
+    "COPIUM": {
+      "expressions": [
+        "cope"
+      ],
+      "visual": [
+        "meme"
+      ],
+      "functions": [
+        "cope_prophecy"
+      ],
+      "intensity": 0.65,
+      "confidence": 1.0,
+      "irony_ok": true
+    },
+    "HOPIUM": {
+      "expressions": [
+        "hope",
+        "cope"
+      ],
+      "visual": [
+        "meme"
+      ],
+      "functions": [
+        "cope_prophecy"
+      ],
+      "intensity": 0.65,
+      "confidence": 1.0,
+      "irony_ok": true
+    },
+    "Prayge": {
+      "expressions": [
+        "desperate_hope",
+        "prayer",
+        "hope"
+      ],
+      "visual": [
+        "pepe"
+      ],
+      "functions": [
+        "cope_prophecy",
+        "pleading"
+      ],
+      "intensity": 0.65,
+      "confidence": 1.0,
+      "irony_ok": true,
+      "sincerity": "mixed"
+    },
+    "sroDream": {
+      "expressions": [
+        "hope",
+        "cope"
+      ],
+      "visual": [
+        "sro_custom"
+      ],
+      "functions": [
+        "cope_prophecy"
+      ],
+      "intensity": 0.55,
+      "confidence": 1.0,
+      "irony_ok": true
+    },
+    "HUH": {
+      "expressions": [
+        "confused_disbelief",
+        "disbelief",
+        "confusion"
+      ],
+      "visual": [
+        "meme"
+      ],
+      "functions": [
+        "general_reaction",
+        "out_of_pocket_reaction"
+      ],
+      "intensity": 0.6,
+      "confidence": 1.0,
+      "irony_ok": true
+    },
+    "KEKL": {
+      "expressions": [
+        "laughter",
+        "mockery"
+      ],
+      "visual": [
+        "pepe"
+      ],
+      "functions": [
+        "roast",
+        "failure_reaction"
+      ],
+      "intensity": 0.72,
+      "confidence": 1.0,
+      "irony_ok": true
+    },
+    "KEKW": {
+      "expressions": [
+        "laughter",
+        "mockery"
+      ],
+      "visual": [
+        "meme"
+      ],
+      "functions": [
+        "roast",
+        "failure_reaction"
+      ],
+      "intensity": 0.78,
+      "confidence": 1.0,
+      "irony_ok": true
+    },
+    "ICANT": {
+      "expressions": [
+        "laughter",
+        "disbelief"
+      ],
+      "visual": [
+        "meme"
+      ],
+      "functions": [
+        "roast",
+        "failure_reaction"
+      ],
+      "intensity": 0.85,
+      "confidence": 1.0,
+      "irony_ok": true
+    },
+    "xxd": {
+      "expressions": [
+        "goofy_irony",
+        "light_laughter",
+        "mockery"
+      ],
+      "visual": [
+        "meme"
+      ],
+      "functions": [
+        "self_aware_reply",
+        "roast",
+        "mock_pride"
+      ],
+      "intensity": 0.46,
+      "confidence": 1.0,
+      "irony_ok": true,
+      "sincerity": "ironic",
+      "pairing_roles": [
+        "compound_lead",
+        "standalone"
+      ]
+    },
+    "xddyep": {
+      "expressions": [
+        "laughter",
+        "agreement"
+      ],
+      "visual": [
+        "meme"
+      ],
+      "functions": [
+        "approval_reaction",
+        "roast"
+      ],
+      "intensity": 0.6,
+      "confidence": 0.95,
+      "irony_ok": true
+    },
+    "NODDERS": {
+      "expressions": [
+        "agreement",
+        "approval",
+        "ironic_endorsement"
+      ],
+      "visual": [
+        "meme"
+      ],
+      "functions": [
+        "prediction_yes",
+        "approval_reaction",
+        "seal_judgment"
+      ],
+      "intensity": 0.42,
+      "confidence": 1.0,
+      "irony_ok": true,
+      "sincerity": "mixed"
+    },
+    "YEP": {
+      "expressions": [
+        "agreement",
+        "approval"
+      ],
+      "visual": [
+        "meme"
+      ],
+      "functions": [
+        "prediction_yes",
+        "approval_reaction"
+      ],
+      "intensity": 0.38,
+      "confidence": 0.95,
+      "irony_ok": true
+    },
+    "badYEP": {
+      "expressions": [
+        "reluctant_agreement",
+        "disbelief"
+      ],
+      "visual": [
+        "meme"
+      ],
+      "functions": [
+        "prediction_yes",
+        "general_reaction"
+      ],
+      "intensity": 0.48,
+      "confidence": 1.0,
+      "irony_ok": true
+    },
+    "Wp": {
+      "expressions": [
+        "approval",
+        "recognition"
+      ],
+      "visual": [
+        "text_reaction"
+      ],
+      "functions": [
+        "approval_reaction"
+      ],
+      "intensity": 0.34,
+      "confidence": 0.9,
+      "irony_ok": true
+    },
+    "Aware": {
+      "expressions": [
+        "recognition",
+        "smug"
+      ],
+      "visual": [
+        "meme"
+      ],
+      "functions": [
+        "rebuttal",
+        "general_reaction"
+      ],
+      "intensity": 0.4,
+      "confidence": 1.0,
+      "irony_ok": true
+    },
+    "Clueless": {
+      "expressions": [
+        "mockery",
+        "disbelief"
+      ],
+      "visual": [
+        "meme"
+      ],
+      "functions": [
+        "roast",
+        "failure_reaction"
+      ],
+      "intensity": 0.48,
+      "confidence": 1.0,
+      "irony_ok": true
+    },
+    "Deadge": {
+      "expressions": [
+        "doom",
+        "failure"
+      ],
+      "visual": [
+        "pepe"
+      ],
+      "functions": [
+        "prediction_no",
+        "failure_reaction"
+      ],
+      "intensity": 0.72,
+      "confidence": 1.0,
+      "irony_ok": true
+    },
+    "Saddies": {
+      "expressions": [
+        "sadness",
+        "doom"
+      ],
+      "visual": [
+        "pepe"
+      ],
+      "functions": [
+        "failure_reaction"
+      ],
+      "intensity": 0.58,
+      "confidence": 1.0,
+      "irony_ok": true
+    },
+    "sroRip": {
+      "expressions": [
+        "failure",
+        "doom"
+      ],
+      "visual": [
+        "sro_custom"
+      ],
+      "functions": [
+        "failure_reaction"
+      ],
+      "intensity": 0.66,
+      "confidence": 1.0,
+      "irony_ok": true
+    },
+    "sroRekt": {
+      "expressions": [
+        "failure",
+        "mockery"
+      ],
+      "visual": [
+        "sro_custom"
+      ],
+      "functions": [
+        "failure_reaction",
+        "roast"
+      ],
+      "intensity": 0.68,
+      "confidence": 1.0,
+      "irony_ok": true
+    },
+    "sroTilt": {
+      "expressions": [
+        "tilt",
+        "rage"
+      ],
+      "visual": [
+        "sro_custom"
+      ],
+      "functions": [
+        "failure_reaction"
+      ],
+      "intensity": 0.76,
+      "confidence": 1.0,
+      "irony_ok": true
+    },
+    "MAD": {
+      "expressions": [
+        "rage",
+        "power"
+      ],
+      "visual": [
+        "character"
+      ],
+      "functions": [
+        "hype_reaction",
+        "failure_reaction"
+      ],
+      "intensity": 0.86,
+      "confidence": 0.9,
+      "irony_ok": true
+    },
+    "sroWink": {
+      "expressions": [
+        "smug",
+        "recognition"
+      ],
+      "visual": [
+        "sro_custom"
+      ],
+      "functions": [
+        "rebuttal",
+        "prediction_yes"
+      ],
+      "intensity": 0.35,
+      "confidence": 1.0,
+      "irony_ok": true
+    },
+    "sroBaited": {
+      "expressions": [
+        "bait",
+        "disbelief"
+      ],
+      "visual": [
+        "sro_custom"
+      ],
+      "functions": [
+        "rebuttal",
+        "roast"
+      ],
+      "intensity": 0.58,
+      "confidence": 1.0,
+      "irony_ok": true
+    },
+    "sroQuestion": {
+      "expressions": [
+        "confusion",
+        "disbelief"
+      ],
+      "visual": [
+        "sro_custom"
+      ],
+      "functions": [
+        "general_reaction"
+      ],
+      "intensity": 0.44,
+      "confidence": 1.0,
+      "irony_ok": true
+    },
+    "sroConfused": {
+      "expressions": [
+        "confusion",
+        "disbelief"
+      ],
+      "visual": [
+        "sro_custom"
+      ],
+      "functions": [
+        "general_reaction"
+      ],
+      "intensity": 0.48,
+      "confidence": 1.0,
+      "irony_ok": true
+    },
+    "Susge": {
+      "expressions": [
+        "suspicion",
+        "disbelief"
+      ],
+      "visual": [
+        "pepe"
+      ],
+      "functions": [
+        "rebuttal",
+        "roast"
+      ],
+      "intensity": 0.48,
+      "confidence": 1.0,
+      "irony_ok": true
+    },
+    "CAUGHT": {
+      "expressions": [
+        "recognition",
+        "suspicion"
+      ],
+      "visual": [
+        "meme"
+      ],
+      "functions": [
+        "mock_sentence",
+        "roast"
+      ],
+      "intensity": 0.64,
+      "confidence": 1.0,
+      "irony_ok": true
+    },
+    "lookUp": {
+      "expressions": [
+        "watching",
+        "suspicion"
+      ],
+      "visual": [
+        "meme"
+      ],
+      "functions": [
+        "location_status",
+        "watching_reaction"
+      ],
+      "intensity": 0.3,
+      "confidence": 1.0,
+      "irony_ok": true
+    },
+    "PauseChamp": {
+      "expressions": [
+        "waiting",
+        "anticipation"
+      ],
+      "visual": [
+        "pepe"
+      ],
+      "functions": [
+        "watching_reaction"
+      ],
+      "intensity": 0.42,
+      "confidence": 1.0,
+      "irony_ok": true
+    },
+    "Staring": {
+      "expressions": [
+        "watching",
+        "cringe"
+      ],
+      "visual": [
+        "meme"
+      ],
+      "functions": [
+        "watching_reaction",
+        "general_reaction"
+      ],
+      "intensity": 0.45,
+      "confidence": 0.9,
+      "irony_ok": true
+    },
+    "POGGERS": {
+      "expressions": [
+        "hype",
+        "approval"
+      ],
+      "visual": [
+        "pepe"
+      ],
+      "functions": [
+        "hype_reaction",
+        "prediction_yes"
+      ],
+      "intensity": 0.78,
+      "confidence": 1.0,
+      "irony_ok": true,
+      "hard_blocks": [
+        "negative_outcome",
+        "sincere_sympathy"
+      ],
+      "target_affinity": [
+        "premature_hype",
+        "viewer_games",
+        "build_evaluation",
+        "experimental_build",
+        "lane_free",
+        "matchup_evaluation",
+        "rank_goal_masters",
+        "rank_goal_challenger",
+        "reckless_commitment",
+        "hype_reaction",
+        "approval_reaction"
+      ]
+    },
+    "HOLY": {
+      "expressions": [
+        "hype",
+        "disbelief"
+      ],
+      "visual": [
+        "text_reaction"
+      ],
+      "functions": [
+        "hype_reaction"
+      ],
+      "intensity": 0.82,
+      "confidence": 0.95,
+      "irony_ok": true,
+      "hard_blocks": [
+        "negative_outcome",
+        "sincere_sympathy"
+      ],
+      "target_affinity": [
+        "premature_hype",
+        "viewer_games",
+        "build_evaluation",
+        "experimental_build",
+        "lane_free",
+        "matchup_evaluation",
+        "rank_goal_masters",
+        "rank_goal_challenger",
+        "reckless_commitment",
+        "hype_reaction",
+        "approval_reaction"
+      ]
+    },
+    "BOOMWADDUP": {
+      "expressions": [
+        "hype",
+        "power"
+      ],
+      "visual": [
+        "meme"
+      ],
+      "functions": [
+        "hype_reaction",
+        "cursed_build"
+      ],
+      "intensity": 0.88,
+      "confidence": 1.0,
+      "irony_ok": true
+    },
+    "LETHIMCOOK": {
+      "expressions": [
+        "approval",
+        "cursed_build"
+      ],
+      "visual": [
+        "meme"
+      ],
+      "functions": [
+        "cursed_build",
+        "approval_reaction"
+      ],
+      "intensity": 0.72,
+      "confidence": 1.0,
+      "irony_ok": true
+    },
+    "WICKED": {
+      "expressions": [
+        "cursed_build",
+        "hype"
+      ],
+      "visual": [
+        "meme"
+      ],
+      "functions": [
+        "cursed_build"
+      ],
+      "intensity": 0.68,
+      "confidence": 0.95,
+      "irony_ok": true
+    },
+    "MYEYES": {
+      "expressions": [
+        "visual_pain",
+        "cringe",
+        "disbelief"
+      ],
+      "visual": [
+        "meme"
+      ],
+      "functions": [
+        "painful_witnessing",
+        "roast",
+        "failure_reaction"
+      ],
+      "intensity": 0.72,
+      "confidence": 1.0,
+      "irony_ok": true,
+      "hard_blocks": [
+        "clean_victory",
+        "sincere_sympathy"
+      ],
+      "target_affinity": [
+        "visual_failure",
+        "wave_clear_jab",
+        "flash_use",
+        "build_evaluation",
+        "experimental_build"
+      ]
+    },
+    "modCheck": {
+      "expressions": [
+        "moderation",
+        "watching"
+      ],
+      "visual": [
+        "meme"
+      ],
+      "functions": [
+        "moderation_reaction"
+      ],
+      "intensity": 0.42,
+      "confidence": 1.0,
+      "irony_ok": true
+    },
+    "NOPERS": {
+      "expressions": [
+        "refusal",
+        "disbelief"
+      ],
+      "visual": [
+        "pepe"
+      ],
+      "functions": [
+        "prediction_no",
+        "rebuttal"
+      ],
+      "intensity": 0.52,
+      "confidence": 1.0,
+      "irony_ok": true
+    },
+    "GIGACHAD": {
+      "expressions": [
+        "power",
+        "approval"
+      ],
+      "visual": [
+        "character"
+      ],
+      "functions": [
+        "hype_reaction",
+        "approval_reaction"
+      ],
+      "intensity": 0.82,
+      "confidence": 1.0,
+      "irony_ok": true
+    },
+    "GIGANASUS": {
+      "expressions": [
+        "power",
+        "hype"
+      ],
+      "visual": [
+        "league"
+      ],
+      "functions": [
+        "hype_reaction"
+      ],
+      "intensity": 0.78,
+      "confidence": 1.0,
+      "irony_ok": true
+    },
+    "AINTNOWAY": {
+      "expressions": [
+        "disbelief",
+        "laughter"
+      ],
+      "visual": [
+        "meme"
+      ],
+      "functions": [
+        "roast",
+        "general_reaction"
+      ],
+      "intensity": 0.76,
+      "confidence": 1.0,
+      "irony_ok": true
+    },
+    "monkaHmm": {
+      "expressions": [
+        "suspicion",
+        "confusion"
+      ],
+      "visual": [
+        "pepe"
+      ],
+      "functions": [
+        "general_reaction",
+        "watching_reaction"
+      ],
+      "intensity": 0.44,
+      "confidence": 0.95,
+      "irony_ok": true
+    },
+    "Pog": {
+      "expressions": [
+        "mild_hype",
+        "hype",
+        "approval"
+      ],
+      "visual": [
+        "meme"
+      ],
+      "functions": [
+        "hype_reaction",
+        "approval_reaction"
+      ],
+      "intensity": 0.52,
+      "confidence": 0.95,
+      "irony_ok": true,
+      "provider_hint": "observed_channel"
+    },
+    "CoolCat": {
+      "expressions": [
+        "contrarian_pride",
+        "approval",
+        "smug"
+      ],
+      "visual": [
+        "cat"
+      ],
+      "functions": [
+        "approval_reaction",
+        "rebuttal"
+      ],
+      "intensity": 0.48,
+      "confidence": 0.9,
+      "irony_ok": true,
+      "provider_hint": "observed_channel"
+    },
+    "cmonBruh": {
+      "expressions": [
+        "admonishment",
+        "disbelief"
+      ],
+      "visual": [
+        "meme"
+      ],
+      "functions": [
+        "rebuttal",
+        "general_reaction"
+      ],
+      "intensity": 0.58,
+      "confidence": 0.95,
+      "irony_ok": true,
+      "provider_hint": "observed_channel",
+      "hard_blocks": [
+        "sincere_sympathy"
+      ]
+    },
+    "Clap": {
+      "expressions": [
+        "applause",
+        "approval"
+      ],
+      "visual": [
+        "gesture"
+      ],
+      "functions": [
+        "approval_reaction",
+        "mock_applause"
+      ],
+      "intensity": 0.55,
+      "confidence": 0.95,
+      "irony_ok": true,
+      "provider_hint": "observed_channel",
+      "pairing_roles": [
+        "compound_tail",
+        "standalone"
+      ]
+    },
+    "pepeLad": {
+      "expressions": [
+        "mock_formality",
+        "admonishment",
+        "smug"
+      ],
+      "visual": [
+        "pepe"
+      ],
+      "functions": [
+        "mock_authority",
+        "rebuttal"
+      ],
+      "intensity": 0.45,
+      "confidence": 0.9,
+      "irony_ok": true,
+      "provider_hint": "observed_channel",
+      "target_affinity": [
+        "mock_authority",
+        "admonishment",
+        "room_lore"
+      ]
+    },
+    "CrayonTime": {
+      "expressions": [
+        "childish_mockery",
+        "cringe",
+        "mockery"
+      ],
+      "visual": [
+        "meme"
+      ],
+      "functions": [
+        "roast",
+        "failure_reaction"
+      ],
+      "intensity": 0.64,
+      "confidence": 0.9,
+      "irony_ok": true,
+      "provider_hint": "observed_channel",
+      "pairing_roles": [
+        "compound_tail",
+        "standalone"
+      ],
+      "target_affinity": [
+        "roast",
+        "childish_mockery",
+        "bot_challenge"
+      ]
+    },
+    "BUSSIN": {
+      "expressions": [
+        "enthusiastic_approval",
+        "hype",
+        "food_approval"
+      ],
+      "visual": [
+        "meme"
+      ],
+      "functions": [
+        "approval_reaction",
+        "hype_reaction"
+      ],
+      "intensity": 0.72,
+      "confidence": 0.95,
+      "irony_ok": true,
+      "provider_hint": "observed_channel",
+      "target_affinity": [
+        "food_health_outside",
+        "food",
+        "enthusiastic_approval"
+      ]
+    },
+    "xddWalk": {
+      "expressions": [
+        "goofy_irony",
+        "exit",
+        "light_laughter"
+      ],
+      "visual": [
+        "meme"
+      ],
+      "functions": [
+        "self_aware_reply",
+        "roast"
+      ],
+      "intensity": 0.48,
+      "confidence": 0.9,
+      "irony_ok": true,
+      "provider_hint": "observed_channel"
+    },
+    "Considering": {
+      "expressions": [
+        "contemplation",
+        "uncertainty"
+      ],
+      "visual": [
+        "meme"
+      ],
+      "functions": [
+        "prediction_unclear",
+        "general_reaction"
+      ],
+      "intensity": 0.32,
+      "confidence": 0.9,
+      "irony_ok": true,
+      "provider_hint": "observed_channel"
+    },
+    "docnotL": {
+      "expressions": [
+        "dry_disapproval",
+        "recognition"
+      ],
+      "visual": [
+        "meme"
+      ],
+      "functions": [
+        "rebuttal",
+        "general_reaction"
+      ],
+      "intensity": 0.36,
+      "confidence": 0.55,
+      "irony_ok": true,
+      "provider_hint": "observed_channel_unverified_visual",
+      "hard_blocks": [
+        "sincere_sympathy",
+        "clean_victory"
+      ]
+    },
+    "sadKEK": {
+      "expressions": [
+        "self_own",
+        "rueful_laughter",
+        "sadness"
+      ],
+      "visual": [
+        "meme"
+      ],
+      "functions": [
+        "failure_reaction",
+        "self_aware_reply"
+      ],
+      "intensity": 0.62,
+      "confidence": 1.0,
+      "irony_ok": true,
+      "provider_hint": "observed_channel",
+      "target_affinity": [
+        "self_own",
+        "failure_reaction",
+        "gamba"
+      ]
+    },
+    "gambabert": {
+      "expressions": [
+        "gamba_belief",
+        "hope",
+        "commitment"
+      ],
+      "visual": [
+        "meme"
+      ],
+      "functions": [
+        "cope_prophecy",
+        "prediction_yes",
+        "gamba_reaction"
+      ],
+      "intensity": 0.58,
+      "confidence": 0.95,
+      "irony_ok": true,
+      "provider_hint": "observed_channel",
+      "target_affinity": [
+        "gamba",
+        "room_doubters_believers",
+        "rank_goal_masters",
+        "rank_goal_challenger"
+      ]
+    },
+    "omgBruh": {
+      "expressions": [
+        "self_disbelief",
+        "embarrassment",
+        "cringe"
+      ],
+      "visual": [
+        "meme"
+      ],
+      "functions": [
+        "failure_reaction",
+        "self_aware_reply"
+      ],
+      "intensity": 0.68,
+      "confidence": 0.95,
+      "irony_ok": true,
+      "provider_hint": "observed_channel"
+    },
+    "PepePolice": {
+      "expressions": [
+        "mock_enforcement",
+        "moderation"
+      ],
+      "visual": [
+        "pepe"
+      ],
+      "functions": [
+        "moderation_reaction",
+        "mock_sentence"
+      ],
+      "intensity": 0.62,
+      "confidence": 1.0,
+      "irony_ok": true,
+      "provider_hint": "observed_channel",
+      "target_affinity": [
+        "mock_mod_call",
+        "moderation"
+      ]
+    },
+    "Sadge": {
+      "expressions": [
+        "sadness",
+        "disappointment"
+      ],
+      "visual": [
+        "pepe"
+      ],
+      "functions": [
+        "failure_reaction"
+      ],
+      "intensity": 0.52,
+      "confidence": 1.0,
+      "irony_ok": true,
+      "provider_hint": "observed_channel"
+    },
+    "BoyWhatTheHellBoy": {
+      "expressions": [
+        "accusatory_disbelief",
+        "disbelief",
+        "mockery"
+      ],
+      "visual": [
+        "meme"
+      ],
+      "functions": [
+        "rebuttal",
+        "roast"
+      ],
+      "intensity": 0.76,
+      "confidence": 0.95,
+      "irony_ok": true,
+      "provider_hint": "observed_channel",
+      "target_affinity": [
+        "bot_challenge",
+        "flash_use",
+        "worth_cope",
+        "explanation",
+        "roast",
+        "deadpan_diagnosis",
+        "mock_accusation"
+      ]
+    },
+    "LUL": {
+      "expressions": [
+        "light_laughter",
+        "laughter"
+      ],
+      "visual": [
+        "meme"
+      ],
+      "functions": [
+        "general_reaction"
+      ],
+      "intensity": 0.52,
+      "confidence": 0.95,
+      "irony_ok": true,
+      "provider_hint": "observed_channel"
+    },
+    "LMAO": {
+      "expressions": [
+        "hard_laughter",
+        "laughter"
+      ],
+      "visual": [
+        "text_reaction"
+      ],
+      "functions": [
+        "roast",
+        "general_reaction"
+      ],
+      "intensity": 0.84,
+      "confidence": 0.95,
+      "irony_ok": true,
+      "provider_hint": "observed_channel"
+    }
+  }
+}

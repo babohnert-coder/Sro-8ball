@@ -1,0 +1,326 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sro-8ball.local/schema/response.schema.json",
+  "title": "SRO 8 Ball authored response",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "text",
+    "intents",
+    "domains_any",
+    "domains_all",
+    "domains_forbidden",
+    "entities_required",
+    "entities_preferred",
+    "entities_forbidden",
+    "concepts_any",
+    "concepts_all",
+    "concepts_forbidden",
+    "states_any",
+    "states_forbidden",
+    "verdict",
+    "delivery",
+    "league_intensity",
+    "sro_intensity",
+    "seriousness",
+    "chaos",
+    "min_specificity",
+    "max_specificity",
+    "status",
+    "semantic_family",
+    "opening_family",
+    "syntax_family",
+    "reply_move",
+    "twist_family",
+    "target_family",
+    "payoff_family",
+    "emote_policy"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$"
+    },
+    "text": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 390
+    },
+    "intents": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "domains_any": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "domains_all": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "domains_forbidden": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "entities_required": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "entities_preferred": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "entities_forbidden": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "concepts_any": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "concepts_all": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "concepts_forbidden": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "states_any": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "states_forbidden": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "verdict": {
+      "type": "string"
+    },
+    "delivery": {
+      "enum": [
+        "classic",
+        "direct",
+        "contextual",
+        "dry",
+        "room_lore",
+        "chaos"
+      ]
+    },
+    "league_intensity": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 3
+    },
+    "sro_intensity": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 3
+    },
+    "seriousness": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 3
+    },
+    "chaos": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 3
+    },
+    "emote": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "min_specificity": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "max_specificity": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "approved",
+        "rejected",
+        "archived",
+        "test_only"
+      ]
+    },
+    "reference_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "semantic_family": {
+      "type": "string"
+    },
+    "opening_family": {
+      "type": "string"
+    },
+    "syntax_family": {
+      "type": "string"
+    },
+    "editorial_notes": {
+      "type": "string"
+    },
+    "source_assumptions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reply_move": {
+      "type": "string"
+    },
+    "twist_family": {
+      "type": "string"
+    },
+    "target_family": {
+      "type": "string"
+    },
+    "payoff_family": {
+      "type": "string"
+    },
+    "emote_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "expressions_any",
+        "expressions_preferred",
+        "expressions_forbidden",
+        "discourse_functions_any",
+        "visual_families_preferred",
+        "min_intensity",
+        "max_intensity",
+        "allow_hidden_nonsense",
+        "pinned_emote"
+      ],
+      "properties": {
+        "expressions_any": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "expressions_preferred": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "expressions_forbidden": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "discourse_functions_any": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "visual_families_preferred": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "min_intensity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "max_intensity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "allow_hidden_nonsense": {
+          "type": "boolean"
+        },
+        "pinned_emote": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "context_tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "compound_roles_any": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "compound_preferred": {
+          "type": "boolean"
+        },
+        "target_contexts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        }
+      }
+    }
+  }
+}

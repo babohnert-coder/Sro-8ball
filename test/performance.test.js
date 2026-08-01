@@ -1,0 +1,2 @@
+import test from 'node:test'; import assert from 'node:assert/strict'; import { recognizeInquiry } from '../src/recognition/index.js'; import { buildPerceptionBundle, formDecisionPlan } from '../src/brain.js';
+test('brain planning stays lightweight',()=>{const start=performance.now();for(let i=0;i<10000;i++){const b=recognizeInquiry('will sro win lane');const p=buildPerceptionBundle({bundle:b});formDecisionPlan({perception:p,seed:String(i),personalityVolume:6});}assert.ok(performance.now()-start<15000);});

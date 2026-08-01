@@ -1,0 +1,209 @@
+{
+  "version": "4.7.0",
+  "principle": "The question creates an expected reply shape. The response earns humor by answering that shape, then bending it once with a room-native retort move.",
+  "reply_moves": [
+    {
+      "id": "straight_verdict",
+      "description": "Direct yes/no/maybe/outlook answer with little or no twist."
+    },
+    {
+      "id": "conditional_verdict",
+      "description": "Answer is granted or denied under one revealing condition."
+    },
+    {
+      "id": "confirm_then_undercut",
+      "description": "Confirm the premise, then damage the motive, method, or consequence."
+    },
+    {
+      "id": "deny_then_reframe",
+      "description": "Reject the expected answer and replace the frame with a sharper one."
+    },
+    {
+      "id": "deadpan_diagnosis",
+      "description": "Name what the situation really is in a short, confident observation."
+    },
+    {
+      "id": "callback_substitution",
+      "description": "Answer through a verified room callback instead of literal explanation."
+    },
+    {
+      "id": "mock_accusation",
+      "description": "Treat the subject as obviously guilty or implicated."
+    },
+    {
+      "id": "mock_sentence",
+      "description": "Deliver a fake legal, moderator, police, or disciplinary ruling."
+    },
+    {
+      "id": "false_choice",
+      "description": "Refuse a binary choice, select both/neither, or choose the funnier failure."
+    },
+    {
+      "id": "comparison_pick",
+      "description": "Pick one option directly, with or without a brief jab."
+    },
+    {
+      "id": "understatement",
+      "description": "Describe a disaster as minor, technical, or merely inconvenient."
+    },
+    {
+      "id": "escalation",
+      "description": "Raise a small premise into a larger absurd consequence."
+    },
+    {
+      "id": "blame_shift",
+      "description": "Move responsibility to chat, teammates, the enemy, the map, or the question itself."
+    },
+    {
+      "id": "literalize_slang",
+      "description": "Treat League/Twitch slang as literal reality."
+    },
+    {
+      "id": "instruction",
+      "description": "Give a short command that doubles as the joke."
+    },
+    {
+      "id": "refusal",
+      "description": "The Ball refuses cooperation, permission, or a clean answer."
+    },
+    {
+      "id": "omen",
+      "description": "Deliver a compact prophecy or forecast without explaining it."
+    },
+    {
+      "id": "identity_answer",
+      "description": "Identify who or what something is, then add one relevant turn."
+    },
+    {
+      "id": "location_answer",
+      "description": "Answer where someone or something is, then add one relevant turn."
+    },
+    {
+      "id": "absurd_declaration",
+      "description": "Make a concise, intentional, controlled-chaos declaration."
+    }
+  ],
+  "twist_families": [
+    {
+      "id": "none",
+      "description": "The line works as a direct answer without a separate twist."
+    },
+    {
+      "id": "motive_gap",
+      "description": "The fact is settled; the motive or wisdom remains suspicious."
+    },
+    {
+      "id": "callback_jump",
+      "description": "A known room reference carries the answer."
+    },
+    {
+      "id": "premise_undercut",
+      "description": "The question or assumption is exposed as the real problem."
+    },
+    {
+      "id": "status_reversal",
+      "description": "Success becomes dangerous, or failure becomes useful/content."
+    },
+    {
+      "id": "impossible_condition",
+      "description": "The answer depends on cooperation or restraint unlikely to occur."
+    },
+    {
+      "id": "quiet_doom",
+      "description": "A severe outcome is delivered calmly and briefly."
+    },
+    {
+      "id": "mock_authority",
+      "description": "Legal, moderator, police, court, custody, or sentencing language reframes the event."
+    },
+    {
+      "id": "role_reversal",
+      "description": "Expected helper, victim, winner, or culprit swaps roles."
+    },
+    {
+      "id": "self_incrimination",
+      "description": "The question or behavior becomes evidence against the asker/subject."
+    },
+    {
+      "id": "social_frame_on_league",
+      "description": "Ordinary social, legal, financial, domestic, or workplace language frames League."
+    },
+    {
+      "id": "league_frame_on_social",
+      "description": "League mechanics or vocabulary frame an ordinary-life question."
+    },
+    {
+      "id": "literal_slang",
+      "description": "A figurative chat phrase is interpreted literally."
+    },
+    {
+      "id": "scale_shift",
+      "description": "A minor action is treated as having outsized consequences."
+    },
+    {
+      "id": "expectation_denial",
+      "description": "The line deliberately refuses the expected yes/no, why, or choice shape."
+    },
+    {
+      "id": "confident_nonsense",
+      "description": "The answer is absurd but delivered as settled fact."
+    },
+    {
+      "id": "blame_transfer",
+      "description": "Responsibility moves to another player, chat, fate, or the environment."
+    },
+    {
+      "id": "compression",
+      "description": "A large shared context is compressed into one short recognized phrase."
+    }
+  ],
+  "target_families": [
+    "subject",
+    "asker",
+    "streamer",
+    "chat",
+    "team",
+    "enemy",
+    "moderators",
+    "game_state",
+    "object_or_build",
+    "fate",
+    "nobody"
+  ],
+  "payoff_families": [
+    {
+      "id": "recognition",
+      "description": "The laugh comes from recognizing shared room or League knowledge."
+    },
+    {
+      "id": "reversal",
+      "description": "The answer turns the expected conclusion around."
+    },
+    {
+      "id": "judgment",
+      "description": "The Ball confidently judges competence, motive, or taste."
+    },
+    {
+      "id": "escalation",
+      "description": "The line makes the consequence larger or more dramatic."
+    },
+    {
+      "id": "absurdity",
+      "description": "The line lands through controlled incongruity."
+    },
+    {
+      "id": "cope",
+      "description": "The line exposes or participates in ironic rationalization."
+    },
+    {
+      "id": "doom",
+      "description": "The line lands through calm inevitability."
+    },
+    {
+      "id": "utility",
+      "description": "The answer is useful or direct; restraint is the feature."
+    }
+  ],
+  "selection_rule": "Relevance admits responses to a route. Exact-answer cycling remains absolute. Within the unused pool, prefer fresh reply structures, choose the authored line by RNG, then route a semantically compatible emote from the full active SRO set while maintaining the rolling usage target.",
+  "writing_rule": "Do not generate from fragments at runtime. These labels describe completed authored lines and are used only for curation, auditing, and variety control."
+}

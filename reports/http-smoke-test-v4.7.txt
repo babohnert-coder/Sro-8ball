@@ -1,0 +1,48 @@
+SRO 8 Ball V4.7 HTTP Smoke Test
+Mode: production
+7TV mode: categorized fallback (live fetch intentionally disabled for local smoke)
+Set ID: 01GBAYMGX0000B23ECE97RP321
+
+HEALTH
+{"ok":true,"mode":"production","dataLoaded":true,"responseCounts":{"total":585,"approved":585,"testOnly":0},"productionReady":false,"persistence":{"ready":true,"degraded":false,"persistent":true,"distributed":false,"adapter":"file"},"sevenTv":{"source":"fallback_disabled","degraded":true,"error":null,"setId":"01GBAYMGX0000B23ECE97RP321","total":41,"categorized":41,"coverageRatio":1,"uncategorizedCount":0,"hash":"a5fd65d1"},"editorialStatus":"approved_content_present"}
+
+01. will Mike win
+    -> Mike found the expensive path again. Deadge
+02. will SRO win
+    -> The Ball watched the last three minutes. No. lookUp
+03. can Mike win this game
+    -> Content has overtaken the result.
+04. is this game doomed
+    -> MAYBE — the evidence is split. CAUGHT
+05. can he hit masters
+    -> MAYBE — only if you can survive being wrong. monkaHmm
+06. was that worth
+    -> Only if survival was never in the plan.
+07. why did he flash
+    -> The cursor knows. Susge
+08. doubt or believe
+    -> Believe for now. That is the funnier mistake. HOPIUM
+09. where is misanthrope
+    -> Nearby. Misanthrope rarely misses the next line. Staring
+10. why is mtf such a hater
+    -> He is not hating. He is pre-denying the outcome. Aware
+11. does bones put pineapple on pizza
+    -> Ask again after the evidence stops being delicious. KEKL
+12. will comeback happen
+    -> OUTLOOK GOOD — barely, which still counts. NODDERS
+13. is renekton good here
+    -> The range gap is collecting interest. Deadge
+14. should he keep cooking
+    -> YES — but stop after the first bad sign.
+15. is top free
+    -> The matchup is allowing movement. YEP
+16. is baron free
+    -> Baron is free only if the map agrees.
+17. did he just reset his gold
+    -> Weak cope. Live game. Prayge
+18. viewer games
+    -> NO — the Ball declines to infer the rest. NOPERS
+19. do you love me
+    -> VERY DOUBTFUL — one person is carrying the entire forecast. Deadge
+20. when will you be finished
+    -> ASK AGAIN LATER — the answer has not arrived. monkaHmm

@@ -1,0 +1,136 @@
+{
+  "version": "4.0.0",
+  "generated_at": "2026-07-31T02:12:13.801443+00:00",
+  "files": [
+    {
+      "path": "source/chat-logs/[7-20-26] SoloRenektonOnly - SRO Classic League -\uff1e Climbing to Rank 1(000) After - Top Lane Kingdom - Chat.json",
+      "size_bytes": 788758,
+      "sha256": "f8ebde4888f19c066c96ec95540bfc88f11648cea6dcbbd97bc4bc4c72fe1523"
+    },
+    {
+      "path": "source/chat-logs/[7-23-26] SoloRenektonOnly - SRO Can I Even Get Masters Again...\uff1f - Top Lane Kingdom - Get Good or Die Trying - Chat.json",
+      "size_bytes": 1063389,
+      "sha256": "8dedae243dbf51eec94556150351719433617f06909270a202b2e4659ecc65a9"
+    },
+    {
+      "path": "source/chat-logs/[7-24-26] SoloRenektonOnly - SRO League Classic Gamer -\uff1e Ranked Masters Today\uff1f - Chat.json",
+      "size_bytes": 1126952,
+      "sha256": "e1fbe2f095e1a9a2aeba3bc225dafa120f5653d29c0071a17e5ad27176ad2eca"
+    },
+    {
+      "path": "source/chat-logs/[7-27-26] SoloRenektonOnly - SRO Cooked with These Builds - INTeresting Builds to Feedmax on (now that the haters are gone this build is the best you're gonna love it) - Chat.json",
+      "size_bytes": 13731974,
+      "sha256": "8ffa8fa9c1a77fb4b8aae8daf4b624cb9c492c7b44663f7496145917979f1be0"
+    },
+    {
+      "path": "source/editorial/AUTHORED_RESPONSES.md",
+      "size_bytes": 34067,
+      "sha256": "97f777ceb47d029ac67afa7857d408eeb39c014ad3aa612adc5cb346b5141415"
+    },
+    {
+      "path": "source/editorial/SRO_8BALL_CODEX_HANDOFF_CHECKLIST.md",
+      "size_bytes": 1057,
+      "sha256": "0260b622b90518b27fc8a58c34c53b87205e6c045c7c2b0ba6f4c2b622a152cd"
+    },
+    {
+      "path": "source/editorial/SRO_8BALL_CODEX_MASTER_PROMPT_V3.md",
+      "size_bytes": 29735,
+      "sha256": "ec83689f57667dc9630013f31167fb8478bfb71a26b2ab130fda51f1e8209e35"
+    },
+    {
+      "path": "source/editorial/SRO_8BALL_REFERENCE_MANIFEST.md",
+      "size_bytes": 12950,
+      "sha256": "37f6725f20a241bb235ff7353e40e5268d0435b248eb7199433ac00a8c29ac6e"
+    },
+    {
+      "path": "source/editorial/SRO_8Ball_v3_Response_Review.md",
+      "size_bytes": 23038,
+      "sha256": "d1c11bcec263fb79d4fc630d1002dc2fc6517787257613df5c53661eb7338c72"
+    },
+    {
+      "path": "source/legacy-build/AUTHORED_RESPONSES.md",
+      "size_bytes": 34067,
+      "sha256": "97f777ceb47d029ac67afa7857d408eeb39c014ad3aa612adc5cb346b5141415"
+    },
+    {
+      "path": "source/legacy-build/README.md",
+      "size_bytes": 2943,
+      "sha256": "53ca36423af28ca0d7b37a6c414a9896cdcad7aed993611ca7cf3162421973e8"
+    },
+    {
+      "path": "source/legacy-build/RESEARCH_NOTES.md",
+      "size_bytes": 1404,
+      "sha256": "90e9e8078d732b0acdc4763b1392bdeac7e707ca77449ea87cb5b8fe5cb446fc"
+    },
+    {
+      "path": "source/legacy-build/api/8ball.js",
+      "size_bytes": 1185,
+      "sha256": "a5b83153059c1a3543db30f8f4cf3a72945cfdf674e8e46b9ab818eb6ef94bed"
+    },
+    {
+      "path": "source/legacy-build/api/health.js",
+      "size_bytes": 428,
+      "sha256": "d38ae823b1c6689d5f8db3475a42fb17c60f81dea91aa615dc460fbb6268db0a"
+    },
+    {
+      "path": "source/legacy-build/data/responses.json",
+      "size_bytes": 28710,
+      "sha256": "9b0591716e02669971742d6769c0278a25fd6ee315c95adc4259f07f5be361fe"
+    },
+    {
+      "path": "source/legacy-build/data/routes.json",
+      "size_bytes": 11268,
+      "sha256": "474d2169ffe5142a8ed8eb87e0bb3ef61d13f5350e7ef491b23811e2716c27f2"
+    },
+    {
+      "path": "source/legacy-build/package.json",
+      "size_bytes": 457,
+      "sha256": "d06145e8128296e1621efb8cc4c2942fafd2cc665dc979dfa2b38e9da16e2a0d"
+    },
+    {
+      "path": "source/legacy-build/scripts/compile-responses.js",
+      "size_bytes": 1551,
+      "sha256": "0999097c36c48bbc02f6929bd2249190a67c9bd58de5ce243ca1e37f3ab9c5ec"
+    },
+    {
+      "path": "source/legacy-build/server.js",
+      "size_bytes": 828,
+      "sha256": "7987007c207194e835428bb784d4f0a019c99f12c1d32453de161ba5520a9985"
+    },
+    {
+      "path": "source/legacy-build/src/memory-store.js",
+      "size_bytes": 1681,
+      "sha256": "e2aec5328ee6e930585f38f397884036d67a34bf20dd43495b554f455ac1ac60"
+    },
+    {
+      "path": "source/legacy-build/src/oracle.js",
+      "size_bytes": 4377,
+      "sha256": "cb09c4d681f583bdbfb129b964ea7ddeb23273bbfa7db1968ca2e992ef55bf7e"
+    },
+    {
+      "path": "source/legacy-build/src/router.js",
+      "size_bytes": 946,
+      "sha256": "98794245e76b1092e59eb8ae4507c2a949abd978905d9f5efc2e5e4412548156"
+    },
+    {
+      "path": "source/legacy-build/src/seventv.js",
+      "size_bytes": 1935,
+      "sha256": "fd0d28bd05f2d4886e28281845b1394f7a514df2d6915b936d3ea355ffb9b2f8"
+    },
+    {
+      "path": "source/legacy-build/src/text.js",
+      "size_bytes": 648,
+      "sha256": "5923c6d053f0a6a0dc4b492f44ba57369c8ab9b0680e1baef4a3465d382e7c0a"
+    },
+    {
+      "path": "source/legacy-build/test/oracle.test.js",
+      "size_bytes": 1795,
+      "sha256": "03873ddb5176ae780b910e00c68616429c7ebd9ab3f4dc3b90d5eb85b0fc1349"
+    },
+    {
+      "path": "source/legacy-build/vercel.json",
+      "size_bytes": 231,
+      "sha256": "66c4b30eba9d3695c4414e60346d906a587110f661ec2f919c137f21411993f2"
+    }
+  ]
+}

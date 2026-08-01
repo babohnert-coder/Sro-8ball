@@ -1,0 +1,44 @@
+# Health
+{"ok":true,"mode":"production","dataLoaded":true,"responseCounts":{"total":571,"approved":571,"testOnly":0},"productionReady":false,"persistence":{"ready":true,"degraded":false,"persistent":true,"distributed":false,"adapter":"file"},"sevenTv":{"source":"fallback_disabled","degraded":true,"error":null},"editorialStatus":"approved_content_present"}
+# Twelve-answer SRO win cycle
+NO — Mike has found the expensive route.
+YES — Mike still has a path.
+MAYBE — it depends which Mike returns from base.
+MAYBE — the hands are present; the game is negotiating.
+NOT YET — Mike has one more theory.
+OUTLOOK UNCLEAR — Mike has not finished making this harder.
+NO — content has overtaken result.
+NO — the Ball has reviewed the last three minutes.
+VERY DOUBTFUL — the comeback now requires a speech.
+YES — Mike will call it calculated afterward.
+OUTLOOK GOOD — the haters have briefly lost jurisdiction.
+YES — somehow, this remains his game to lose.
+# MTF safe route
+OUTLOOK UNCLEAR — the room has not settled it.
+NO — certainty would be invented here.
+NO — the Ball refuses to guess.
+ASK AGAIN LATER — MTF has not confirmed the omen.
+# Misanthrope location route
+INCOMING — another message is already warming up.
+SOMEWHERE IN CHAT — the next message will narrow it.
+CLOSE — silence would be the real plot twist.
+ASK AGAIN LATER — the next line will locate him.
+# Adversarial mix
+should they flip Baron => OUTLOOK UNCLEAR — one Smite owns the prophecy.
+does this item scale => NO — the scaling ends before the game does.
+can Mike carry groceries => NO — make two trips; pride is not a handle.
+should Mike cook dinner => NO — hunger is currently drafting the idea.
+can I scale this recipe => NO — baking has already filed an objection.
+did he run it down => YES — that is inting with plausible deniability.
+
+# Concurrent burst
+YES — but not cleanly.
+NO — the map has already chosen a side.
+MAYBE — the next mistake matters more than the last.
+OUTLOOK UNCLEAR — one fight will answer it.
+NOT YET — somebody still has to finish it.
+VERY DOUBTFUL — the lead is becoming permanent.
+LIKELY — the game remains recoverable.
+UNLIKELY — too many conditions are now required.
+# Concurrent unique count: 8
+# First-cycle unique count: 12

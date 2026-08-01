@@ -1,0 +1,41 @@
+{
+  "release": "5.0.2",
+  "product": "SRO Twitch Magic 8 Ball",
+  "release_name": "Visible Contextual 7TV Integration",
+  "base_release": "5.0.1",
+  "approved_responses": 689,
+  "automated_tests": {
+    "passed": 150,
+    "failed": 0
+  },
+  "emote_audit": {
+    "simulated_replies": 240,
+    "emote_bearing_replies": 185,
+    "emote_rate": 0.771,
+    "unique_emote_outputs": 33,
+    "minimum_emotes_per_rolling_20": 14,
+    "maximum_consecutive_plain_normal_replies": 1,
+    "semantic_mismatches": 0,
+    "out_of_set_tokens": 0
+  },
+  "live_sequence_regression": {
+    "minimum_emote_bearing_replies": 6,
+    "sequence_length": 8,
+    "replayed_prompts": [
+      "how will sro do tomorrow",
+      "is mtf british",
+      "is misanthrope a problem",
+      "john east or john west",
+      "is davey handsome",
+      "do we win these",
+      "gamba win or losed",
+      "does bonesex eat pineapple on pizza"
+    ]
+  },
+  "preserved_endpoints": [
+    "/8ball",
+    "/api/8ball",
+    "/health",
+    "/api/health"
+  ]
+}

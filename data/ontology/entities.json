@@ -1,0 +1,427 @@
+{
+  "version": "4.8.0",
+  "entity_types": [
+    "person",
+    "role",
+    "champion",
+    "objective",
+    "rank",
+    "item_build",
+    "viewer",
+    "team_side",
+    "command"
+  ],
+  "entities": [
+    {
+      "id": "sro",
+      "type": "person",
+      "status": "verified",
+      "aliases": [
+        "sro",
+        "solo renekton only",
+        "solorenektononly",
+        "mike"
+      ],
+      "conditional_aliases": [
+        {
+          "alias": "solo",
+          "requires_domains_any": [
+            "sro",
+            "champion_matchup",
+            "current_game"
+          ]
+        }
+      ],
+      "forbidden_assumptions": [
+        "currently_playing_renekton",
+        "ahead",
+        "behind",
+        "winning",
+        "tilted"
+      ]
+    },
+    {
+      "id": "bones",
+      "type": "person",
+      "status": "verified",
+      "aliases": [
+        "bones",
+        "b0n3sxx",
+        "bonesex",
+        "b0nesex"
+      ],
+      "allowed_concepts": [
+        "creator_origin"
+      ],
+      "forbidden_assumptions": [
+        "emotional_attachment",
+        "generic_lore_insert"
+      ]
+    },
+    {
+      "id": "mtf",
+      "type": "person",
+      "status": "verified",
+      "aliases": [
+        "mtf",
+        "michaelthefan",
+        "michael the fan"
+      ],
+      "production_lore_allowed": true,
+      "verified_associations": [
+        "recurring_chatter",
+        "repeated_nidalee_requests"
+      ],
+      "candidate_associations": [
+        "british"
+      ]
+    },
+    {
+      "id": "john_west_gamer",
+      "type": "person",
+      "status": "verified",
+      "aliases": [
+        "johnwestgamer",
+        "john west"
+      ],
+      "ambiguous_aliases": [
+        "john"
+      ],
+      "production_lore_allowed": true,
+      "verified_associations": [
+        "recurring_chatter",
+        "john_east_west_banter"
+      ],
+      "candidate_associations": [
+        "doubter_list",
+        "spreadsheet_administration"
+      ]
+    },
+    {
+      "id": "teamplay",
+      "type": "person",
+      "status": "verified",
+      "aliases": [
+        "teamplay",
+        "teamplay4victory"
+      ],
+      "production_lore_allowed": true,
+      "verified_associations": [
+        "moderator"
+      ],
+      "candidate_associations": [
+        "specific_ban_behavior"
+      ]
+    },
+    {
+      "id": "misanthrope",
+      "type": "person",
+      "status": "verified",
+      "aliases": [
+        "misanthrope",
+        "the_misanthrope13"
+      ],
+      "production_lore_allowed": true,
+      "verified_associations": [
+        "recurring_chatter"
+      ],
+      "candidate_associations": [
+        "lead_mod_banter",
+        "oracle_role"
+      ]
+    },
+    {
+      "id": "viewer_self",
+      "type": "viewer",
+      "aliases": [
+        "i",
+        "me",
+        "my",
+        "we",
+        "us",
+        "our"
+      ]
+    },
+    {
+      "id": "ally",
+      "type": "team_side",
+      "aliases": [
+        "ally",
+        "teammate",
+        "our team",
+        "we"
+      ]
+    },
+    {
+      "id": "enemy",
+      "type": "team_side",
+      "aliases": [
+        "enemy",
+        "opponent",
+        "their team"
+      ]
+    },
+    {
+      "id": "top",
+      "type": "role",
+      "aliases": [
+        "top",
+        "top lane",
+        "toplaner",
+        "top laner"
+      ]
+    },
+    {
+      "id": "jungle",
+      "type": "role",
+      "aliases": [
+        "jungle",
+        "jungler",
+        "jg"
+      ]
+    },
+    {
+      "id": "mid",
+      "type": "role",
+      "aliases": [
+        "mid",
+        "mid lane",
+        "midlaner"
+      ]
+    },
+    {
+      "id": "adc",
+      "type": "role",
+      "aliases": [
+        "adc",
+        "bot carry",
+        "marksman"
+      ]
+    },
+    {
+      "id": "support",
+      "type": "role",
+      "aliases": [
+        "support",
+        "supp"
+      ]
+    },
+    {
+      "id": "baron",
+      "type": "objective",
+      "aliases": [
+        "baron",
+        "nashor"
+      ]
+    },
+    {
+      "id": "dragon",
+      "type": "objective",
+      "aliases": [
+        "dragon",
+        "drake"
+      ]
+    },
+    {
+      "id": "elder",
+      "type": "objective",
+      "aliases": [
+        "elder",
+        "elder dragon"
+      ]
+    },
+    {
+      "id": "herald",
+      "type": "objective",
+      "aliases": [
+        "herald",
+        "rift herald"
+      ]
+    },
+    {
+      "id": "grubs",
+      "type": "objective",
+      "aliases": [
+        "grubs",
+        "void grubs"
+      ]
+    },
+    {
+      "id": "tower",
+      "type": "objective",
+      "aliases": [
+        "tower",
+        "turret"
+      ]
+    },
+    {
+      "id": "nexus",
+      "type": "objective",
+      "aliases": [
+        "nexus"
+      ]
+    },
+    {
+      "id": "masters",
+      "type": "rank",
+      "aliases": [
+        "master",
+        "masters",
+        "mikey masters"
+      ]
+    },
+    {
+      "id": "challenger",
+      "type": "rank",
+      "aliases": [
+        "challenger",
+        "rank 1"
+      ]
+    },
+    {
+      "id": "diamond",
+      "type": "rank",
+      "aliases": [
+        "diamond",
+        "d2",
+        "diamond 2"
+      ]
+    }
+  ],
+  "core_champions": [
+    {
+      "id": "renekton",
+      "aliases": [
+        "renekton",
+        "renek",
+        "croc"
+      ],
+      "conditional_aliases": [
+        "crocodile"
+      ]
+    },
+    {
+      "id": "nasus",
+      "aliases": [
+        "nasus"
+      ]
+    },
+    {
+      "id": "nidalee",
+      "aliases": [
+        "nidalee"
+      ]
+    },
+    {
+      "id": "jax",
+      "aliases": [
+        "jax"
+      ]
+    },
+    {
+      "id": "darius",
+      "aliases": [
+        "darius"
+      ]
+    },
+    {
+      "id": "garen",
+      "aliases": [
+        "garen"
+      ]
+    },
+    {
+      "id": "illaoi",
+      "aliases": [
+        "illaoi"
+      ]
+    },
+    {
+      "id": "singed",
+      "aliases": [
+        "singed"
+      ]
+    },
+    {
+      "id": "teemo",
+      "aliases": [
+        "teemo"
+      ]
+    },
+    {
+      "id": "irelia",
+      "aliases": [
+        "irelia"
+      ]
+    },
+    {
+      "id": "ksante",
+      "aliases": [
+        "ksante",
+        "k'sante"
+      ]
+    },
+    {
+      "id": "gangplank",
+      "aliases": [
+        "gangplank",
+        "gp"
+      ]
+    },
+    {
+      "id": "malphite",
+      "aliases": [
+        "malphite"
+      ]
+    },
+    {
+      "id": "sett",
+      "aliases": [
+        "sett"
+      ]
+    },
+    {
+      "id": "gwen",
+      "aliases": [
+        "gwen"
+      ]
+    },
+    {
+      "id": "riven",
+      "aliases": [
+        "riven"
+      ]
+    },
+    {
+      "id": "vayne",
+      "aliases": [
+        "vayne"
+      ]
+    },
+    {
+      "id": "yone",
+      "aliases": [
+        "yone"
+      ]
+    },
+    {
+      "id": "yasuo",
+      "aliases": [
+        "yasuo"
+      ]
+    },
+    {
+      "id": "pantheon",
+      "aliases": [
+        "pantheon"
+      ]
+    },
+    {
+      "id": "camille",
+      "aliases": [
+        "camille"
+      ]
+    }
+  ],
+  "unknown_person_rule": "recognize_as_unknown_person_only; do_not_unlock_lore"
+}

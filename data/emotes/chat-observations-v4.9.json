@@ -1,0 +1,106 @@
+{
+  "version": "4.9.0",
+  "source": "current SRO room chat supplied by user",
+  "scope_rule": "Learn durable conversational use only. Do not retain the day's Mundo, Kindred, Wendy's, prediction, rank, or lobby details as lore.",
+  "observations": [
+    {
+      "alias": "xxd",
+      "durable_meaning": [
+        "goofy_irony",
+        "knowingly_unserious_acknowledgment",
+        "mock_pride"
+      ],
+      "examples": [
+        "fake authority",
+        "self-aware rank flex",
+        "lightly ridiculous acknowledgment"
+      ]
+    },
+    {
+      "alias": "Clap",
+      "durable_meaning": [
+        "applause",
+        "mock_applause_when_paired"
+      ]
+    },
+    {
+      "alias": "CrayonTime",
+      "durable_meaning": [
+        "childish_mockery",
+        "ridiculous_reasoning"
+      ]
+    },
+    {
+      "alias": "sadKEK",
+      "durable_meaning": [
+        "self-inflicted loss that is also funny",
+        "rueful self-own"
+      ]
+    },
+    {
+      "alias": "Prayge",
+      "durable_meaning": [
+        "active pleading",
+        "desperate hope",
+        "self-serving manifestation"
+      ]
+    },
+    {
+      "alias": "NODDERS",
+      "durable_meaning": [
+        "agreement",
+        "ironic endorsement",
+        "seal on an excessive judgment"
+      ]
+    },
+    {
+      "alias": "PepePolice",
+      "durable_meaning": [
+        "mock enforcement",
+        "room-law framing"
+      ]
+    },
+    {
+      "alias": "MYEYES",
+      "durable_meaning": [
+        "painful witnessing",
+        "visually or strategically offensive event"
+      ]
+    },
+    {
+      "alias": "BoyWhatTheHellBoy",
+      "durable_meaning": [
+        "accusatory disbelief at an explanation"
+      ]
+    },
+    {
+      "alias": "gambabert",
+      "durable_meaning": [
+        "gamba belief",
+        "doubling down",
+        "believer propaganda"
+      ]
+    },
+    {
+      "alias": "pepeLad",
+      "durable_meaning": [
+        "mock formal authority",
+        "ceremonial correction"
+      ]
+    },
+    {
+      "alias": "HUH",
+      "durable_meaning": [
+        "confused rejection",
+        "what am I hearing"
+      ]
+    }
+  ],
+  "reviewed_compounds": [
+    "xxd Clap",
+    "xxd CrayonTime"
+  ],
+  "rejected_as_unverified_compound": [
+    "xxd FK it we ball"
+  ]
+}

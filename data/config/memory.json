@@ -1,0 +1,33 @@
+{
+  "version": "5.0.0",
+  "adapters": [
+    "memory",
+    "redis_compatible"
+  ],
+  "production_preference": "upstash_redis_if_existing_deployment_supports_it",
+  "windows": {
+    "same_user_exact_response_count": 30,
+    "global_exact_response_count": 20,
+    "semantic_family_count": 8,
+    "opening_family_count": 5,
+    "syntax_family_count": 4,
+    "concept_family_count": 6,
+    "emote_count": 8,
+    "same_user_inquiry_fingerprint_ttl_seconds": 900,
+    "history_ttl_seconds": 21600,
+    "path_exact_response_count": 64,
+    "reply_move_count": 6,
+    "twist_family_count": 6,
+    "target_family_count": 4,
+    "payoff_family_count": 5,
+    "emote_family_count": 8,
+    "emote_ratio_window_count": 20
+  },
+  "privacy": {
+    "store_raw_inquiry": false,
+    "hash_viewer_id": true,
+    "store_response_id": true,
+    "bounded_collections": true
+  },
+  "degraded_mode": "continue_with_warm_in_memory_failover_report_persistence_degraded_and_retry_upstash_automatically"
+}

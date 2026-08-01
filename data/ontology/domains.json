@@ -1,0 +1,72 @@
+{
+  "version": "4.0.0",
+  "domains": [
+    {
+      "id": "general_oracle",
+      "description": "No supported narrower domain."
+    },
+    {
+      "id": "current_game",
+      "description": "Outcome or state of the game currently being discussed."
+    },
+    {
+      "id": "sro",
+      "description": "Explicit SRO or Mike context."
+    },
+    {
+      "id": "rank_climb",
+      "description": "Rank, LP, MMR, Masters, Challenger, streaks, or climbing."
+    },
+    {
+      "id": "builds_items_runes",
+      "description": "League item builds, runes, build experiments, or build evaluation."
+    },
+    {
+      "id": "champion_matchup",
+      "description": "Champion selection, matchup, counterpick, or champion viability."
+    },
+    {
+      "id": "lane_wave_state",
+      "description": "Lane result, wave state, freeze, XP denial, or lane access."
+    },
+    {
+      "id": "player_role_performance",
+      "description": "Player or role performance, gap, carry, or skill assessment."
+    },
+    {
+      "id": "objective_macro",
+      "description": "Baron, Dragon, Elder, Herald, grubs, towers, nexus, rotations, or macro calls."
+    },
+    {
+      "id": "fight_dive_trade_shutdown",
+      "description": "Fights, dives, trades, kills, deaths, bounties, shutdowns, or throws."
+    },
+    {
+      "id": "stream_chat_moderation",
+      "description": "Chat, viewers, mods, bans, command behavior, or stream status."
+    },
+    {
+      "id": "room_lore",
+      "description": "Verified named room reference or exact callback."
+    },
+    {
+      "id": "ordinary_life",
+      "description": "General non-League personal or daily-life question."
+    },
+    {
+      "id": "relationships_social",
+      "description": "Dating, texting, attraction, friendship, or social questions."
+    },
+    {
+      "id": "work_money",
+      "description": "Jobs, work, spending, money, finance, or business."
+    },
+    {
+      "id": "food_health_outside",
+      "description": "Food, sleep, exercise, health, weather, or going outside."
+    }
+  ],
+  "multi_domain_allowed": true,
+  "primary_domain_rule": "highest_supported_score_after_ambiguity_penalties",
+  "generic_fallback_rule": "if no domain score reaches 0.55, include general_oracle as primary"
+}

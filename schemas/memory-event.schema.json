@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"MemoryEvent","type":"object","required":["userHash","routeKey","responseId","stance","motive","target","verdict"]}

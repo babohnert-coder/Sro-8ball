@@ -1,0 +1,82 @@
+{
+  "version": "5.0.0",
+  "hard_eligibility_order": [
+    "status_allowed",
+    "intent_compatible",
+    "required_domains",
+    "forbidden_domains",
+    "required_entities",
+    "forbidden_entities",
+    "required_concepts",
+    "forbidden_concepts",
+    "state_compatible",
+    "specificity_range",
+    "league_intensity_supported",
+    "sro_intensity_supported",
+    "reference_permissions",
+    "emote_resolvable"
+  ],
+  "production_statuses": [
+    "approved"
+  ],
+  "test_statuses": [
+    "approved",
+    "test_only"
+  ],
+  "relevance_floor": 45,
+  "weights": {
+    "intent_exact": 30,
+    "domain_required_each": 20,
+    "domain_any_each": 12,
+    "domain_any_cap": 24,
+    "entity_required_each": 20,
+    "entity_preferred_each": 8,
+    "concept_required_each": 25,
+    "concept_any_each": 15,
+    "concept_any_cap": 30,
+    "state_match_each": 8,
+    "state_match_cap": 16,
+    "verdict_compatibility": 12,
+    "specificity_fit_max": 10,
+    "delivery_fit": 6,
+    "seriousness_fit": 4,
+    "league_intensity_fit": 4,
+    "sro_intensity_fit": 4
+  },
+  "penalties": {
+    "exact_response_in_user_window": -1000,
+    "exact_response_in_global_window": -200,
+    "semantic_family_recent": -35,
+    "opening_family_recent": -18,
+    "syntax_family_recent": -12,
+    "concept_family_recent": -10,
+    "emote_recent": -10,
+    "delivery_mode_over_target": -8,
+    "weak_match_below_floor": "ineligible"
+  },
+  "fallback_order": [
+    "same_intent_broad_domain",
+    "same_intent_general_oracle",
+    "safe_classic_direct",
+    "missing_inquiry_help"
+  ],
+  "fallback_forbidden": [
+    "chaos",
+    "champion_specificity",
+    "room_lore",
+    "unrelated_league_concept"
+  ],
+  "pool_admission_band": 6,
+  "selection_model": "canonical_route_family_then_hierarchical_specificity_pool_then_relevance_admission_then_scheduled_chaos_then_exact_cycle_then_hard_immediate_freshness_then_humor_grammar_freshness_then_uniform_rng_then_route_aware_semantic_emote_routing",
+  "humor_grammar_freshness": {
+    "path_reply_move_window": 4,
+    "path_twist_family_window": 4,
+    "path_target_family_window": 3,
+    "path_payoff_family_window": 3,
+    "global_reply_move_window": 6,
+    "global_twist_family_window": 6,
+    "global_target_family_window": 4,
+    "global_payoff_family_window": 5
+  },
+  "minimum_specific_pool_size": 4
+}

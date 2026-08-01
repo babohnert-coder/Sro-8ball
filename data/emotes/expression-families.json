@@ -1,0 +1,32 @@
+{
+  "version": "4.9.0",
+  "expression_families": [
+    "agreement", "approval", "reluctant_agreement", "ironic_endorsement",
+    "cope", "hope", "desperate_hope", "prayer", "gamba_belief",
+    "disbelief", "confused_disbelief", "accusatory_disbelief", "confusion",
+    "suspicion", "contemplation", "uncertainty", "visual_pain", "cringe",
+    "laughter", "light_laughter", "hard_laughter", "rueful_laughter",
+    "goofy_irony", "mockery", "childish_mockery", "mock_applause",
+    "mock_enforcement", "mock_formality", "admonishment", "self_own",
+    "self_disbelief", "embarrassment", "failure", "doom", "sadness",
+    "disappointment", "smug", "recognition", "bait", "rage", "tilt",
+    "hype", "mild_hype", "power", "contrarian_pride", "applause",
+    "enthusiastic_approval", "food_approval", "commitment", "watching",
+    "waiting", "anticipation", "exit", "moderation", "refusal",
+    "cursed_build", "panic", "victory", "love", "dry_disapproval",
+    "neutral_reaction", "hidden_nonsense"
+  ],
+  "visual_families": [
+    "pepe", "wojak", "cat", "dog", "frog", "sro_custom", "league",
+    "character", "gesture", "text_reaction", "meme", "obscure"
+  ],
+  "discourse_functions": [
+    "prediction_yes", "prediction_no", "prediction_unclear", "roast", "rebuttal",
+    "mock_sentence", "mock_enforcement", "mock_applause", "mock_authority",
+    "location_status", "watching_reaction", "out_of_pocket_reaction",
+    "self_aware_reply", "mock_pride", "seal_judgment", "pleading",
+    "cope_prophecy", "failure_reaction", "painful_witnessing", "gamba_reaction",
+    "approval_reaction", "hype_reaction", "cursed_build", "moderation_reaction",
+    "love_response", "chaos_oracle", "general_reaction"
+  ]
+}

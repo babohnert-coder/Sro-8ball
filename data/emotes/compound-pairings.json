@@ -1,0 +1,83 @@
+{
+  "version": "4.9.0",
+  "compounds": [
+    {
+      "id": "xxd_clap",
+      "output": "xxd Clap",
+      "required_aliases": [
+        "xxd",
+        "Clap"
+      ],
+      "expressions": [
+        "mock_applause",
+        "goofy_irony",
+        "approval"
+      ],
+      "functions": [
+        "mock_applause",
+        "mock_pride",
+        "approval_reaction"
+      ],
+      "visual_families": [
+        "meme",
+        "gesture"
+      ],
+      "intensity": 0.62,
+      "confidence": 1.0,
+      "allowed_reply_moves": [
+        "confirm_then_undercut",
+        "callback_substitution",
+        "deadpan_diagnosis",
+        "identity_answer"
+      ],
+      "blocked_seriousness": 3,
+      "target_affinity": [
+        "room_person:john_west_gamer",
+        "bot_completion",
+        "rank_goal_masters",
+        "rank_goal_challenger",
+        "won_lane",
+        "lead_built",
+        "identity_answer",
+        "creator_origin"
+      ]
+    },
+    {
+      "id": "xxd_crayontime",
+      "output": "xxd CrayonTime",
+      "required_aliases": [
+        "xxd",
+        "CrayonTime"
+      ],
+      "expressions": [
+        "childish_mockery",
+        "goofy_irony",
+        "cringe",
+        "mockery"
+      ],
+      "functions": [
+        "roast",
+        "self_aware_reply"
+      ],
+      "visual_families": [
+        "meme"
+      ],
+      "intensity": 0.7,
+      "confidence": 1.0,
+      "allowed_reply_moves": [
+        "mock_accusation",
+        "deadpan_diagnosis",
+        "deny_then_reframe",
+        "blame_shift"
+      ],
+      "blocked_seriousness": 3,
+      "target_affinity": [
+        "experimental_build",
+        "old_six_nashors_jax",
+        "bot_challenge",
+        "mock_diff",
+        "wave_clear_jab"
+      ]
+    }
+  ]
+}

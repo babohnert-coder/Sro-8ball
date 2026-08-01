@@ -1,0 +1,19 @@
+{
+  "version":"6.0",
+  "defaultPersonalityVolume":6,
+  "plainResponseRate":0.22,
+  "stanceWindow":4,
+  "maxSameStanceInWindow":2,
+  "stances":{
+    "dry_witness":{"weight":20,"aggression":[1,4],"sincerity":[3,7],"absurdity":[0,2]},
+    "reluctant_approval":{"weight":13,"aggression":[2,5],"sincerity":[3,6],"absurdity":[0,3]},
+    "clean_no":{"weight":10,"aggression":[2,5],"sincerity":[4,8],"absurdity":[0,1]},
+    "league_realist":{"weight":18,"requiresDomain":"league_gameplay","aggression":[2,6],"sincerity":[2,6],"absurdity":[0,3]},
+    "chat_regular":{"weight":12,"aggression":[1,5],"sincerity":[2,6],"absurdity":[0,3]},
+    "suspicious_reader":{"weight":8,"aggression":[1,4],"sincerity":[4,8],"absurdity":[0,2]},
+    "soft_roast":{"weight":8,"aggression":[3,6],"sincerity":[1,5],"absurdity":[0,3]},
+    "odd_sincerity":{"weight":5,"aggression":[0,2],"sincerity":[7,10],"absurdity":[0,2]},
+    "omen":{"weight":4,"aggression":[0,3],"sincerity":[2,6],"absurdity":[3,6]},
+    "controlled_chaos":{"weight":2,"aggression":[1,5],"sincerity":[0,3],"absurdity":[7,10]}
+  }
+}

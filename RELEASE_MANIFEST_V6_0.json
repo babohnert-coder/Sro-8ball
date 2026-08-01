@@ -1,0 +1,1 @@
+{"version":"6.0.0","base":"SRO_8BALL_V5_1_0_BRAIN_PASS.zip","status":"engineering_verified_not_deployed","tests":{"total":161,"passed":161},"productionResponses":689,"personalityVolumeDefault":6,"runtimeLLM":false,"approvedTextModified":false,"entrypoint":"server.js","verification":"reports/V6_VERIFICATION.md"}

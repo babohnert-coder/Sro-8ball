@@ -1,0 +1,198 @@
+{
+  "version": "4.0.0",
+  "intents": [
+    {
+      "id": "prediction",
+      "description": "Future or unresolved outcome prediction.",
+      "strong_cues": [
+        "will",
+        "what happens",
+        "outcome",
+        "going to",
+        "come back",
+        "win this game"
+      ],
+      "default_verdict_families": [
+        "yes",
+        "no",
+        "maybe",
+        "outlook_good",
+        "outlook_unclear",
+        "very_doubtful",
+        "likely",
+        "unlikely",
+        "not_yet"
+      ]
+    },
+    {
+      "id": "permission",
+      "description": "Whether an actor should, can, could, or may perform an action.",
+      "strong_cues": [
+        "should",
+        "may i",
+        "may we",
+        "is it okay",
+        "can i",
+        "can we",
+        "could i",
+        "could we"
+      ],
+      "default_verdict_families": [
+        "yes",
+        "no",
+        "maybe",
+        "ask_again_later"
+      ]
+    },
+    {
+      "id": "evaluation",
+      "description": "Assessment of current or past state, quality, viability, value, or performance.",
+      "strong_cues": [
+        "is this good",
+        "is this bad",
+        "winnable",
+        "worth",
+        "did he win",
+        "did he lose",
+        "viable",
+        "troll",
+        "broken"
+      ],
+      "default_verdict_families": [
+        "yes",
+        "no",
+        "maybe",
+        "outlook_good",
+        "outlook_unclear",
+        "very_doubtful"
+      ]
+    },
+    {
+      "id": "comparison",
+      "description": "Choose or compare two or more alternatives.",
+      "strong_cues": [
+        " or ",
+        " vs ",
+        " versus ",
+        "which",
+        "better"
+      ],
+      "default_verdict_families": [
+        "first",
+        "second",
+        "neither",
+        "both",
+        "unclear"
+      ]
+    },
+    {
+      "id": "timing",
+      "description": "When or how soon something will occur.",
+      "strong_cues": [
+        "when",
+        "how soon",
+        "today",
+        "tonight"
+      ],
+      "default_verdict_families": [
+        "soon",
+        "not_yet",
+        "ask_again_later",
+        "unclear"
+      ]
+    },
+    {
+      "id": "location",
+      "description": "Where a person, object, or subject is.",
+      "strong_cues": [
+        "where is",
+        "where are",
+        "where did"
+      ],
+      "default_verdict_families": [
+        "direct_location",
+        "unclear",
+        "ask_again_later"
+      ]
+    },
+    {
+      "id": "explanation",
+      "description": "Why or how an event occurred.",
+      "strong_cues": [
+        "why",
+        "how did",
+        "how does"
+      ],
+      "default_verdict_families": [
+        "because",
+        "unclear"
+      ]
+    },
+    {
+      "id": "identity",
+      "description": "Who or what an entity is, including command origin or status.",
+      "strong_cues": [
+        "who are",
+        "what are",
+        "are you alive",
+        "who built",
+        "who made"
+      ],
+      "default_verdict_families": [
+        "direct_identity",
+        "unclear"
+      ]
+    },
+    {
+      "id": "reaction",
+      "description": "A reaction, accusation, or fragment framed as an inquiry.",
+      "strong_cues": [
+        "nice throw",
+        "cooked",
+        "washed",
+        "really",
+        "seriously",
+        "kekw"
+      ],
+      "default_verdict_families": [
+        "yes",
+        "no",
+        "maybe",
+        "unclear"
+      ]
+    },
+    {
+      "id": "nonsense",
+      "description": "Incoherent, emote-only, or intentionally absurd content with no recoverable inquiry.",
+      "strong_cues": [],
+      "default_verdict_families": [
+        "unclear",
+        "ask_again_later"
+      ]
+    },
+    {
+      "id": "command_help",
+      "description": "Missing inquiry, usage request, or command-status question.",
+      "strong_cues": [
+        "help",
+        "commands",
+        "how use",
+        "how does 8ball work"
+      ],
+      "default_verdict_families": [
+        "direct_help"
+      ]
+    }
+  ],
+  "precedence_rules": [
+    "explicit_when_over_prediction",
+    "explicit_where_over_identity",
+    "explicit_why_or_how_over_evaluation",
+    "explicit_or_vs_over_evaluation",
+    "should_may_permission_over_prediction",
+    "can_plus_outcome_concept_is_prediction",
+    "can_plus_deliberate_action_is_permission",
+    "missing_inquiry_is_command_help",
+    "emote_only_is_reaction_if_known_else_nonsense"
+  ]
+}

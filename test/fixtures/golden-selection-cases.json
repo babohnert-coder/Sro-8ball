@@ -1,0 +1,140 @@
+{
+  "version": "4.0.0",
+  "cases": [
+    {
+      "id": "s001",
+      "input_fixture": "r001",
+      "must_allow": [
+        "t_game_outcome",
+        "t_general_unclear"
+      ],
+      "must_forbid": [
+        "t_shutdown_not_over",
+        "t_wave_no",
+        "t_baron_maybe",
+        "t_candidate_mtf"
+      ]
+    },
+    {
+      "id": "s002",
+      "input_fixture": "r010",
+      "must_allow": [
+        "t_shutdown_not_over"
+      ],
+      "must_forbid": [
+        "t_wave_no",
+        "t_candidate_mtf"
+      ]
+    },
+    {
+      "id": "s003",
+      "input_fixture": "r006",
+      "must_allow": [
+        "t_build_maybe"
+      ],
+      "must_forbid": [
+        "t_shutdown_not_over",
+        "t_baron_maybe"
+      ]
+    },
+    {
+      "id": "s004",
+      "input_fixture": "r023",
+      "must_allow": [
+        "t_wave_no"
+      ],
+      "must_forbid": [
+        "t_build_maybe",
+        "t_shutdown_not_over"
+      ]
+    },
+    {
+      "id": "s005",
+      "input_fixture": "r014",
+      "must_allow": [
+        "t_baron_maybe"
+      ],
+      "must_forbid": [
+        "t_wave_no",
+        "t_candidate_mtf"
+      ]
+    },
+    {
+      "id": "s006",
+      "input_fixture": "r002",
+      "must_allow": [
+        "t_sro_win",
+        "t_game_outcome"
+      ],
+      "must_forbid": [
+        "t_candidate_mtf",
+        "t_plumbing"
+      ]
+    },
+    {
+      "id": "s007",
+      "input_fixture": "r039",
+      "must_allow": [
+        "t_creator"
+      ],
+      "must_forbid": [
+        "t_candidate_mtf"
+      ]
+    },
+    {
+      "id": "s008",
+      "input_fixture": "r042",
+      "must_allow": [
+        "t_plumbing"
+      ],
+      "must_forbid": [
+        "t_candidate_mtf"
+      ]
+    },
+    {
+      "id": "s009",
+      "input_fixture": "r037",
+      "must_allow": [],
+      "must_forbid": [
+        "t_candidate_mtf"
+      ],
+      "notes": "Candidate reference cannot unlock production or reference-dependent selection."
+    },
+    {
+      "id": "s010",
+      "input_fixture": "r049",
+      "must_allow": [
+        "t_general_yes",
+        "t_general_no",
+        "t_general_unclear"
+      ],
+      "must_forbid": [
+        "t_build_maybe",
+        "t_chaos_general"
+      ],
+      "notes": "Ambiguous cooked input must remain broad; chaos test can be separately seeded only after eligibility."
+    },
+    {
+      "id": "s011",
+      "input_fixture": "r048",
+      "must_allow": [
+        "t_general_yes",
+        "t_general_no"
+      ],
+      "must_forbid": [
+        "t_chaos_general"
+      ],
+      "notes": "Serious work question forbids chaos."
+    },
+    {
+      "id": "s012",
+      "input_fixture": "r053",
+      "must_allow": [],
+      "must_forbid": [
+        "t_chaos_general",
+        "t_candidate_mtf"
+      ],
+      "notes": "Missing inquiry uses dedicated help fallback not included in this test pool."
+    }
+  ]
+}

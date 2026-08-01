@@ -1,121 +1,183 @@
-# SRO 8 Ball Hosted Oracle
+# SRO Twitch Magic 8 Ball — V5.0 Launch-Hardened Build
 
-A hosted Twitch/League oracle designed to replace the large Nightbot `$(eval ...)` loop. Nightbot sends the question to one stable endpoint; the endpoint handles typo normalization, hierarchical intent scoring, social questions, League shorthand, structured fallbacks, anti-repetition, and contextual 7TV emotes, 50% eligible-response emote delivery, sharper SRO-room humor, and champion-aware answers.
+A finite, authored Twitch `!8ball` with rule-based League/SRO recognition, canonical route families, exact-cycle variety, room-native retort grammar, and semantic 7TV emote routing. It does not call an LLM or assemble jokes at runtime.
 
-## What this fixes
+## What V5.0 adds
 
-- No giant JSON download and regex loop inside Nightbot, reducing script timeouts.
-- Multiple matching routes are scored instead of stopping at the first keyword.
-- Direct questions to the bot beat generic `why` and fallback routes.
-- Social intent beats generic username lore: `do we like MTF`, `should X date Y`, `will X find love`.
-- League shorthand is understood: `winnable`, `how we doing`, `we are fucked`, `back in it`, `blue trinket`, and build trolling.
-- Unknown questions receive ambiguous League-oracle answers instead of unrelated jokes.
-- Emotes are selected by meaning and used sparingly.
+V5.0 preserves the complete V4.9 response, routing, and contextual-emote system while hardening the three behaviors that matter during a live stream:
 
-## Deploy on Vercel
+- chaos is scheduled once every 10–15 eligible answers and can never streak;
+- immediate semantic, opening, reply-move, twist, target, and payoff families are blocked when fresh alternatives exist;
+- configured Upstash persistence automatically falls back to warm process-local history during an outage and reports degraded health until it recovers.
 
-1. Create a new GitHub repository or add these files to the existing `Sro-8ball` repository.
-2. In Vercel, choose **Add New Project**, import the repository, and deploy with the defaults.
-3. Test the resulting URL:
+The V4.9 contextual-emote pipeline remains intact:
+
+V4.9 preserves the V4.8 integrated pipeline and adds a contextual emote-language layer learned from actual SRO room usage without retaining temporary daily banter as lore:
+
+1. the inquiry produces intent, domain, entities, concepts, state, and a canonical `route_family`;
+2. the route family opens the most specific authored response pool with enough variety;
+3. relevance controls admission, never the final answer order;
+4. exact route history exhausts the admitted pool before repetition;
+5. retort-grammar history prefers a fresh conversational move;
+6. each selected line contributes its authored emote intent;
+7. the recognized route refines that intent;
+8. the active SRO 7TV set supplies a compatible, fresh alias.
+
+Keywords are routing evidence. They do not have to appear in the response.
+
+## Verified state
+
+- Automated tests: **141/141 passed**.
+- Golden recognition fixtures: **60/60 passed**.
+- Intent accuracy: **100%**.
+- Primary-domain accuracy: **100%**.
+- Entity precision: **100%**.
+- Concept micro-F1: **100%**.
+- Golden selector cases: **12/12 passed**.
+- Approved production responses: **657**.
+- Tested golden routes with at least four admitted normal answers: **59/59**.
+- Exact normalized duplicates: **0**.
+- Near-duplicate response families: **0**.
+- AI/software-status voice flags: **0**.
+- Scheduled chaos spacing: **one result every 10–15 eligible answers, with no consecutive chaos**.
+- Responses with integrated emote contracts: **657/657**.
+- Local emote audit: **165/240 replies (68.8%)**.
+- Expanded live review: **138/210 replies with emotes**, using **38 distinct outputs**.
+- Semantic emote mismatches: **0**.
+
+
+## Contextual emote grammar
+
+- Distinguishes goofy irony (`xxd`) from light laughter (`LUL`) and hard laughter (`KEKL`, `KEKW`, `LMAO`).
+- Distinguishes desperate hope (`Prayge`) from gamba belief (`gambabert`) and generic cope.
+- Restricts `MYEYES`, `BoyWhatTheHellBoy`, `PepePolice`, `BUSSIN`, and other local aliases to the subjects and retort functions that earn them.
+- Supports reviewed compound phrases `xxd Clap` and `xxd CrayonTime`; random concatenation is prohibited.
+- Keeps the rolling emote target above 60% while compounds remain rare.
+
+## Durable room-language routes
+
+The build promotes reusable League/Twitch speech acts rather than preserving one morning's conversation:
+
+- `good gold reset` → shutdown cope
+- `[resource] diff` → mock diagnosis
+- `NA wave clear` → mechanic-based jab
+- `easy penta` → premature certainty
+- `let him cook` / `send it` → reckless approval
+- `viewer games` → recurring room-risk framing
+- creator-collab money questions → sponsorship/payment retorts
+- bot completion/version questions → build-meta retorts
+- direct challenge to the Ball → rebuttal pool
+- `mods ban` → mock sentencing
+- affection questions → object-shaped affection/deflection
+- bare laugh reactions such as `KEKW` → compact acknowledgement
+
+Each family has a six-line authored pool except where lore permissions deliberately narrow it.
+
+## Variety chain
+
+The selector operates in this order:
+
+1. hard eligibility and reference permission;
+2. canonical route family;
+3. hierarchical match tier;
+4. relevance admission band;
+5. persistent scheduled-chaos gate for eligible low-risk broad prompts only;
+6. exact-answer route-cycle exclusion;
+7. hard immediate family freshness with progressive relaxation only when needed;
+8. humor-grammar freshness;
+9. uniform seeded RNG;
+10. integrated semantic emote routing.
+
+Equivalent phrasings such as `will Mike win`, `will SRO win`, `is Mike going to win`, and `can Mike win this game` share one route history. Locks prevent concurrent requests from selecting the same unfinished-cycle answer.
+
+## Full SRO 7TV set
+
+Canonical set ID:
 
 ```text
-https://YOUR-PROJECT.vercel.app/8ball?q=is%20this%20winnable&user=b0n3sxx
+01GBAYMGX0000B23ECE97RP321
 ```
 
-The health endpoint is:
+Runtime endpoint:
 
 ```text
-https://YOUR-PROJECT.vercel.app/health
+https://api.7tv.app/v3/emote-sets/01GBAYMGX0000B23ECE97RP321
 ```
 
-## Stable Nightbot interface
+The active set is the emote bank. Every set-local alias is preserved and classified by expression, discourse function, visual family, intensity, confidence, animation, and zero-width status. Manual SRO mappings are authoritative; heuristics cover remaining aliases. Unknown entries are restricted to controlled hidden-nonsense usage until reviewed.
 
-The existing deployment URL does not need to change for this update. Both `/8ball` and `/api/8ball` remain supported, with `q` or `question` for the question and `user` or `u` for the viewer. For a new deployment only, the usual command is:
+The response is selected first. Its authored line policy and the recognized route context are then combined. A specific line can narrow a broad route expression—for example, a dry affection answer can prefer `smug` or `recognition` rather than any generic disbelief emote.
 
-```text
-!commands edit !8ball -cd=12 8ballSRO @$(user): $(urlfetch https://YOUR-PROJECT.vercel.app/8ball?q=$(querystring)&user=$(user))
-```
+Emote target:
 
-That is the only Nightbot change required. Future code and response updates happen behind the same endpoint.
+- minimum long-window share: **60%**;
+- rolling window: **20 replies**;
+- minimum full-window count: **12**;
+- serious responses are quota-exempt;
+- semantic fit, active availability, and zero-width safety always outrank the quota.
 
-## Run locally
+Pinned pairings such as `Motive remains unclear Susge` remain exact and cannot receive a second suffix.
+
+## Verify
 
 ```bash
-npm test
+npm run check
+```
+
+Synchronize the live set in a networked environment:
+
+```bash
+npm run sync:emotes
+```
+
+This writes:
+
+- `data/emotes/active-set-snapshot.json`
+- `data/emotes/semantic-inventory.json`
+- `reports/7tv-semantic-inventory.md`
+
+## Local run
+
+```bash
+NODE_ENV=production \
+SRO_8BALL_RESPONSE_FILE=./data/runtime/responses.json \
+SRO_8BALL_MEMORY_FILE=/tmp/sro8ball-memory.json \
+DISABLE_7TV_FETCH=1 \
 npm start
 ```
 
-Then open:
+Test:
 
 ```text
-http://localhost:3000/8ball?q=do%20we%20win%20these&user=tester
+http://localhost:3000/8ball?q=will%20Mike%20win&user=tester
 ```
 
-Add `&debug=1` to see the selected route and normalized question.
-
-## Updating the personality
-
-- `data/high-priority-routes.json`: strongest direct, social, League, and bot-character routes.
-- `data/smart-responses.json`: broader legacy Twitch/League routes.
-- `data/emotes.json`: semantic emote categories and frequency.
-
-The endpoint route and URL do not need to change when these files are updated.
-
-## Viewer context
-
-The Nightbot command already sends `user=$(user)`. Version 1.1 stores a small profile for each viewer containing the last 12 oracle interactions, route counts, and repeat-question history. This enables callbacks such as recognizing a repeated question or a viewer returning to the same kind of omen.
-
-For durable context on Vercel, create an Upstash Redis database and add these environment variables in the Vercel project:
+Nightbot command shape:
 
 ```text
-UPSTASH_REDIS_REST_URL=...
-UPSTASH_REDIS_REST_TOKEN=...
+$(urlfetch https://YOUR-VERCEL-DOMAIN/8ball?q=$(querystring)&user=$(user))
 ```
 
-Without those variables, the oracle uses an in-memory fallback. That works locally and may work temporarily in a warm server instance, but it is not reliable across Vercel restarts or multiple instances.
+## Production requirements
 
-Viewer context is deliberately small and expires after 30 days. It remembers only oracle interactions sent through `!8ball`; it cannot see unrelated Twitch chat messages unless a separate Twitch bot integration sends them to the endpoint.
+Configure distributed history and locking for Vercel:
 
-## 7TV room emotes and SRO humor
+```text
+UPSTASH_REDIS_REST_URL
+UPSTASH_REDIS_REST_TOKEN
+```
 
-This build ships with a curated SRO-room emote vocabulary and uses emotes by semantic category rather than attaching them randomly. It also suppresses recently used emotes.
+If Upstash is temporarily unavailable, the command continues using warm process-local history and `/health` reports degraded persistence. Separate serverless instances cannot guarantee one shared response/emote cycle until Upstash recovers.
 
-For live 7TV filtering, set either:
+## Main reports
 
-- `SEVENTV_EMOTE_SET_ID` to the channel's 7TV emote-set ID. The oracle refreshes that set every 10 minutes.
-- `SEVENTV_EMOTES` to a comma-separated list of currently enabled room emote names.
+- `reports/INTEGRATION_PASS_V4_8.md`
+- `reports/production-behavior-audit.md`
+- `reports/HUMOR_GRAMMAR_AUDIT_V4_6.md`
+- `reports/EMOTE_SYSTEM_AUDIT_V4_8.md`
+- `reports/router-pilot-report.md`
+- `reports/live-output-review.md`
+- `reports/http-smoke-test-v4.8.txt`
+- `reports/final-engineering-report.md`
 
-If neither variable is set, the bundled SRO room list is used. The oracle continues working if 7TV is temporarily unavailable.
-
-Room humor guidance is stored in `data/room-humor.json`. Keep recurring lore there and avoid turning temporary jokes into permanent personality.
-
-## v1.3 content update
-
-- Automatically discovers the live SoloRenektonOnly 7TV set using Twitch user ID `30227322`.
-- Uses the full live set as an availability filter while retaining curated semantic categories, so emotes remain relevant rather than random.
-- Adds routes for outside/touch-grass advice, original-8-ball nostalgia, drug accusations, smarter-than comparisons, keeping named chatters in check, full-AP Croc, and fail-flash moments.
-- Historical note: v1.3 briefly targeted a lower emote rate. The current configured behavior is 50% on eligible responses, with a four-emote cooldown window and no more than one emote per answer.
-- No Vercel environment variable is required for the SRO live 7TV set. `SEVENTV_EMOTE_SET_ID`, `SEVENTV_TWITCH_USER_ID`, and `SEVENTV_EMOTES` remain optional overrides.
-
-## v1.5 social-intelligence upgrade
-
-- Confidence-aware routing avoids confidently choosing weak or ambiguous matches.
-- Fallbacks are classified as challenge, comparison, bot bait, social, game, League, life, nonsense, or reaction.
-- Relationship lore combines recurring room characters instead of repeating isolated name jokes.
-- Short pronoun follow-ups can resolve against the viewer's recent question for up to 20 minutes.
-- Dedicated handling was added for `prove it`, `still?`, `again?`, `what about me?`, 400-character bait, and Ask Jeeves comparisons.
-- Debug output now reports intent, confidence, route score, score margin, resolved text, and recognized lore targets.
-
-## v1.6 structured-reference upgrade
-
-- `data/room-humor.json` is now runtime policy: target length, joke limit, discouraged frames, stable lore, and inactive-by-default temporary motifs are read by the oracle.
-- `data/legacy-fallbacks.json` now participates in broad prediction and reaction fallbacks instead of being loaded and ignored.
-- `data/reference-fragments.json` is a tagged composition layer. It can add one context-matched SRO-room observation without sending a pile of dialogue to a model.
-- Debug output reports the fragment ID, emote category, and why an emote was selected or skipped.
-- Package version, voice policy, provenance, fallback count, and emote settings are exposed by `/health`.
-
-### Reference boundary
-
-This package does **not** include the raw chat-log corpus. The supplied route, lore, and room-humor files are the current reference boundary, and `reference-fragments.json` truthfully marks its fragments as curated rather than corpus-derived. A future corpus pass should add reviewed, tagged fragments with provenance; raw dialogue should not be pasted into a prompt or shipped as an unfiltered response pool.
-
-Stable identity and relationship facts belong in `lore-map.json` and `room-humor.json.fixedLore`. Temporary bits belong in `room-humor.json.temporaryMotifs`; they are inactive unless explicitly enabled, so a short-lived joke cannot silently become permanent room canon.
+No Git push or deployment is performed automatically.
