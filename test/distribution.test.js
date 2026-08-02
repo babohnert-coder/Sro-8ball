@@ -1,2 +1,0 @@
-import test from 'node:test'; import assert from 'node:assert/strict'; import { recognizeInquiry } from '../src/recognition/index.js'; import { buildPerceptionBundle, formDecisionPlan } from '../src/brain.js';
-test('stance distribution is not single-state across seeds',()=>{const p=buildPerceptionBundle({bundle:recognizeInquiry('will sro win lane')});const s=new Set(Array.from({length:100},(_,i)=>formDecisionPlan({perception:p,seed:String(i),personalityVolume:6}).stance));assert.ok(s.size>=4);});

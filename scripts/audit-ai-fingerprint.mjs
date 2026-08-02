@@ -1,2 +1,0 @@
-import fs from 'node:fs'; import { auditVoice } from '../src/renderer/voice.js';
-const bank=JSON.parse(fs.readFileSync('data/runtime/responses.json','utf8')).responses;const flagged=bank.map(r=>({id:r.id,...auditVoice(r.text)})).filter(x=>!x.valid);console.log(JSON.stringify({total:bank.length,flagged:flagged.length,examples:flagged.slice(0,20)},null,2));process.exitCode=flagged.length>Math.ceil(bank.length*.12)?1:0;

@@ -1,3 +1,0 @@
-import test from 'node:test'; import assert from 'node:assert/strict';
-import { recognizeInquiry } from '../src/recognition/index.js'; import { buildPerceptionBundle, formDecisionPlan } from '../src/brain.js';
-test('V6 forms a complete deterministic plan',()=>{const bundle=recognizeInquiry('should sro queue one more');const p=buildPerceptionBundle({bundle,repeatedInquiry:false,userHash:'u'});const a=formDecisionPlan({perception:p,seed:'x',personalityVolume:6});const b=formDecisionPlan({perception:p,seed:'x',personalityVolume:6});assert.deepEqual(a,b);for(const k of ['verdict','stance','motive','target','aggression','sincerity','leagueSpecificity','loreDensity','absurdity','responseMove','safetyMode'])assert.ok(k in a);});

@@ -1,32 +1,15 @@
 {
-  "name": "sro-8ball-engineering-build",
-  "version": "7.0.0",
+  "name": "sro-8ball-rng",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "validate": "node tools/validate-reasoning-package.mjs",
-    "build:responses": "node scripts/build-production-bank.mjs && node editorial/rewrite-v4.6.mjs && node editorial/rewrite-v4.7.mjs && node editorial/rewrite-v4.8.mjs && node editorial/rewrite-v4.9.mjs",
-    "test": "node --test test/*.test.js",
-    "test:router": "node --test test/recognition.test.js",
-    "test:selection": "node --test test/selection.test.js",
-    "audit:production": "node scripts/audit-production-behavior.mjs",
-    "review:live": "node scripts/generate-live-output-review.mjs",
-    "evaluate": "node scripts/generate-reports.mjs",
-    "start": "node server.js",
-    "check": "npm run validate && npm run build:responses && npm test && npm run audit:production && npm run audit:humor && npm run audit:emotes && npm run review:live && npm run evaluate",
-    "audit:humor": "node scripts/audit-humor-grammar.mjs",
-    "audit:emotes": "node scripts/audit-emote-system.mjs",
-    "sync:emotes": "node scripts/sync-7tv-emotes.mjs",
-    "audit:personality": "node scripts/audit-personality.mjs",
-    "audit:ai": "node scripts/audit-ai-fingerprint.mjs",
-    "simulate:v6": "node scripts/simulate-routes.mjs",
-    "score:v6": "node scripts/evaluate-brain-scorecard.mjs",
-    "review:v6": "node scripts/export-human-review.mjs",
-    "verify:v6": "npm test && npm run audit:production && npm run audit:personality && npm run audit:ai && npm run simulate:v6 && npm run score:v6 && npm run review:v6",
-    "verify:v7": "npm test && npm run audit:production && npm run audit:personality && npm run audit:ai && npm run simulate:v6 && npm run score:v6 && npm run review:v6"
+    "test": "node --test",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "check": "npm test && wrangler deploy --dry-run"
   },
-  "description": "Finite authored SRO Oracle with deterministic perception, psychology, relationship arc, judgment, memory, and approved-line retrieval",
-  "engines": {
-    "node": ">=20"
+  "devDependencies": {
+    "wrangler": "4.118.0"
   }
 }

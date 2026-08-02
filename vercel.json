@@ -1,6 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/8ball", "destination": "/api/8ball" },
-    { "source": "/health", "destination": "/api/health" }
-  ]
-}
