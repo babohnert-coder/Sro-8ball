@@ -1,4 +1,4 @@
-export const RECENT_LIMIT = 25;
+export const RECENT_LIMIT = 100;
 
 function normalizeRecent(recent, responseCount, limit) {
   if (!Array.isArray(recent)) return [];

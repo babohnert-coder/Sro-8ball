@@ -11,12 +11,12 @@ function seededRandom(seed = 1) {
   };
 }
 
-test("the final response pool contains 180 unique responses", () => {
-  assert.equal(RESPONSES.length, 180);
-  assert.equal(new Set(RESPONSES).size, 180);
+test("the final response pool contains 183 unique responses", () => {
+  assert.equal(RESPONSES.length, 183);
+  assert.equal(new Set(RESPONSES).size, 183);
 });
 
-test("a response never appears inside the previous 25 draws", () => {
+test("a response never appears inside the configured repeat window", () => {
   const random = seededRandom(8_012_026);
   let recent = [];
 
@@ -28,7 +28,7 @@ test("a response never appears inside the previous 25 draws", () => {
   }
 });
 
-test("a response becomes eligible after 25 other responses", () => {
+test("a response becomes eligible after the configured repeat window", () => {
   let recent = [];
 
   for (let draw = 0; draw < RECENT_LIMIT + 2; draw += 1) {
