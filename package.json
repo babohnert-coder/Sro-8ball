@@ -1,15 +1,9 @@
 {
-  "name": "sro-8ball-rng",
-  "version": "1.0.0",
+  "name": "sro-8ball-vercel",
+  "version": "9.1.0",
   "private": true,
   "type": "module",
-  "scripts": {
-    "test": "node --test",
-    "dev": "wrangler dev",
-    "deploy": "wrangler deploy",
-    "check": "npm test && wrangler deploy --dry-run"
-  },
-  "devDependencies": {
-    "wrangler": "4.118.0"
+  "engines": {
+    "node": "22.x"
   }
 }

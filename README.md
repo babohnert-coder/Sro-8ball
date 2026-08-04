@@ -1,30 +1,11 @@
-# SRO Magic 8-Ball RNG
+# SRO 8-Ball Vercel Fix
 
-Flat RNG response machine for SRO Twitch chat.
+Vercel-compatible flat RNG build.
 
-- 183 authored responses
-- No routing, keyword detection, question parsing, or runtime AI
-- The previous 100 response IDs are excluded from every draw
-- Persistent global history through the existing Durable Object
-- Plain-text output remains compatible with the existing Nightbot `urlfetch` command
+Endpoints:
+- `/`
+- `/8ball`
+- `/api/8ball`
+- `/health`
 
-## Deploy
-
-```bash
-npm install
-npm test
-npm run deploy
-```
-
-The existing public Worker URL and Nightbot command do not need to change.
-
-Use `/health` to verify the deployed build. It should report:
-
-```json
-{
-  "ok": true,
-  "responses": 183,
-  "repeatWindow": 100,
-  "routing": false
-}
-```
+The response pool contains 183 responses and the warm serverless instance blocks the previous 100 response IDs.

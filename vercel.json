@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/api/8ball"
+    },
+    {
+      "source": "/8ball",
+      "destination": "/api/8ball"
+    },
+    {
+      "source": "/health",
+      "destination": "/api/8ball?health=1"
+    }
+  ],
+  "functions": {
+    "api/8ball.js": {
+      "memory": 256,
+      "maxDuration": 10
+    }
+  }
+}

@@ -1,0 +1,7 @@
+REPLACE THE CONTENTS OF THE hosted-oracle REPOSITORY FOLDER WITH THESE FILES.
+
+Then commit and push hosted-oracle.
+Vercel should create a Preview deployment.
+Promote that Preview to Production.
+
+This build contains no Cloudflare imports and works as a Vercel serverless function.
